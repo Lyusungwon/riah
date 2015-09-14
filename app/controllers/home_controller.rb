@@ -2,6 +2,7 @@ class HomeController < ApplicationController
     def index
     end
     def main
+        @hairshop=Hairshop.all
     end
     def hairshopsearch
     end
@@ -11,7 +12,7 @@ class HomeController < ApplicationController
         @hairshop=Hairshop.find(params[:id])
     end
     def write
-        eval.create(name: current_user, content: params[:content],image: params[:image_file])
+        eval.create(name: current_user, content: params[:content],image: params[:image_file],password: params[:password])
         redirect_to :back
     end
     def delete
@@ -23,6 +24,7 @@ class HomeController < ApplicationController
         
     end
     def myinfo
+        
     end
     def myeval
     end

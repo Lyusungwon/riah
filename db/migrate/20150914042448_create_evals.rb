@@ -8,6 +8,7 @@ class CreateEvals < ActiveRecord::Migration
       t.string :name
       t.text :content
       t.string :image
+      t.string :password
       
       t.timestamps null: false
     end
