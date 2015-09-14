@@ -1,0 +1,33 @@
+.lectureList > .content > .listTop {overflow:hidden;}
+.lectureList > .content > .listTop > .left {width:50%;height:20px;line-height:20px;float:left;}
+.lectureList > .content > .listTop > .right {height:20px;line-height:20px;text-align:right;color:#999;overflow:hidden;}
+
+.lectureList > .content > .listTable {width:100%;margin-top:10px;text-align:center;border-collapse:collapse;table-layout:fixed;}
+.lectureList > .content > .listTable tr {height:40px;margin:0;padding:0;border-bottom:1px dotted #DDD;cursor:pointer;}
+.lectureList > .content > .listTable tr > td {margin:0;padding:0;text-overflow:ellipsis;white-space:nowrap;overflow:hidden;}
+.lectureList > .content > .listTable tr > td.chk {width:40px;}
+.lectureList > .content > .listTable tr > td.chk > input {vertical-align:middle;}
+.lectureList > .content > .listTable tr > td.lec_term {width:70px;color:#AAA;}
+.lectureList > .content > .listTable tr > td.lec_code {width:70px;color:#AAA;}
+.lectureList > .content > .listTable tr > td.lec_name {width:auto;text-align:left;}
+.lectureList > .content > .listTable tr > td.lec_name:hover {text-decoration:underline;}
+.lectureList > .content > .listTable tr > td.lec_profName {width:90px;color:#AAA;}
+.lectureList > .content > .listTable tr > td.lec_summary {width:140px;}
+.lectureList > .content > .listTable tr > td.lec_summary > span {vertical-align:middle;}
+.lectureList > .content > .listTable tr > td.lec_summary > span.star {width:17px;height:17px;display:inline-block;background:url('./images/lectureList_star.png') center 0px no-repeat;background-size:17px 34px;}
+.lectureList > .content > .listTable tr > td.lec_summary > span.star.active {background-position:0 -17px;}
+.lectureList > .content > .listTable tr > td.lec_summary > span.num {height:17px;line-height:17px;padding-left:5px;font-family:'arial';font-size:10pt;font-weight:bold;color:#F84;display:inline-block;}
+.lectureList > .content > .listTable tr > td.lec_summary > span.noPermission {color:#AAA;}
+.lectureList > .content > .listTable tr > td.evalBtn {width:80px;}
+.lectureList > .content > .listTable tr > td.evalBtn > button {width:100%;padding:5px 0;border:none;border-radius:3px;color:#FFF;background:#F84;cursor:pointer;}
+.lectureList > .content > .listTable tr.head {height:40px;border:1px solid #E1E1E1;border-bottom:1px solid #CCC;border-right:1px solid #CCC;background:#F5F5F5;cursor:auto;}
+.lectureList > .content > .listTable tr.head > td {font-size:10pt;color:#333;font-weight:bold;text-align:center;}
+.lectureList > .content > .listTable tr.noResult {height:100px;color:#AAA;}
+
+
+.lectureList > .page {margin-top:15px;font-size:0;text-align:center;overflow:hidden;}
+.lectureList > .page > a {width:40px;height:40px;line-height:38px;border:1px solid #DDD;border-right:none;font-size:10pt;font-weight:bold;color:#555;background:#F5F5F5;display:inline-block;}
+.lectureList > .page > a.current {color:#F84;background:#FFF;}
+.lectureList > .page > a:first-child {border-radius:5px 0 0 5px;}
+.lectureList > .page > a:last-child {border-right:1px solid #DDD;border-radius:0 5px 5px 0;}
+.lectureList > .page > a:hover {background:#FFF;}

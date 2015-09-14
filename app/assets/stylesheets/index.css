@@ -1,0 +1,33 @@
+#head, #tail, #sideAD, #sideAD2 {display:none;}
+#content > .login_wrap {width:800px;height:400px;padding:30px;border:1px solid #DDD;border-radius:3px;background:#FFF;overflow:hidden;position:absolute;left:50%;margin-left:-400px;top:50%;margin-top:-200px;z-index:10;}
+#content > .login_wrap > .left {width:50%;height:100%;border-right:1px solid #DDD;padding-right:30px;float:left;}
+#content > .login_wrap > .left > .logo {margin-top:65px;}
+#content > .login_wrap > .left > .logo > img {width:100%;height:auto;}
+#content > .login_wrap > .left > .desc {margin-top:20px;padding:0 20px;font-size:10pt;color:#AAA;}
+#content > .login_wrap > .left > .desc > .bold {font-size:12pt;font-family:arial;color:#777;font-weight:bold;}
+#content > .login_wrap > .right {height:100%;padding-left:30px;text-align:left;overflow:hidden;}
+#content > .login_wrap > .right > .welcome {margin-top:66px;padding:10px;border:1px solid #DDD;color:#777;background:#F5F5F5;overflow:hidden;}
+#content > .login_wrap > .right > .idpw_wrap {margin-top:10px;text-align:left;overflow:hidden;}
+#content > .login_wrap > .right > .idpw_wrap > .id_wrap {margin-bottom:10px;overflow:hidden;}
+#content > .login_wrap > .right > .idpw_wrap > .pw_wrap {overflow:hidden;}
+#content > .login_wrap > .right > .idpw_wrap input {width:200px;height:40px;border-radius:3px;padding:5px 10px;margin:0;border:1px solid #DDD;font-size:12pt;}
+#content > .login_wrap > .right > .idpw_wrap span.desc {height:40px;line-height:40px;padding-left:10px;font-size:10pt;color:#999;}
+#content > .login_wrap > .right > .btn_wrap {height:40px;margin-top:10px;font-size:0;}
+#content > .login_wrap > .right > .btn_wrap > button {height:40px;padding:5px 15px;margin-right:5px;;border-radius:3px;border:none;font-size:10pt;color:#FFF;background:#CCC;cursor:pointer;}
+#content > .login_wrap > .right > .btn_wrap > button.login {background:#F84;}
+#content > .tail_wrap {width:800px;height:60px;line-height:58px;border:1px solid #DDD;border-radius:3px;font-size:10pt;color:#777;text-align:center;background:#FFF;overflow:hidden;position:absolute;left:50%;margin-left:-400px;top:50%;margin-top:210px;z-index:10;}
+#content > .tail_wrap > .orange {font-weight:bold;color:#F84;}
+
+
+
+#findPwPopup {width:100%;height:100%;position:fixed;left:0;top:0;z-index:100;background:rgba(0,0,0,0.3);display:none;}
+#findPwPopup > .inner {width:400px;padding:30px;border-radius:5px;background:#FFF;box-shadow:1px 1px 2px 1px rgba(0,0,0,0.3);position:absolute;left:50%;margin-left:-200px;top:50%;margin-top:-142px;}
+#findPwPopup > .inner > .title {margin-bottom:20px;font-size:14pt;font-weight:bold;color:#F84;}
+#findPwPopup > .inner > .row {overflow:hidden;}
+#findPwPopup > .inner > .row > .left {width:80px;height:40px;line-height:40px;font-size:10pt;font-weight:bold;float:left;}
+#findPwPopup > .inner > .row > .right {height:40px;overflow:hidden;}
+#findPwPopup > .inner > .row > .right > input {width:100%;height:30px;margin-top:5px;border:1px solid #DDD;padding:0 10px;}
+#findPwPopup > .inner > .btnWrap {margin-top:20px;text-align:center;font-size:0;}
+#findPwPopup > .inner > .btnWrap > button {width:120px;height:40px;margin:0 5px;border:none;color:#FFF;font-size:10pt;cursor:pointer;}
+#findPwPopup > .inner > .btnWrap > button.findPw {background:#F84;}
+#findPwPopup > .inner > .btnWrap > button.cancel {background:#999;}

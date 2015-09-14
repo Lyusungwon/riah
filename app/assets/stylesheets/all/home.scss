@@ -1,0 +1,150 @@
+@charset "UTF-8";
+/**
+* 전역설정
+**/
+body {width:100%;margin:0;padding:0;text-align:center;font-size:9pt;font-family:'맑은 고딕','Dotum','Arial';color:#333333;background:#F5F5F5;overflow-x:hidden;}
+body * {font-size:inherit;color:inherit;box-sizing:border-box;}
+img,a,div,form {border:0;padding:0;}
+a {text-decoration:none;}
+input, button, textarea {font-family:'맑은 고딕','Dotum','Arial'}
+
+.inline {float:left;display:inline;}
+.ellipsis {white-space:nowrap;text-overflow:ellipsis;overflow:hidden;}
+
+/**
+* head.php
+**/
+#head {width:100%;min-width:980px;height:50px;background:#F84;position:fixed;left:0;top:0;z-index:10;box-shadow:0px 0px 2px 2px rgba(0,0,0,0.2);}
+#head > .inner {height:50px;margin:0 auto;}
+#head > .inner > .logo {width:100px;height:50px;margin-left:10px;text-align:left;float:left;display:inline;}
+#head > .inner > .search {width:300px;height:50px;margin-left:15px;float:left;display:inline;}
+#head > .inner > .search > input {width:100%;height:30px;padding:0 40px 0 10px;margin-top:10px;border:none;border-radius:5px;background:#FFF url('./images/common_search.png') right 10px center no-repeat;background-size:20px 20px;}
+#head > .inner > .search2 {width:90px;height:50px;padding-top:10px;padding-left:10px;float:left;display:inline;}
+#head > .inner > .search2 > button {width:100%;height:31px;border-radius:3px;border:none;border-bottom:1px solid #D73;border-right:1px solid #D73;color:#FFF;background:#FB5;cursor:pointer;}
+#head > .inner > .menu {width:100px;height:50px;float:right;display:inline;}
+#head > .inner > .menu > .e {width:50px;height:50px;background-size:25px 25px;background-repeat:no-repeat;background-position:center center;display:inline;float:right;position:relative;cursor:pointer;opacity:0.7;}
+#head > .inner > .menu > .e:hover {opacity:1;}
+#head > .inner > .menu > .e.menu {background-image:url('./images/common_menu.png');}
+#head > .inner > .menu > .e.menu > .dropdown {width:220px;padding:10px;border:1px solid #DDD;text-align:left;position:absolute;right:10px;top:50px;z-index:20;background:#FFF;box-shadow:0px 0px 2px 0px rgba(0,0,0,0.2);overflow:hidden;display:none;}
+#head > .inner > .menu > .e.menu > .dropdown > .row {padding:5px 10px;color:#555;overflow:hidden;cursor:pointer;}
+#head > .inner > .menu > .e.menu > .dropdown > .row:hover {background:#FEB;color:#F84;}
+#head > .inner > .menu > .e.menu > .dropdown > .hr {height:20px;margin-top:20px;border-top:1px solid #DDD;}
+#head > .inner > .menu > .e.menu:hover > .dropdown {display:block;}
+#head > .inner > .menu > .e.notification {background-image:url('./images/common_notification.png');}
+#head > .inner > .menu > .e.notification > .cnt {padding:0px 2px;border-bottom:1px solid #C22;border-right:1px solid #C22;border-radius:3px;color:#FFF;font-size:8pt;background:#F22;position:absolute;right:5px;top:5px;z-index:21;display:none;}
+#head > .inner > .menu > .e.notification > .dropdown {width:300px;padding:0 15px;border:1px solid #DDD;text-align:left;position:absolute;right:10px;top:50px;z-index:20;background:#FFF;box-shadow:0px 0px 2px 0px rgba(0,0,0,0.2);overflow:hidden;display:none;}
+#head > .inner > .menu > .e.notification > .dropdown > .row {padding:15px 0;border-bottom:1px solid #E5E5E5;}
+#head > .inner > .menu > .e.notification > .dropdown > .row:last-child {border:none;}
+#head > .inner > .menu > .e.notification > .dropdown > .row > .msg {color:#777;}
+#head > .inner > .menu > .e.notification > .dropdown > .row.unread > .msg {color:#333;font-weight:bold;}
+#head > .inner > .menu > .e.notification > .dropdown > .row > .wr_time {font-size:8pt;color:#FA5;text-align:right;}
+#head > .inner > .menu > .e.notification > .dropdown > .empty {height:70px;line-height:70px;color:#999;text-align:center;}
+#head > .inner > .menu > .e.notification:hover > .dropdown {display:block;}
+#head > .inner > .menu > .e.chkTime {background-image:url('./images/common_time.png');}
+#head > .inner > .menu > a {width:80px;height:50px;line-height:50px;color:#FEB;display:inline;float:right;}
+#head > .inner > .menu > a:hover {color:#FFF;text-decoration:none;}
+#head > .inner > .serverTime {width:120px;height:50px;float:right;display:inline;cursor:pointer;}
+#head > .inner > .serverTime > .icon {width:50px;height:50px;background-size:25px 25px;background-repeat:no-repeat;background-position:center center;background-image:url('./images/common_time.png');float:left;opacity:0.7;}
+#head > .inner > .serverTime > .time {height:50px;line-height:50px;color:#FED;text-align:left;}
+#head > .inner > .serverTime > .dropdown {width:300px;padding:15px;border:1px solid #DDD;font-size:10pt;position:absolute;right:110px;top:50px;z-index:20;background:#FFF;box-shadow:0px 0px 2px 0px rgba(0,0,0,0.2);overflow:hidden;display:none;}
+#head > .inner > .serverTime > .dropdown > strong {color:#F84;}
+#head > .inner > .serverTime:hover > .icon {opacity:1;}
+#head > .inner > .serverTime:hover > .dropdown {display:block;}
+
+#sideAD {width:160px;height:600px;position:absolute;left:50%;top:60px;margin-left:-660px;z-index:9;overflow:hidden;}
+#sideAD2 {width:160px;height:600px;position:absolute;left:50%;top:60px;margin-left:500px;z-index:9;overflow:hidden;}
+
+#content {width:980px;margin:10px auto;padding-top:50px;text-align:left;overflow:hidden;}
+#content > .mainContent {width:720px;min-height:10px;overflow:hidden;float:left;}
+#content > .mainContent > .box {padding:20px;padding-top:0;margin-bottom:10px;border-radius:5px;border:1px solid #EAEAEA;border-bottom:1px solid #DDD;background:#FFF;overflow:hidden;}
+#content > .mainContent > .box > .title {overflow:hidden;}
+#content > .mainContent > .box > .title > span {line-height:45px;border-top:5px solid #F84;color:#F84;font-size:16pt;font-weight:bold;float:left;}
+#content > .sideContent {padding-left:10px;overflow:hidden;}
+#content > .sideContent > .box {padding:20px;margin-bottom:10px;border-radius:5px;border:1px solid #EAEAEA;border-bottom:1px solid #DDD;background:#FFF;overflow:hidden;}
+#content > .sideContent > .box > .title {padding-bottom:20px;border-bottom:1px solid #DDD;font-size:11pt;font-weight:bold;}
+#content > .sideContent > .box > .content {margin-top:20px;color:#777;text-align:justify;overflow:hidden;}
+
+#content > .sideContent > .myInfo > .name_wrap > .name {width:140px;height:20px;line-height:20px;font-size:11pt;font-weight:bold;float:left;}
+#content > .sideContent > .myInfo > .name_wrap > .menu {height:20px;line-height:20px;color:#F84;text-align:right;overflow:hidden;}
+#content > .sideContent > .myInfo > .progressBar_wrap {margin-top:10px;}
+
+#content > .sideContent > .myInfo > .evalInfo {margin-top:20px;padding-top:20px;border-top:1px solid #DDD;}
+#content > .sideContent > .myInfo > .evalInfo > .row {height:20px;overflow:hidden;}
+#content > .sideContent > .myInfo > .evalInfo > .row.cursor {cursor:pointer;}
+#content > .sideContent > .myInfo > .evalInfo > .row > .left {width:100px;height:20px;line-height:20px;color:#777;font-weight:bold;float:left;}
+#content > .sideContent > .myInfo > .evalInfo > .row > .right {height:20px;line-height:20px;color:#777;text-align:right;overflow:hidden;}
+#content > .sideContent > .myInfo > .evalInfo > .row > .right > span {font-size:10pt;font-family:arial;color:#F84;font-weight:bold;}
+#content > .sideContent > .myInfo > .evalInfo > .row2 {margin-bottom:10px;font-size:8pt;color:#999;text-align:right;}
+#content > .sideContent > .myInfo > .btnWrap {margin-top:20px;padding-top:20px;border-top:1px solid #DDD;overflow:hidden;}
+#content > .sideContent > .myInfo > .btnWrap > .permBtn {width:100%;height:45px;border:none;border-radius:3px;color:#FFF;font-size:11pt;text-align:center;background:#AAA;position:relative;overflow:hidden;cursor:pointer;}
+#content > .sideContent > .myInfo > .btnWrap > .permBtn > .bg {height:45px;background:#FB5;position:absolute;left:0;top:0;z-index:2;}
+#content > .sideContent > .myInfo > .btnWrap > .permBtn > .text {height:45px;line-height:45px;position:relative;z-index:3;}
+#content > .sideContent > .myInfo > .btnWrap > .evalBtn {width:100%;height:45px;padding-right:20px;margin-top:5px;border:none;border-radius:3px;color:#FFF;font-size:11pt;background:#F84 url('./images/common_next.png') no-repeat right 30px center;cursor:pointer;}
+
+#content > .sideContent > .guide {padding:20px 0;font-size:10pt;color:#777;font-weight:bold;text-align:center;}
+#content > .sideContent > .guide > .left {width:50%;height:20px;line-height:20px;float:left;border-right:1px solid #DDD;cursor:pointer;}
+#content > .sideContent > .guide > .right {height:20px;line-height:20px;color:#F84;overflow:hidden;cursor:pointer;}
+
+
+#tail {background:#FFF;border-top:1px solid #DDD;overflow:hidden;}
+#tail > .inner {width:980px;margin:0 auto;padding:30px 0;overflow:hidden;}
+#tail > .inner > .copyright {color:#777;font-size:11pt;}
+#tail > .inner > .copyright > .orange {font-weight:bold;color:#F84;}
+
+/**
+* lectureEvalList
+**/
+.lectureEvalList {font-size:10pt;overflow:hidden;}
+.lectureEvalList > .noResult {height:100px;line-height:100px;color:#999;text-align:center;}
+.lectureEvalList > .e {padding:20px;margin-bottom:10px;border-radius:5px;border:1px solid #EAEAEA;border-bottom:1px solid #DDD;background:#FFF;overflow:hidden;}
+.lectureEvalList > .e > .title {border-bottom:1px solid #DDD;margin-bottom:15px;padding-bottom:15px;overflow:hidden;}
+.lectureEvalList > .e > .title > .lec_name {height:30px;line-height:30px;margin-right:10px;font-size:16pt;color:#F84;font-weight:bold;float:left;}
+.lectureEvalList > .e > .title > .lec_profName {height:30px;line-height:20px;padding-top:10px;font-size:9pt;color:#AAA;float:left;}
+.lectureEvalList > .e > .content {margin-bottom:15px;overflow:hidden;}
+.lectureEvalList > .e > .content > .left {padding-right:15px;}
+.lectureEvalList > .e > .content > .left > .lec_name {font-size:12pt;font-weight:bold;text-overflow:ellipsis;white-space:nowrap;overflow:hidden;}
+.lectureEvalList > .e > .content > .left > .lec_name > span.prof {padding-left:15px;font-size:10pt;color:#AAA;font-weight:normal;}
+.lectureEvalList > .e > .content > .left > .wrInfo {color:#999;overflow:hidden;}
+.lectureEvalList > .e > .content > .left > .wrInfo > .bold {font-size:14pt;font-weight:bold;color:#333;}
+.lectureEvalList > .e > .content > .left > .wrInfo > a:hover {text-decoration:underline;}
+.lectureEvalList > .e > .content > .left > .wrInfoSub {color:#999;overflow:hidden;}
+.lectureEvalList > .e > .content > .left > .wrContent {line-height:170%;margin-top:10px;color:#777;text-align:justify;}
+.lectureEvalList > .e > .content > .right {width:300px;padding:15px;margin-left:15px;border:1px solid #DDD;font-size:9pt;background:#F5F5F5;float:right;}
+.lectureEvalList > .e > .content > .right > .e > .left {width:50px;height:30px;line-height:30px;padding-right:10px;float:left;font-size:9pt;color:#AAA;text-align:right;}
+.lectureEvalList > .e > .content > .right > .e > .right {width:60px;height:30px;line-height:30px;padding-left:10px;float:right;font-size:9pt;color:#777;text-align:left;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+.lectureEvalList > .e > .content > .right > .e > .center {height:30px;overflow:hidden;}
+.lectureEvalList > .e > .content > .right > .e > .center > span {width:20%;height:10px;margin-top:10px;border-right:1px solid #F5F5F5;background:#E5E5E5;float:left;}
+.lectureEvalList > .e > .content > .right > .e > .center > span:first-child {border-radius:5px 0 0 5px;}
+.lectureEvalList > .e > .content > .right > .e > .center > span:last-child {border-radius:0 5px 5px 0;}
+.lectureEvalList > .e > .content > .right > .e.total > .center > span {height:20px;margin-top:5px;border-radius:0;border:none;background:url('./images/lectureEval_star.png') top center no-repeat;background-size:20px 40px;}
+.lectureEvalList > .e > .content > .right > .e.total > .center > span.active {background-position:center -20px;}
+.lectureEvalList > .e > .content > .right > .e.difficulty > .center > span.active {background:#F84;}
+.lectureEvalList > .e > .content > .right > .e.studyTime > .center > span.active {background:#5987FF;}
+.lectureEvalList > .e > .content > .right > .e.attendance > .center > span.active {background:#FFC000;}
+.lectureEvalList > .e > .content > .right > .e.grade > .center > span.active {background:#8F3CB2;}
+.lectureEvalList > .e > .content > .right > .e.achievement > .center > span.active {background:#00C675;}
+.lectureEvalList > .e > .content > .right > .prevData {height:30px;line-height:30px;color:#777;text-align:center;}
+.lectureEvalList > .e > .tail {border-top:1px solid #DDD;padding-top:15px;overflow:hidden;}
+.lectureEvalList > .e > .tail > .btnWrap {color:#F84;overflow:hidden;}
+.lectureEvalList > .e > .tail > .btnWrap > span {height:20px;line-height:20px;float:left;cursor:pointer;}
+.lectureEvalList > .e > .tail > .btnWrap > span.like {padding-left:25px;padding-right:10px;background:url('./images/common_like.png') left center no-repeat;}
+.lectureEvalList > .e > .tail > .btnWrap > span.comment {padding-left:25px;padding-right:10px;background:url('./images/common_comment.png') left center no-repeat;}
+.lectureEvalList > .e > .tail > .btnWrap > span.etc {padding-left:10px;float:right;}
+.lectureEvalList > .e > .tail > .commentList {overflow:hidden;}
+.lectureEvalList > .e > .tail > .commentList.hide {display:none;}
+.lectureEvalList > .e > .tail > .commentList > .e {margin-top:15px;padding:10px;border:1px solid #DDD;background:#F5F5F5;overflow:hidden;}
+.lectureEvalList > .e > .tail > .commentList > .e > .cmtInfo {overflow:hidden;}
+.lectureEvalList > .e > .tail > .commentList > .e > .cmtInfo > .mb_nick {margin-right:10px;font-size:10pt;font-weight:bold;color:#F84;float:left;}
+.lectureEvalList > .e > .tail > .commentList > .e > .cmtInfo > .wr_time {font-size:9pt;color:#AAA;}
+.lectureEvalList > .e > .tail > .commentList > .e > .cmtInfo > .option {font-size:9pt;color:#F84;float:right;}
+.lectureEvalList > .e > .tail > .commentList > .e > .cmtInfo > .option > span {cursor:pointer;}
+.lectureEvalList > .e > .tail > .commentList > .e > .cmtContent {margin-top:5px;color:#777;overflow:hidden;}
+.lectureEvalList > .e > .tail > .commentList > .e.deleted > .cmtContent {color:#999;}
+
+.lectureEvalList > .e > .tail > .commentInput {margin-top:15px;overflow:hidden;}
+.lectureEvalList > .e > .tail > .commentInput.hide {display:none;}
+.lectureEvalList > .e > .tail > .commentInput > .left {height:40px;padding-right:15px;overflow:hidden;}
+.lectureEvalList > .e > .tail > .commentInput > .left > input {width:100%;height:100%;border:1px solid #DDD;;padding:0 15px;}
+.lectureEvalList > .e > .tail > .commentInput > .right {width:70px;height:40px;float:right;}
+.lectureEvalList > .e > .tail > .commentInput > .right > button {width:100%;height:100%;border:none;border-radius:5px;color:#FFF;background:#F84;}
+

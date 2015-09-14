@@ -1,0 +1,55 @@
+<head>
+	<%= stylesheet_link_tag "index", :media => "all" %>
+</head>
+		<div id='head'>
+			<div class="inner">
+				<div class='logo'><a href='.'><img src='./css/images/logo_s_white.png' /></a></div>
+								<div class='menu'>
+										<a href='./index.php'>로그인</a>
+					<a href='./register.php'>회원가입</a>
+									</div>
+							</div>
+		</div>
+		<div id='content'><input type='hidden' id='pubKey' value='' />
+<div class='login_wrap'>
+	<div class='left'>
+		<div class='logo'><img src='./css/images/common_logo_orange.png' /></div>
+		<div class='desc'>KLUE는 현재 <span class='bold'>32,043</span>명의 학우가 <br /><span class='bold'>263,340</span>개의 강의평을 공유하고 있습니다.</div>
+	</div>
+	<div class='right'>
+		<div class='welcome'>KLUE에 오신것을 환영합니다! KLUE는 재학생만 이용할 수 있으며 서비스를 이용하기 위해 로그인이 필요합니다!</div>
+		<div class='idpw_wrap'>
+			<div class='id_wrap'><input type='text' id='mb_id' placeholder='포털아이디' onkeydown='if (event.keyCode==13) do_login();' /><span class='desc'>@korea.ac.kr</span></div>
+			<div class='pw_wrap'><input type='password' id='mb_pw' placeholder='비밀번호' onkeydown='if (event.keyCode==13) do_login();' /></div>
+		</div>
+		<div class='btn_wrap'><button type='button' class='login' onclick='do_login();'>로그인</button><button type='button' onclick="location.href=yh_path+'/register.php'">회원가입</button><button type='button' onclick="findPw_open();">비밀번호 찾기</button></div>
+	</div>
+</div>
+<div class='tail_wrap'>klue.kr2@gmail.com | Copyright &copy; 2015 <a href='http://kweb.korea.ac.kr/' target='_blank' class='orange'>KLUE</a> All rights reserved.</div>
+<div id="findPwPopup">
+	<div class="inner">
+		<div class="title">비밀번호 찾기</div>
+		<div class="row">
+			<div class="left">아이디</div>
+			<div class="right"><input type='text' name='mb_id' placeholder='@korea.ac.kr은 제외하고 입력해주세요.' onkeydown='if (event.keyCode==13) findPw_submitOk();' /></div>
+		</div>
+		<div class="row">
+			<div class="left">학번</div>
+			<div class="right"><input type='text' name='mb_stNum' placeholder='학번을 입력해주세요.' onkeydown='if (event.keyCode==13) findPw_submitOk();' /></div>
+		</div>
+		<div class="row">
+			<div class="left">이름</div>
+			<div class="right"><input type='text' name='mb_name' placeholder='가입시 작성한 이름을 입력해주세요.' onkeydown='if (event.keyCode==13) findPw_submitOk();' /></div>
+		</div>
+		<div class="btnWrap">
+			<button type='button' class='findPw' onclick='findPw_submitOk();'>비밀번호찾기</button>
+			<button type='button' class='cancel' onclick='findPw_close();'>취소</button>
+		</div>
+	</div>
+</div>
+</div>
+<div id='tail'>
+	<div class="inner">
+		<div class="copyright">Copyright &copy; 2015 <a href='http://kweb.korea.ac.kr/' target='_blank' class='orange'>KLUE</a> All rights reserved.</div>
+	</div>
+</div>
