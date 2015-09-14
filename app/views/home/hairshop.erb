@@ -90,7 +90,7 @@
     <%end%>
 
   <% if user_signed_in? %>
-              <%= form_tag '/trend/reply',method:'post', html: {:class => "form-horizontal"} do %>
+              <%= form_tag '/trend/reply',method:'post', html: {:class => "form-horizontal"},multipart: true do %>
               <!--<form class="form-horizontal" action="/trend/reply">-->
               <input type="hidden" name="item_id" value="<%=@detail.id%>"> 
                   <!--댓글 공간 시작-->
@@ -150,9 +150,10 @@
                         <label for="exampleInputPassword1">암호</label>
                         <input type="password" class="form-control" id="exampleInputPassword1" placeholder="암호">
                       </div>
+                     
                       <div class="form-group">
                         <label for="exampleInputFile">이미지파일 업로드</label>
-                        <input type="file" id="exampleInputFile">
+                        <input type="file" name="image_file">
                         <p class="help-block">여기에 블록레벨 도움말 예제</p>
                       </div>
                       <!--전송버튼-->
