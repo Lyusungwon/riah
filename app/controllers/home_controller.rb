@@ -8,10 +8,16 @@ class HomeController < ApplicationController
     def hairshopsearch2
     end
     def hairshop
+        @hairshop=Hairshop.find(params[:id])
     end
     def write
+        eval.create(name: current_user, content: params[:content])
+        redirect_to :back
     end
     def delete
+        e=Eval.find(params[:id])
+        e.destroy
+        redirect_to :back
     end
     def update
     end
