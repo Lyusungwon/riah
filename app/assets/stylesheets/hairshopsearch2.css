@@ -1,0 +1,81 @@
+#searchWrap {}
+#searchWrap > .content {margin-top:20px;}
+#searchWrap > .content > .row {height:30px;margin-bottom:10px;overflow:hidden;}
+#searchWrap > .content > .row > .e {width:33.3%;height:30px;float:left;}
+#searchWrap > .content > .row > .e.last {width:auto;height:30px;float:none;overflow:hidden;}
+#searchWrap > .content > .row > .e.hide {visibility:hidden;}
+#searchWrap > .content > .row > .e > .left {width:60px;height:30px;line-height:30px;padding-right:5px;color:#999;font-weight:bold;text-align:right;float:left;}
+#searchWrap > .content > .row > .e > .right {height:30px;overflow:hidden;}
+#searchWrap > .content > .row > .e > .right > select {width:120px;height:30px;margin-left:18px;border:1px solid #CCC;}
+#searchWrap > .content > .row > .e > .right > input {width:50%;height:30px;padding:0 10px;border:1px solid #DDD;}
+#searchWrap > .content > .row > .e > .right > .min {width:15px;height:30px;line-height:30px;color:#F84;font-size:8pt;font-weight:bold;font-family:arial;text-align:center;float:left;}
+#searchWrap > .content > .row > .e > .right > .max {width:15px;height:30px;line-height:30px;color:#F84;font-size:8pt;font-weight:bold;font-family:arial;text-align:center;float:right;}
+#searchWrap > .content > .row > .e > .right > .sliderWrap {height:30px;padding:0 10px;padding-top:10px;overflow:hidden;}
+#searchWrap > .content > .row > .e > .right > button {height:30px;padding:0 30px;float:right;border:none;background:#F84;color:#FFF;font-size:10pt;cursor:pointer;}
+#searchWrap > .content > .descWrap {padding-top:10px;color:#F84;text-align:right;}
+
+#sliderTotal > .ui-slider-range {background:#FFD700;}
+#sliderDifficulty > .ui-slider-range {background:#F84;}
+#sliderStudyTime > .ui-slider-range {background:#5987FF;}
+#sliderAttendance > .ui-slider-range {background:#FFC000;}
+#sliderGrade > .ui-slider-range {background:#8F3CB2;}
+#sliderAchievement > .ui-slider-range {background:#00C675;}
+
+
+#resultWrap {}
+#resultWrap > .content {margin-top:20px;}
+#resultWrap > .content > .listWrap {}
+#resultWrap > .content > .listWrap > .e {margin-bottom:15px;padding-bottom:15px;border-bottom:1px solid #DDD;}
+#resultWrap > .content > .listWrap > .e > .title {margin-bottom:10px;}
+#resultWrap > .content > .listWrap > .e > .title > .lecName {color:#F84;font-size:12pt;font-weight:bold;}
+#resultWrap > .content > .listWrap > .e > .title > .profName {padding-left:15px;color:#999;}
+#resultWrap > .content > .listWrap > .e > .pointWrap {margin-bottom:10px;padding:10px;padding-right:20px;border:1px solid #DDD;background:#F5F5F5;overflow:hidden;}
+#resultWrap > .content > .listWrap > .e > .pointWrap > .e {width:33.3%;float:left;}
+#resultWrap > .content > .listWrap > .e > .pointWrap > .e > .left {width:45px;height:30px;line-height:30px;padding-right:5px;float:left;font-size:9pt;color:#AAA;text-align:right;}
+#resultWrap > .content > .listWrap > .e > .pointWrap > .e > .right {width:40px;height:30px;line-height:30px;padding-left:5px;float:right;font-size:8pt;color:#F84;font-weight:bold;text-align:left;overflow:hidden;}
+#resultWrap > .content > .listWrap > .e > .pointWrap > .e > .center {height:30px;overflow:hidden;}
+#resultWrap > .content > .listWrap > .e > .pointWrap > .e > .center > span {width:20%;height:10px;margin-top:10px;border-right:1px solid #F5F5F5;background:#E5E5E5;float:left;}
+#resultWrap > .content > .listWrap > .e > .pointWrap > .e > .center > span:first-child {border-radius:5px 0 0 5px;}
+#resultWrap > .content > .listWrap > .e > .pointWrap > .e > .center > span:last-child {border-radius:0 5px 5px 0;}
+#resultWrap > .content > .listWrap > .e > .pointWrap > .e.total > .center > span {height:20px;margin-top:5px;border-radius:0;border:none;background:url('./images/lectureEval_star.png') top center no-repeat;background-size:20px 40px;}
+#resultWrap > .content > .listWrap > .e > .pointWrap > .e.total > .center > span.active {background-position:center -20px;}
+#resultWrap > .content > .listWrap > .e > .pointWrap > .e.difficulty > .center > span.active {background:#F84;}
+#resultWrap > .content > .listWrap > .e > .pointWrap > .e.studyTime > .center > span.active {background:#5987FF;}
+#resultWrap > .content > .listWrap > .e > .pointWrap > .e.attendance > .center > span.active {background:#FFC000;}
+#resultWrap > .content > .listWrap > .e > .pointWrap > .e.grade > .center > span.active {background:#8F3CB2;}
+#resultWrap > .content > .listWrap > .e > .pointWrap > .e.achievement > .center > span.active {background:#00C675;}
+#resultWrap > .content > .listWrap > .e > .pointWrap > .prevData {height:30px;line-height:30px;color:#777;text-align:center;}
+#resultWrap > .content > .listWrap > .e > .pointWrap > .e > .center > span.noInfo{width:auto;height:30px;line-height:30px;margin:0;color:#AAA;background:none;border-radius:0;border:none;}
+
+#resultWrap > .content > .listWrap > .e > .infoWrap {overflow:hidden;}
+#resultWrap > .content > .listWrap > .e > .infoWrap > .left {width:75%;height:50px;float:left;}
+#resultWrap > .content > .listWrap > .e > .infoWrap > .left > .e {width:33.3%;height:25px;line-height:25px;float:left;}
+#resultWrap > .content > .listWrap > .e > .infoWrap > .left > .e > .subj {padding-right:10px;font-weight:bold;}
+#resultWrap > .content > .listWrap > .e > .infoWrap > .left > .e > .data {color:#999;}
+#resultWrap > .content > .listWrap > .e > .infoWrap > .left > .e.last {width:auto;float:none;overflow:hidden;}
+#resultWrap > .content > .listWrap > .e > .infoWrap > .right {height:50px;overflow:hidden;}
+#resultWrap > .content > .listWrap > .e > .infoWrap > .right > button {width:100%;height:100%;border:none;border-radius:5px;font-size:10pt;color:#FFF;background:#F84;cursor:pointer;}
+
+#resultWrap > .content > .listWrap > .noResult {height:100px;line-height:100px;text-align:center;color:#999;}
+
+#resultWrap > .content > .listWrap > .resultCnt {color:#999;text-align:right;}
+#resultWrap > .content > .listWrap > .resultCnt > .cnt {color:#F84;font-weight:bold;}
+#resultWrap > .content > .listWrap > .pageWrap {margin-top:15px;font-size:0;text-align:center;overflow:hidden;}
+#resultWrap > .content > .listWrap > .pageWrap > a {width:40px;height:40px;line-height:38px;border:1px solid #DDD;border-right:none;font-size:10pt;font-weight:bold;color:#555;background:#F5F5F5;display:inline-block;}
+#resultWrap > .content > .listWrap > .pageWrap > a.current {color:#F84;background:#FFF;}
+#resultWrap > .content > .listWrap > .pageWrap > a:first-child {border-radius:5px 0 0 5px;}
+#resultWrap > .content > .listWrap > .pageWrap > a:last-child {border-right:1px solid #DDD;border-radius:0 5px 5px 0;}
+#resultWrap > .content > .listWrap > .pageWrap > a:hover {background:#FFF;}
+
+
+@-webkit-keyframes rotateLoading {
+	from {-webkit-transform: rotate(0deg);}
+	to { -webkit-transform: rotate(360deg);}
+}
+@keyframes rotateLoading {
+	from {-ms-transform: rotate(0deg);}
+	to { -ms-transform: rotate(360deg);}
+}
+#resultWrap > .content > .listWrap > .loading {padding:30px 0;text-align:center;overflow:hidden;}
+#resultWrap > .content > .listWrap > .loading > img {width:50px;height:50px;animation:rotateLoading 1200ms infinite;-webkit-animation:rotateLoading 1200ms infinite;}
+#resultWrap > .content > .listWrap > .loading > .text {margin-top:20px;color:#999;}

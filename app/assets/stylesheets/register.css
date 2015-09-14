@@ -1,0 +1,29 @@
+#content {text-align:left;}
+
+#content > .mainContent > .form_wrap > .desc {padding:15px 10px;margin-top:40px;border-left:4px solid #FFA500;background:#F5F5F5;}
+#content > .mainContent > .form_wrap > .desc > ul {margin:0;padding-left:1.5em;list-style-type:check;}
+#content > .mainContent > .form_wrap > .desc > ul > li {line-height:130%;margin-bottom:10px;font-size:10pt;}
+#content > .mainContent > .form_wrap > .desc > ul > li:last-child {margin:0;}
+#content > .mainContent > .form_wrap > .input_wrap {margin-top:40px;overflow:hidden;}
+#content > .mainContent > .form_wrap > .input_wrap > .row {min-height:60px;overflow:hidden;}
+#content > .mainContent > .form_wrap > .input_wrap > .row > .left {width:100px;height:60px;line-height:60px;font-size:11pt;font-weight:bold;float:left;}
+#content > .mainContent > .form_wrap > .input_wrap > .row > .right {min-height:60px;overflow:hidden;}
+#content > .mainContent > .form_wrap > .input_wrap > .row > .right > input {border-radius:3px;padding:5px 10px;margin:10px 0 0;border:1px solid #DDD;font-size:12pt;} 
+#content > .mainContent > .form_wrap > .input_wrap > .row > .right > input.text01 {width:200px;height:40px;}
+#content > .mainContent > .form_wrap > .input_wrap > .row > .right > span.desc {height:40px;line-height:40px;margin-top:5px;padding-left:10px;font-size:10pt;color:#999;}
+#content > .mainContent > .form_wrap > .input_wrap > .row > .right > span.desc.warn {color:#F22;}
+#content > .mainContent > .form_wrap > .input_wrap > .row > .right > span.desc.ok {color:#3C3;}
+#content > .mainContent > .term {overflow:hidden;}
+#content > .mainContent > .term > .title {font-size:12pt;font-weight:bold;}
+#content > .mainContent > .term > .content {height:200px;margin-top:10px;border:1px solid #EEE;padding:5px;overflow-y:scroll;}
+#content > .mainContent > .term > .chk_wrap {height:30px;line-height:30px;margin-top:10px;}
+#content > .mainContent > .term > .chk_wrap input {vertical-align:middle;}
+#content > .mainContent > .btn_wrap {margin-top:10px;margin-bottom:100px;text-align:right;overflow:hidden;}
+#content > .mainContent > .btn_wrap > button {padding:20px 25px;border:none;border-radius:3px;font-size:12pt;font-weight:bold;color:#FFF;background:#F84;cursor:pointer;}
+#content > .mainContent > .btn_wrap > button.wait {background:#CCC;}
+
+
+#content > .sideContent > .box > .title {font-size:12pt;font-weight:bold;}
+#content > .sideContent > .info > ul {margin:0;margin-top:10px;padding-left:1.5em;list-style-type:check;}
+#content > .sideContent > .info > ul > li {line-height:130%;margin-bottom:10px;font-size:9pt;color:#777;}
+#content > .sideContent > .info > ul > li:last-child {margin:0;}

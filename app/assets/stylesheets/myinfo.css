@@ -1,0 +1,38 @@
+#content > .mainContent > .myInfoForm {}
+#content > .mainContent > .myInfoForm > .content {padding:0 10px;border-top:1px solid #CCC;}
+#content > .mainContent > .myInfoForm > .content > .row {border-bottom:1px solid #E5E5E5;font-size:10pt;overflow:hidden;}
+#content > .mainContent > .myInfoForm > .content > .row > .subj {width:150px;height:50px;line-height:30px;padding:10px 0;font-size:11pt;font-weight:bold;color:#999;float:left;}
+#content > .mainContent > .myInfoForm > .content > .row > .data {height:50px;line-height:30px;padding:10px 0;overflow:hidden;}
+#content > .mainContent > .myInfoForm > .content > .row > .data > .inputText01 {width:150px;height:100%;padding:0 10px;background:#FFF;border:1px solid #DDD;}
+#content > .mainContent > .myInfoForm > .content > .row > .data > .inputText02 {width:250px;height:100%;padding:0 10px;background:#FFF;border:1px solid #DDD;}
+#content > .mainContent > .myInfoForm > .content > .row > .data > .inputText03 {width:350px;height:100%;padding:0 10px;background:#FFF;border:1px solid #DDD;}
+#content > .mainContent > .myInfoForm > .content > .row > .data > .inputText04 {width:100%;height:100%;padding:0 10px;background:#FFF;border:1px solid #DDD;}
+#content > .mainContent > .myInfoForm > .content > .row > .data > .btn01 {height:100%;margin-left:10px;padding:0 15px;background:#F5F5F5;border:1px solid #DDD;}
+#content > .mainContent > .myInfoForm > .content > .row.idWrap > .data > span.id {font-size:11pt;}
+#content > .mainContent > .myInfoForm > .content > .row.idWrap > .data > span.email {color:#999;}
+#content > .mainContent > .myInfoForm > .content > .btnWrap {height:40px;margin-top:10px;text-align:right;}
+#content > .mainContent > .myInfoForm > .content > .btnWrap > button {height:40px;padding:0 20px;border:none;color:#FFF;font-size:11pt;background:#F84;cursor:pointer;}
+
+#content > .mainContent > .leave {}
+#content > .mainContent > .leave > .content {padding:0 10px;}
+#content > .mainContent > .leave > .content > .descWrap {color:#777;}
+#content > .mainContent > .leave > .content > .descWrap > strong {color:#333;}
+#content > .mainContent > .leave > .content > .reasonWrap {margin-top:20px;overflow:hidden;display:none;}
+#content > .mainContent > .leave > .content > .reasonWrap.show {display:block;}
+#content > .mainContent > .leave > .content > .reasonWrap > textarea {width:100%;height:150px;line-height:150%;padding:10px;border:1px solid #DDD;resize:none;}
+#content > .mainContent > .leave > .content > .btnWrap {height:40px;margin-top:10px;text-align:right;}
+#content > .mainContent > .leave > .content > .btnWrap > button {height:40px;padding:0 20px;border:none;color:#FFF;font-size:11pt;background:#F84;cursor:pointer;}
+
+#passwordPopup {width:100%;height:100%;background:rgba(0,0,0,0.3);position:fixed;z-index:100;left:0;top:0;display:none;}
+#passwordPopup.show {display:block;}
+#passwordPopup > .inner {width:400px;padding:20px;margin:0 auto;border-radius:5px;background:#FFF;position:relative;top:50%;transform:translateY(-50%);-webkit-transform:translateY(-50%);-ms-transform:translateY(-50%);-o-transform:translateY(-50%);}
+#passwordPopup > .inner > .title {padding-bottom:10px;border-bottom:1px solid #DDD;font-size:12pt;font-weight:bold;}
+#passwordPopup > .inner > .inputWrap {margin-top:10px;}
+#passwordPopup > .inner > .inputWrap > .row {overflow:hidden;}
+#passwordPopup > .inner > .inputWrap > .row > .left {width:120px;height:50px;padding:10px 0;line-height:30px;font-size:10pt;font-weight:bold;color:#999;float:left;}
+#passwordPopup > .inner > .inputWrap > .row > .right {height:50px;padding:10px 0;overflow:hidden;}
+#passwordPopup > .inner > .inputWrap > .row > .right > input {width:100%;height:100%;border:1px solid #DDD;padding:0 10px;}
+#passwordPopup > .inner > .btnWrap {margin-top:20px;text-align:center;}
+#passwordPopup > .inner > .btnWrap > button {height:40px;padding:0 25px;margin:0 5px;border:none;color:#FFF;font-size:11pt;cursor:pointer;}
+#passwordPopup > .inner > .btnWrap > button.submit {background:#F84;}
+#passwordPopup > .inner > .btnWrap > button.cancel {background:#999;}

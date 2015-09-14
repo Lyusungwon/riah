@@ -3,7 +3,9 @@ class HomeController < ApplicationController
     end
     def main
     end
-    def list
+    def hairshopsearch
+    end
+    def hairshopsearch2
     end
     def hairshop
     end
@@ -12,5 +14,13 @@ class HomeController < ApplicationController
     def delete
     end
     def update
+    end
+    def myinfo
+    end
+    def myeval
+    end
+    def register
+    end
+    def report
     end
 end

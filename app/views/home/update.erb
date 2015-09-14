@@ -1,0 +1,185 @@
+<head>
+	<%= stylesheet_link_tag "write", :media => "all" %>
+</head>
+	<div id='head'>
+			<div class="inner">
+				<div class='logo'><a href='.'><img src='./css/images/logo_s_white.png' /></a></div>
+				<div class='search'><input type='text' id='topBar_search' onkeydown='if (event.keyCode == 13) topBar_search();' placeholder='강의명, 학수번호, 교수명으로 빠른검색' /></div>
+				<div class='search2'><button type='button' onclick="location.href=yh_path+'/lectureSearch2.php'">고급검색</button></div>				<div class='menu'>
+										<div class="e menu">
+						<div class="dropdown">
+							<div class="row" onclick="location.href=yh_path+'/myInfo.php'">내 정보</div>
+							<div class="row" onclick="location.href=yh_path+'/myLectureEval.php'">내 강의평</div>
+							<!--<div class="row">쪽지함</div>-->
+							<div class="hr"></div>
+							<div class="row" onclick="location.href=yh_path+'/serverTime.php'">서버시간확인</div>
+							<div class="row" onclick="location.href=yh_path+'/lectureSearch2.php'">고급검색</div>
+							<div class="row" onclick="location.href=yh_path+'/report.php'">신고/문의하기</div>
+							<!--<div class="row">신고/문의내역</div>-->
+							<div class="hr"></div>
+							<div class="row" onclick="location.href=yh_path+'/logout.php'">로그아웃</div>
+						</div>
+					</div>
+					<div class="e notification" notificationData='[{&quot;msg&quot;:&quot;\ubcf5\ud559\uc2e0\uccad\uc774 \uc2b9\uc778\ub418\uc5c8\uc2b5\ub2c8\ub2e4.&quot;,&quot;link&quot;:&quot;&quot;,&quot;wr_time&quot;:&quot;2015-07-18 19:52:22&quot;,&quot;read&quot;:1}]'>
+						<div class='cnt'></div>
+						<div class="dropdown"></div>
+					</div>
+									</div>
+								<div class="serverTime" id='serverTime2' offsetSK='-0.042508047210693,0.007002' onclick="location.href=yh_path+'/serverTime.php'">
+					<div class="icon"></div>
+					<div class="time">받는중...</div>
+					<div class="dropdown">현재 수강신청 서버의 시간입니다<br />더 정확한 시간을 보시려면 <strong>클릭!</strong></div>
+				</div>
+							</div>
+		</div>
+		<div id='sideAD'>
+			<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+			<!-- side2 -->
+			<ins class="adsbygoogle"
+				 style="display:inline-block;width:160px;height:600px"
+				 data-ad-client="ca-pub-3217618135707969"
+				 data-ad-slot="2849566935"></ins>
+			<script>
+			(adsbygoogle = window.adsbygoogle || []).push({});
+			</script>
+		</div>
+		<div id="sideAD2">
+			<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+			<!-- side3 -->
+			<ins class="adsbygoogle"
+				 style="display:inline-block;width:160px;height:600px"
+				 data-ad-client="ca-pub-3217618135707969"
+				 data-ad-slot="6272208130"></ins>
+			<script>
+			(adsbygoogle = window.adsbygoogle || []).push({});
+			</script>
+		</div>
+		<div id='content'><div class='mainContent'>
+		<div class="eval_wrap box">
+		<div class='title'>강의평가 쓰기</div>
+		<div class='desc'>
+			<ul>
+				<li>KLUE에는 강의를 먼저 들었던 학우들이 입력한 263,346개 이상의 강의평가가 등록되어있습니다.</li>
+				<li>강의평가를 입력하여 100포인트를 모으시면 다른 학우들이 입력한 강의를 열람할 수 있습니다.</li>
+				<li>KLUE는 여러분의 성의있는 강의평을 기반으로 운영됩니다.</li>
+			</ul>
+		</div>
+		<div class="form">
+			<div class="row">
+				<div class="subj">강의명</div>
+									<div class="content"><input type="text" id='lec_name' onkeydown='lecAC_keydown()' onkeyup='lecAC(0,event.keyCode);' onblur='lecAC_blur();' /><input type='hidden' name='lec_no' id='lec_no' /></div>
+								<div id='lec_list'></div>
+			</div>
+			<div class="row">
+				<div class="subj">별점평가</div>
+				<div class="content bg1">
+					<div class="e total" id='gp_total'>
+						<input type='hidden' name='eval_total' value='0' />
+						<div class="left">총평</div>
+						<div class='right'></div>
+						<div class="center">
+							<div class="graphWrap" onclick="lecGraph_select('gp_total', 1)" onmouseover="lecGraph_mouseover('gp_total', 1)" onmouseout="lecGraph_mouseout('gp_total')"><span msg='최악이에요!'></span></div>
+							<div class="graphWrap" onclick="lecGraph_select('gp_total', 2)" onmouseover="lecGraph_mouseover('gp_total', 2)" onmouseout="lecGraph_mouseout('gp_total')"><span msg='별로에요'></span></div>
+							<div class="graphWrap" onclick="lecGraph_select('gp_total', 3)" onmouseover="lecGraph_mouseover('gp_total', 3)" onmouseout="lecGraph_mouseout('gp_total')"><span msg='보통이에요'></span></div>
+							<div class="graphWrap" onclick="lecGraph_select('gp_total', 4)" onmouseover="lecGraph_mouseover('gp_total', 4)" onmouseout="lecGraph_mouseout('gp_total')"><span msg='좋아요'></span></div>
+							<div class="graphWrap" onclick="lecGraph_select('gp_total', 5)" onmouseover="lecGraph_mouseover('gp_total', 5)" onmouseout="lecGraph_mouseout('gp_total')"><span msg='최고에요!'></span></div>
+						</div>
+					</div>
+					<div class="e difficulty" id='gp_difficulty'>
+						<input type='hidden' name='eval_difficulty' value='0' />
+						<div class="left">난이도</div>
+						<div class='right'></div>
+						<div class="center">
+							<div class="graphWrap" onclick="lecGraph_select('gp_difficulty', 1)" onmouseover="lecGraph_mouseover('gp_difficulty', 1)" onmouseout="lecGraph_mouseout('gp_difficulty')"><span msg='짱쉬워요!'></span></div>
+							<div class="graphWrap" onclick="lecGraph_select('gp_difficulty', 2)" onmouseover="lecGraph_mouseover('gp_difficulty', 2)" onmouseout="lecGraph_mouseout('gp_difficulty')"><span msg='조금 쉬워요'></span></div>
+							<div class="graphWrap" onclick="lecGraph_select('gp_difficulty', 3)" onmouseover="lecGraph_mouseover('gp_difficulty', 3)" onmouseout="lecGraph_mouseout('gp_difficulty')"><span msg='보통이에요'></span></div>
+							<div class="graphWrap" onclick="lecGraph_select('gp_difficulty', 4)" onmouseover="lecGraph_mouseover('gp_difficulty', 4)" onmouseout="lecGraph_mouseout('gp_difficulty')"><span msg='조금 어려워요'></span></div>
+							<div class="graphWrap" onclick="lecGraph_select('gp_difficulty', 5)" onmouseover="lecGraph_mouseover('gp_difficulty', 5)" onmouseout="lecGraph_mouseout('gp_difficulty')"><span msg='짱어려워요!'></span></div>
+						</div>
+					</div>
+					<div class="e studyTime" id='gp_studyTime'>
+						<input type='hidden' name='eval_studyTime' value='0' />
+						<div class="left">학습량</div>
+						<div class='right'></div>
+						<div class="center">
+							<div class="graphWrap" onclick="lecGraph_select('gp_studyTime', 1)" onmouseover="lecGraph_mouseover('gp_studyTime', 1)" onmouseout="lecGraph_mouseout('gp_studyTime')"><span msg='완전 적어요!'></span></div>
+							<div class="graphWrap" onclick="lecGraph_select('gp_studyTime', 2)" onmouseover="lecGraph_mouseover('gp_studyTime', 2)" onmouseout="lecGraph_mouseout('gp_studyTime')"><span msg='조금 적어요'></span></div>
+							<div class="graphWrap" onclick="lecGraph_select('gp_studyTime', 3)" onmouseover="lecGraph_mouseover('gp_studyTime', 3)" onmouseout="lecGraph_mouseout('gp_studyTime')"><span msg='보통이에요'></span></div>
+							<div class="graphWrap" onclick="lecGraph_select('gp_studyTime', 4)" onmouseover="lecGraph_mouseover('gp_studyTime', 4)" onmouseout="lecGraph_mouseout('gp_studyTime')"><span msg='조금 많아요'></span></div>
+							<div class="graphWrap" onclick="lecGraph_select('gp_studyTime', 5)" onmouseover="lecGraph_mouseover('gp_studyTime', 5)" onmouseout="lecGraph_mouseout('gp_studyTime')"><span msg='완전 많아요!'></span></div>
+						</div>
+					</div>
+					<div class="e attendance" id='gp_attendance'>
+						<input type='hidden' name='eval_attendance' value='0' />
+						<div class="left">출석체크</div>
+						<div class='right'></div>
+						<div class="center">
+							<div class="graphWrap" onclick="lecGraph_select('gp_attendance', 1)" onmouseover="lecGraph_mouseover('gp_attendance', 1)" onmouseout="lecGraph_mouseout('gp_attendance')"><span msg='거의 안해요'></span></div>
+							<div class="graphWrap" onclick="lecGraph_select('gp_attendance', 2)" onmouseover="lecGraph_mouseover('gp_attendance', 2)" onmouseout="lecGraph_mouseout('gp_attendance')"><span msg='가끔 해요'></span></div>
+							<div class="graphWrap" onclick="lecGraph_select('gp_attendance', 3)" onmouseover="lecGraph_mouseover('gp_attendance', 3)" onmouseout="lecGraph_mouseout('gp_attendance')"><span msg='보통이에요'></span></div>
+							<div class="graphWrap" onclick="lecGraph_select('gp_attendance', 4)" onmouseover="lecGraph_mouseover('gp_attendance', 4)" onmouseout="lecGraph_mouseout('gp_attendance')"><span msg='자주 해요'></span></div>
+							<div class="graphWrap" onclick="lecGraph_select('gp_attendance', 5)" onmouseover="lecGraph_mouseover('gp_attendance', 5)" onmouseout="lecGraph_mouseout('gp_attendance')"><span msg='항상 해요'></span></div>
+						</div>
+					</div>
+					<div class="e grade" id='gp_grade'>
+						<input type='hidden' name='eval_grade' value='0' />
+						<div class="left">학점</div>
+						<div class='right'></div>
+						<div class="center">
+							<div class="graphWrap" onclick="lecGraph_select('gp_grade', 1)" onmouseover="lecGraph_mouseover('gp_grade', 1)" onmouseout="lecGraph_mouseout('gp_grade')"><span msg='전설의총잡이! FF'></span></div>
+							<div class="graphWrap" onclick="lecGraph_select('gp_grade', 2)" onmouseover="lecGraph_mouseover('gp_grade', 2)" onmouseout="lecGraph_mouseout('gp_grade')"><span msg='안주는 편'></span></div>
+							<div class="graphWrap" onclick="lecGraph_select('gp_grade', 3)" onmouseover="lecGraph_mouseover('gp_grade', 3)" onmouseout="lecGraph_mouseout('gp_grade')"><span msg='보통이에요'></span></div>
+							<div class="graphWrap" onclick="lecGraph_select('gp_grade', 4)" onmouseover="lecGraph_mouseover('gp_grade', 4)" onmouseout="lecGraph_mouseout('gp_grade')"><span msg='잘주는 편'></span></div>
+							<div class="graphWrap" onclick="lecGraph_select('gp_grade', 5)" onmouseover="lecGraph_mouseover('gp_grade', 5)" onmouseout="lecGraph_mouseout('gp_grade')"><span msg='에이쁠폭격기!'></span></div>
+						</div>
+					</div>
+					<div class="e achievement" id='gp_achievement'>
+						<input type='hidden' name='eval_achievement' value='0' />
+						<div class="left">성취감</div>
+						<div class='right'></div>
+						<div class="center">
+							<div class="graphWrap" onclick="lecGraph_select('gp_achievement', 1)" onmouseover="lecGraph_mouseover('gp_achievement', 1)" onmouseout="lecGraph_mouseout('gp_achievement')"><span msg='뭘배웠는지ㅜㅜ'></span></div>
+							<div class="graphWrap" onclick="lecGraph_select('gp_achievement', 2)" onmouseover="lecGraph_mouseover('gp_achievement', 2)" onmouseout="lecGraph_mouseout('gp_achievement')"><span msg='조금 적어요'></span></div>
+							<div class="graphWrap" onclick="lecGraph_select('gp_achievement', 3)" onmouseover="lecGraph_mouseover('gp_achievement', 3)" onmouseout="lecGraph_mouseout('gp_achievement')"><span msg='보통이에요'></span></div>
+							<div class="graphWrap" onclick="lecGraph_select('gp_achievement', 4)" onmouseover="lecGraph_mouseover('gp_achievement', 4)" onmouseout="lecGraph_mouseout('gp_achievement')"><span msg='조금 많아요'></span></div>
+							<div class="graphWrap" onclick="lecGraph_select('gp_achievement', 5)" onmouseover="lecGraph_mouseover('gp_achievement', 5)" onmouseout="lecGraph_mouseout('gp_achievement')"><span msg='많이배웠어요!'></span></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="subj">평가내용</div>
+				<div class="content"><textarea id='eval_content' name='eval_content' onkeyup='show_textCnt();' placeholder='평가 내용을 입력해주세요.'></textarea><div id="textCnt"></div></div>
+			</div>
+			<div class="btnWrap">
+				<button type='button' onclick='doSubmit();'>평가하기</button>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="sideContent">
+	<div class="box">
+		<div class="title">평가등록안내</div>
+		<div class="content">실제 강의를 듣는데 도움이 되는 유익한 정보를 제공하고 악성정보를 거르기 위해 평가 운영진의 자체적인 검토 및 사용자들의 자발적인 신고제도를 운영하고있습니다.<br /><br />성의없는 평가를 작성한 것으로 적발된 사용자는 이용정지 등의 제재가 가해질 수 있으니 이 점 참고바랍니다.</div>
+	</div>
+	<div class="effect box">
+		<div class="title">잘 쓴 평가가 미치는 영향</div>
+		<div class="row">
+			"어떤 강의를 들을지 결정해야하는데 클루의 강의평가가 큰 도움이 되었다" <span class="from">- 당신의 평가로 더 행복한 학교생활을 하게된 학우</span>
+		</div>
+		<div class="row">
+			"선배에게 물어봐도 잘 모르는 이야기들, 하지만 결정을 위해 알아야만 하는 것들... 클루가 유일한 답이었다." <span class="from">- 당신의 평가로 성공적인 한학기를 보내게 된 학우</span>
+		</div>
+		<div class="row">
+			"클루가 없으면 수강신청을 못하겠어요!" <span class="from">- 클루의 열혈팬이 된 학우</span>
+		</div>
+		<div class="row">
+			"이중전공생이라 전공에 대한 지식을 얻을 선배님도 없어서 답답했는데 클루가 저를 구했어요!" <span class="from">- 당신의 평가가 큰 도움이 되었다는 이중전공생</span>
+		</div>
+	</div>
+</div>
+</div>
+<div id='tail'>
+	<div class="inner">
+		<div class="copyright">Copyright &copy; 2015 <a href='http://kweb.korea.ac.kr/' target='_blank' class='orange'>KLUE</a> All rights reserved.</div>
+	

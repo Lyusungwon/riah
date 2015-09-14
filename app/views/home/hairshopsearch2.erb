@@ -1,0 +1,292 @@
+<head>
+	<%= stylesheet_link_tag "hairshopsearch", :media => "all" %>
+</head>
+		<div id='head'>
+			<div class="inner">
+				<div class='logo'><a href='.'><img src='./css/images/logo_s_white.png' /></a></div>
+				<div class='search'><input type='text' id='topBar_search' onkeydown='if (event.keyCode == 13) topBar_search();' placeholder='강의명, 학수번호, 교수명으로 빠른검색' /></div>
+				<div class='search2'><button type='button' onclick="location.href=yh_path+'/lectureSearch2.php'">고급검색</button></div>				<div class='menu'>
+										<div class="e menu">
+						<div class="dropdown">
+							<div class="row" onclick="location.href=yh_path+'/myInfo.php'">내 정보</div>
+							<div class="row" onclick="location.href=yh_path+'/myLectureEval.php'">내 강의평</div>
+							<!--<div class="row">쪽지함</div>-->
+							<div class="hr"></div>
+							<div class="row" onclick="location.href=yh_path+'/serverTime.php'">서버시간확인</div>
+							<div class="row" onclick="location.href=yh_path+'/lectureSearch2.php'">고급검색</div>
+							<div class="row" onclick="location.href=yh_path+'/report.php'">신고/문의하기</div>
+							<!--<div class="row">신고/문의내역</div>-->
+							<div class="hr"></div>
+							<div class="row" onclick="location.href=yh_path+'/logout.php'">로그아웃</div>
+						</div>
+					</div>
+					<div class="e notification" notificationData='[{&quot;msg&quot;:&quot;\ubcf5\ud559\uc2e0\uccad\uc774 \uc2b9\uc778\ub418\uc5c8\uc2b5\ub2c8\ub2e4.&quot;,&quot;link&quot;:&quot;&quot;,&quot;wr_time&quot;:&quot;2015-07-18 19:52:22&quot;,&quot;read&quot;:1}]'>
+						<div class='cnt'></div>
+						<div class="dropdown"></div>
+					</div>
+									</div>
+								<div class="serverTime" id='serverTime2' offsetSK='-0.030006094909668,0.007002' onclick="location.href=yh_path+'/serverTime.php'">
+					<div class="icon"></div>
+					<div class="time">받는중...</div>
+					<div class="dropdown">현재 수강신청 서버의 시간입니다<br />더 정확한 시간을 보시려면 <strong>클릭!</strong></div>
+				</div>
+							</div>
+		</div>
+		<div id='sideAD'>
+			<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+			<!-- side2 -->
+			<ins class="adsbygoogle"
+				 style="display:inline-block;width:160px;height:600px"
+				 data-ad-client="ca-pub-3217618135707969"
+				 data-ad-slot="2849566935"></ins>
+			<script>
+			(adsbygoogle = window.adsbygoogle || []).push({});
+			</script>
+		</div>
+		<div id="sideAD2">
+			<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+			<!-- side3 -->
+			<ins class="adsbygoogle"
+				 style="display:inline-block;width:160px;height:600px"
+				 data-ad-client="ca-pub-3217618135707969"
+				 data-ad-slot="6272208130"></ins>
+			<script>
+			(adsbygoogle = window.adsbygoogle || []).push({});
+			</script>
+		</div>
+		<div id='content'><div class="mainContent"><input type='hidden' id='dpList' value='[{&quot;dp_code&quot;:&quot;ACEE&quot;,&quot;dp_college&quot;:&quot;\uacf5\uacfc\ub300\ud559&quot;,&quot;dp_name&quot;:&quot;\uac74\ucd95\uc0ac\ud68c\ud658\uacbd\uacf5\ud559\ubd80&quot;},{&quot;dp_code&quot;:&quot;AMSE&quot;,&quot;dp_college&quot;:&quot;\uacf5\uacfc\ub300\ud559&quot;,&quot;dp_name&quot;:&quot;\uc2e0\uc18c\uc7ac\uacf5\ud559\ubd80&quot;},{&quot;dp_code&quot;:&quot;ARCH&quot;,&quot;dp_college&quot;:&quot;\uacf5\uacfc\ub300\ud559&quot;,&quot;dp_name&quot;:&quot;\uac74\ucd95\ud559\uacfc&quot;},{&quot;dp_code&quot;:&quot;ARDE&quot;,&quot;dp_college&quot;:&quot;\ub514\uc790\uc778\uc870\ud615\ud559\ubd80&quot;,&quot;dp_name&quot;:&quot;\ub514\uc790\uc778\uc870\ud615\ud559\ubd80&quot;},{&quot;dp_code&quot;:&quot;BMPH&quot;,&quot;dp_college&quot;:&quot;\uc774\uacfc\ub300\ud559&quot;,&quot;dp_name&quot;:&quot;\uc0dd\ubb3c\ubc0f\uc758\ud559\ubb3c\ub9ac\uc5f0\uacc4\uc804\uacf5&quot;},{&quot;dp_code&quot;:&quot;BNCS&quot;,&quot;dp_college&quot;:&quot;\uc815\ubcf4\ud1b5\uc2e0\ub300\ud559&quot;,&quot;dp_name&quot;:&quot;\ub1cc\ubc0f\uc778\uc9c0\uacfc\ud559\uc735\ud569\uc804\uacf5&quot;},{&quot;dp_code&quot;:&quot;BUSS&quot;,&quot;dp_college&quot;:&quot;\uacbd\uc601\ub300\ud559&quot;,&quot;dp_name&quot;:&quot;\uacbd\uc601\ud559\uacfc&quot;},{&quot;dp_code&quot;:&quot;CCST&quot;,&quot;dp_college&quot;:&quot;\uc0dd\uba85\uacfc\ud559\ub300\ud559&quot;,&quot;dp_name&quot;:&quot;\uae30\ud6c4\ubcc0\ud654\uc735\ud569\uc804\uacf5&quot;},{&quot;dp_code&quot;:&quot;CHBE&quot;,&quot;dp_college&quot;:&quot;\uacf5\uacfc\ub300\ud559&quot;,&quot;dp_name&quot;:&quot;\ud654\uacf5\uc0dd\uba85\uacf5\ud559\uacfc&quot;},{&quot;dp_code&quot;:&quot;CHEM&quot;,&quot;dp_college&quot;:&quot;\uc774\uacfc\ub300\ud559&quot;,&quot;dp_name&quot;:&quot;\ud654\ud559\uacfc&quot;},{&quot;dp_code&quot;:&quot;CHIN&quot;,&quot;dp_college&quot;:&quot;\ubb38\uacfc\ub300\ud559&quot;,&quot;dp_name&quot;:&quot;\uc911\uc5b4\uc911\ubb38\ud559\uacfc&quot;},{&quot;dp_code&quot;:&quot;CNCE&quot;,&quot;dp_college&quot;:&quot;\uc815\ubcf4\ud1b5\uc2e0\ub300\ud559&quot;,&quot;dp_name&quot;:&quot;\ucef4\ud4e8\ud130\u318d\ud1b5\uc2e0\uacf5\ud559\ubd80&quot;},{&quot;dp_code&quot;:&quot;COMP&quot;,&quot;dp_college&quot;:&quot;\uc0ac\ubc94\ub300\ud559&quot;,&quot;dp_name&quot;:&quot;\ucef4\ud4e8\ud130\uad50\uc721\uacfc&quot;},{&quot;dp_code&quot;:&quot;COSE&quot;,&quot;dp_college&quot;:&quot;\uc815\ubcf4\ub300\ud559&quot;,&quot;dp_name&quot;:&quot;\ucef4\ud4e8\ud130\ud559\uacfc&quot;},{&quot;dp_code&quot;:&quot;CRPT&quot;,&quot;dp_college&quot;:&quot;\uc774\uacfc\ub300\ud559&quot;,&quot;dp_name&quot;:&quot;\uc554\ud638\ud559\uc5f0\uacc4\uc804\uacf5&quot;},{&quot;dp_code&quot;:&quot;CYDF&quot;,&quot;dp_college&quot;:&quot;\uc815\ubcf4\ub300\ud559&quot;,&quot;dp_name&quot;:&quot;\uc0ac\uc774\ubc84\uad6d\ubc29\ud559\uacfc&quot;},{&quot;dp_code&quot;:&quot;DISS&quot;,&quot;dp_college&quot;:&quot;\uad6d\uc81c\ud559\ubd80&quot;,&quot;dp_name&quot;:&quot;\uad6d\uc81c\ud559\ubd80&quot;},{&quot;dp_code&quot;:&quot;EAES&quot;,&quot;dp_college&quot;:&quot;\uc774\uacfc\ub300\ud559&quot;,&quot;dp_name&quot;:&quot;\uc9c0\uad6c\ud658\uacbd\uacfc\ud559\uacfc&quot;},{&quot;dp_code&quot;:&quot;ECON&quot;,&quot;dp_college&quot;:&quot;\uc815\uacbd\ub300\ud559&quot;,&quot;dp_name&quot;:&quot;\uacbd\uc81c\ud559\uacfc&quot;},{&quot;dp_code&quot;:&quot;EDUC&quot;,&quot;dp_college&quot;:&quot;\uc0ac\ubc94\ub300\ud559&quot;,&quot;dp_name&quot;:&quot;\uad50\uc721\ud559\uacfc&quot;},{&quot;dp_code&quot;:&quot;EGRN&quot;,&quot;dp_college&quot;:&quot;\uacf5\uacfc\ub300\ud559&quot;,&quot;dp_name&quot;:&quot;\uacf5\uacfc\ub300\ud559&quot;},{&quot;dp_code&quot;:&quot;ELED&quot;,&quot;dp_college&quot;:&quot;\uc0ac\ubc94\ub300\ud559&quot;,&quot;dp_name&quot;:&quot;\uc601\uc5b4\uad50\uc721\uacfc&quot;},{&quot;dp_code&quot;:&quot;ENGL&quot;,&quot;dp_college&quot;:&quot;\ubb38\uacfc\ub300\ud559&quot;,&quot;dp_name&quot;:&quot;\uc601\uc5b4\uc601\ubb38\ud559\uacfc&quot;},{&quot;dp_code&quot;:&quot;FADM&quot;,&quot;dp_college&quot;:&quot;\uc0ac\ubc94\ub300\ud559&quot;,&quot;dp_name&quot;:&quot;\ud328\uc158\ub514\uc790\uc778\ubc0f\uba38\ucc9c\ub2e4\uc774\uc9d5\uc5f0\uacc4\uc804\uacf5&quot;},{&quot;dp_code&quot;:&quot;FNEG&quot;,&quot;dp_college&quot;:&quot;\uc815\uacbd\ub300\ud559&quot;,&quot;dp_name&quot;:&quot;\uae08\uc735\uacf5\ud559\uc5f0\uacc4\uc804\uacf5&quot;},{&quot;dp_code&quot;:&quot;FRAN&quot;,&quot;dp_college&quot;:&quot;\ubb38\uacfc\ub300\ud559&quot;,&quot;dp_name&quot;:&quot;\ubd88\uc5b4\ubd88\ubb38\ud559\uacfc&quot;},{&quot;dp_code&quot;:&quot;GECE&quot;,&quot;dp_college&quot;:&quot;\uad50\uc591\uad50\uc721\uc6d0&quot;,&quot;dp_name&quot;:&quot;\uad50\uc591\uad50\uc721\uc6d0&quot;},{&quot;dp_code&quot;:&quot;GEFC&quot;,&quot;dp_college&quot;:&quot;\uad50\uc591\uad50\uc721\uc6d0&quot;,&quot;dp_name&quot;:&quot;\uad50\uc591\uad50\uc721\uc6d0&quot;},{&quot;dp_code&quot;:&quot;GEFS&quot;,&quot;dp_college&quot;:&quot;\uad50\uc591\uad50\uc721\uc6d0&quot;,&quot;dp_name&quot;:&quot;\uc2e0\uc785\uc0dd\uac15\uc88c&quot;},{&quot;dp_code&quot;:&quot;GEHI&quot;,&quot;dp_college&quot;:&quot;\uad50\uc591\uad50\uc721\uc6d0&quot;,&quot;dp_name&quot;:&quot;\uad50\uc591\uad50\uc721\uc6d0&quot;},{&quot;dp_code&quot;:&quot;GEKS&quot;,&quot;dp_college&quot;:&quot;\uad50\uc591\uad50\uc721\uc6d0&quot;,&quot;dp_name&quot;:&quot;\uad50\uc591\uad50\uc721\uc6d0&quot;},{&quot;dp_code&quot;:&quot;GELA&quot;,&quot;dp_college&quot;:&quot;\uad50\uc591\uad50\uc721\uc6d0&quot;,&quot;dp_name&quot;:&quot;\uad50\uc591\uad50\uc721\uc6d0&quot;},{&quot;dp_code&quot;:&quot;GEOG&quot;,&quot;dp_college&quot;:&quot;\uc0ac\ubc94\ub300\ud559&quot;,&quot;dp_name&quot;:&quot;\uc9c0\ub9ac\uad50\uc721\uacfc&quot;},{&quot;dp_code&quot;:&quot;GEQR&quot;,&quot;dp_college&quot;:&quot;\uad50\uc591\uad50\uc721\uc6d0&quot;,&quot;dp_name&quot;:&quot;\uad50\uc591\uad50\uc721\uc6d0&quot;},{&quot;dp_code&quot;:&quot;GERM&quot;,&quot;dp_college&quot;:&quot;\ubb38\uacfc\ub300\ud559&quot;,&quot;dp_name&quot;:&quot;\ub3c5\uc5b4\ub3c5\ubb38\ud559\uacfc&quot;},{&quot;dp_code&quot;:&quot;GESO&quot;,&quot;dp_college&quot;:&quot;\uad50\uc591\uad50\uc721\uc6d0&quot;,&quot;dp_name&quot;:&quot;\uad50\uc591\uad50\uc721\uc6d0&quot;},{&quot;dp_code&quot;:&quot;GEST&quot;,&quot;dp_college&quot;:&quot;\uad50\uc591\uad50\uc721\uc6d0&quot;,&quot;dp_name&quot;:&quot;\uad50\uc591\uad50\uc721\uc6d0&quot;},{&quot;dp_code&quot;:&quot;GETE&quot;,&quot;dp_college&quot;:&quot;\uad50\uc591\uad50\uc721\uc6d0&quot;,&quot;dp_name&quot;:&quot;\uad50\uc591\uad50\uc721\uc6d0&quot;},{&quot;dp_code&quot;:&quot;HANM&quot;,&quot;dp_college&quot;:&quot;\ubb38\uacfc\ub300\ud559&quot;,&quot;dp_name&quot;:&quot;\ud55c\ubb38\ud559\uacfc&quot;},{&quot;dp_code&quot;:&quot;HEED&quot;,&quot;dp_college&quot;:&quot;\uc0ac\ubc94\ub300\ud559&quot;,&quot;dp_name&quot;:&quot;\uac00\uc815\uad50\uc721\uacfc&quot;},{&quot;dp_code&quot;:&quot;HISE&quot;,&quot;dp_college&quot;:&quot;\uc0ac\ubc94\ub300\ud559&quot;,&quot;dp_name&quot;:&quot;\uc5ed\uc0ac\uad50\uc721\uacfc&quot;},{&quot;dp_code&quot;:&quot;HOEW&quot;,&quot;dp_college&quot;:&quot;\ubb38\uacfc\ub300\ud559&quot;,&quot;dp_name&quot;:&quot;\uc0ac\ud559\uacfc&quot;},{&quot;dp_code&quot;:&quot;HOKA&quot;,&quot;dp_college&quot;:&quot;\ubb38\uacfc\ub300\ud559&quot;,&quot;dp_name&quot;:&quot;\ud55c\uad6d\uc0ac\ud559\uacfc&quot;},{&quot;dp_code&quot;:&quot;IFLS&quot;,&quot;dp_college&quot;:&quot;\uad6d\uc81c\uc5b4\ud559\uc6d0&quot;,&quot;dp_name&quot;:&quot;\uad6d\uc81c\uc5b4\ud559\uc6d0&quot;},{&quot;dp_code&quot;:&quot;IMEN&quot;,&quot;dp_college&quot;:&quot;\uacf5\uacfc\ub300\ud559&quot;,&quot;dp_name&quot;:&quot;\uc0b0\uc5c5\uacbd\uc601\uacf5\ud559\uacfc&quot;},{&quot;dp_code&quot;:&quot;JAPN&quot;,&quot;dp_college&quot;:&quot;\ubb38\uacfc\ub300\ud559&quot;,&quot;dp_name&quot;:&quot;\uc77c\uc5b4\uc77c\ubb38\ud559\uacfc&quot;},{&quot;dp_code&quot;:&quot;JMCO&quot;,&quot;dp_college&quot;:&quot;\ubbf8\ub514\uc5b4\ud559\ubd80&quot;,&quot;dp_name&quot;:&quot;\ubbf8\ub514\uc5b4\ud559\ubd80&quot;},{&quot;dp_code&quot;:&quot;JURA&quot;,&quot;dp_college&quot;:&quot;\ubc95\uacfc\ub300\ud559&quot;,&quot;dp_name&quot;:&quot;\ubc95\ud559\uacfc&quot;},{&quot;dp_code&quot;:&quot;KECE&quot;,&quot;dp_college&quot;:&quot;\uacf5\uacfc\ub300\ud559&quot;,&quot;dp_name&quot;:&quot;\uc804\uae30\uc804\uc790\uc804\ud30c\uacf5\ud559\ubd80&quot;},{&quot;dp_code&quot;:&quot;KEEE&quot;,&quot;dp_college&quot;:&quot;\uacf5\uacfc\ub300\ud559&quot;,&quot;dp_name&quot;:&quot;\uc804\uae30\uc804\uc790\uc804\ud30c\uacf5\ud559\ubd80&quot;},{&quot;dp_code&quot;:&quot;KHBE&quot;,&quot;dp_college&quot;:&quot;\ubcf4\uac74\uacfc\ud559\ub300\ud559&quot;,&quot;dp_name&quot;:&quot;\uc0dd\uccb4\uc758\uacf5\ud559\uacfc&quot;},{&quot;dp_code&quot;:&quot;KHCP&quot;,&quot;dp_college&quot;:&quot;\ubcf4\uac74\uacfc\ud559\ub300\ud559&quot;,&quot;dp_name&quot;:&quot;\uc784\uc0c1\ubcd1\ub9ac\ud559\uacfc&quot;},{&quot;dp_code&quot;:&quot;KHDL&quot;,&quot;dp_college&quot;:&quot;\ubcf4\uac74\uacfc\ud559\ub300\ud559&quot;,&quot;dp_name&quot;:&quot;\uce58\uae30\uacf5\ud559\uacfc&quot;},{&quot;dp_code&quot;:&quot;KHEH&quot;,&quot;dp_college&quot;:&quot;\ubcf4\uac74\uacfc\ud559\ub300\ud559&quot;,&quot;dp_name&quot;:&quot;\ud658\uacbd\ubcf4\uac74\ud559\uacfc&quot;},{&quot;dp_code&quot;:&quot;KHFN&quot;,&quot;dp_college&quot;:&quot;\ubcf4\uac74\uacfc\ud559\ub300\ud559&quot;,&quot;dp_name&quot;:&quot;\uc2dd\ud488\uc601\uc591\ud559\uacfc&quot;},{&quot;dp_code&quot;:&quot;KHHM&quot;,&quot;dp_college&quot;:&quot;\ubcf4\uac74\uacfc\ud559\ub300\ud559&quot;,&quot;dp_name&quot;:&quot;\ubcf4\uac74\ud589\uc815\ud559\uacfc&quot;},{&quot;dp_code&quot;:&quot;KHPH&quot;,&quot;dp_college&quot;:&quot;\ubcf4\uac74\uacfc\ud559\ub300\ud559&quot;,&quot;dp_name&quot;:&quot;\ubb3c\ub9ac\uce58\ub8cc\ud559\uacfc&quot;},{&quot;dp_code&quot;:&quot;KHRS&quot;,&quot;dp_college&quot;:&quot;\ubcf4\uac74\uacfc\ud559\ub300\ud559&quot;,&quot;dp_name&quot;:&quot;\ubc29\uc0ac\uc120\ud559\uacfc&quot;},{&quot;dp_code&quot;:&quot;KHSU&quot;,&quot;dp_college&quot;:&quot;\ubcf4\uac74\uacfc\ud559\ub300\ud559&quot;,&quot;dp_name&quot;:&quot;\ubcf4\uac74\uacfc\ud559\ubd80&quot;},{&quot;dp_code&quot;:&quot;KLLE&quot;,&quot;dp_college&quot;:&quot;\uc0ac\ubc94\ub300\ud559&quot;,&quot;dp_name&quot;:&quot;\uad6d\uc5b4\uad50\uc721\uacfc&quot;},{&quot;dp_code&quot;:&quot;KORE&quot;,&quot;dp_college&quot;:&quot;\ubb38\uacfc\ub300\ud559&quot;,&quot;dp_name&quot;:&quot;\uad6d\uc5b4\uad6d\ubb38\ud559\uacfc&quot;},{&quot;dp_code&quot;:&quot;LALW&quot;,&quot;dp_college&quot;:&quot;\ubb38\uacfc\ub300\ud559&quot;,&quot;dp_name&quot;:&quot;\uc778\ubb38\ud559\uacfc\ubc95\uc5f0\uacc4\uc804\uacf5&quot;},{&quot;dp_code&quot;:&quot;LESE&quot;,&quot;dp_college&quot;:&quot;\uc0dd\uba85\uacfc\ud559\ub300\ud559&quot;,&quot;dp_name&quot;:&quot;\uc2dd\ud488\uc790\uc6d0\uacbd\uc81c\ud559\uacfc&quot;},{&quot;dp_code&quot;:&quot;LESF&quot;,&quot;dp_college&quot;:&quot;\uc0dd\uba85\uacfc\ud559\ub300\ud559&quot;,&quot;dp_name&quot;:&quot;\ud658\uacbd\ub514\uc790\uc778\uc5f0\uacc4\uc804\uacf5&quot;},{&quot;dp_code&quot;:&quot;LIBS&quot;,&quot;dp_college&quot;:&quot;\uc0dd\uba85\uacfc\ud559\ub300\ud559&quot;,&quot;dp_name&quot;:&quot;\uc0dd\uba85\uacfc\ud559\ubd80&quot;},{&quot;dp_code&quot;:&quot;LIBT&quot;,&quot;dp_college&quot;:&quot;\uc0dd\uba85\uacfc\ud559\ub300\ud559&quot;,&quot;dp_name&quot;:&quot;\uc0dd\uba85\uacf5\ud559\ubd80&quot;},{&quot;dp_code&quot;:&quot;LIET&quot;,&quot;dp_college&quot;:&quot;\uc0dd\uba85\uacfc\ud559\ub300\ud559&quot;,&quot;dp_name&quot;:&quot;\ud658\uacbd\uc0dd\ud0dc\uacf5\ud559\ubd80&quot;},{&quot;dp_code&quot;:&quot;LIFS&quot;,&quot;dp_college&quot;:&quot;\uc0dd\uba85\uacfc\ud559\ub300\ud559&quot;,&quot;dp_name&quot;:&quot;\uc2dd\ud488\uacf5\ud559\ubd80&quot;},{&quot;dp_code&quot;:&quot;LING&quot;,&quot;dp_college&quot;:&quot;\ubb38\uacfc\ub300\ud559&quot;,&quot;dp_name&quot;:&quot;\uc5b8\uc5b4\ud559\uacfc&quot;},{&quot;dp_code&quot;:&quot;LIST&quot;,&quot;dp_college&quot;:&quot;\uc0dd\uba85\uacfc\ud559\ub300\ud559&quot;,&quot;dp_name&quot;:&quot;\uc0dd\uba85\uacfc\ud559\ub300\ud559&quot;},{&quot;dp_code&quot;:&quot;MATE&quot;,&quot;dp_college&quot;:&quot;\uc0ac\ubc94\ub300\ud559&quot;,&quot;dp_name&quot;:&quot;\uc218\ud559\uad50\uc721\uacfc&quot;},{&quot;dp_code&quot;:&quot;MATH&quot;,&quot;dp_college&quot;:&quot;\uc774\uacfc\ub300\ud559&quot;,&quot;dp_name&quot;:&quot;\uc218\ud559\uacfc&quot;},{&quot;dp_code&quot;:&quot;MECH&quot;,&quot;dp_college&quot;:&quot;\uacf5\uacfc\ub300\ud559&quot;,&quot;dp_name&quot;:&quot;\uae30\uacc4\uacf5\ud559\ubd80&quot;},{&quot;dp_code&quot;:&quot;NRSG&quot;,&quot;dp_college&quot;:&quot;\uac04\ud638\ub300\ud559&quot;,&quot;dp_name&quot;:&quot;\uac04\ud638\ud559\uacfc&quot;},{&quot;dp_code&quot;:&quot;PAPP&quot;,&quot;dp_college&quot;:&quot;\uc815\uacbd\ub300\ud559&quot;,&quot;dp_name&quot;:&quot;\ud589\uc815\ud559\uacfc&quot;},{&quot;dp_code&quot;:&quot;PHEK&quot;,&quot;dp_college&quot;:&quot;\uc0ac\ubc94\ub300\ud559&quot;,&quot;dp_name&quot;:&quot;\uccb4\uc721\uad50\uc721\uacfc&quot;},{&quot;dp_code&quot;:&quot;PHIL&quot;,&quot;dp_college&quot;:&quot;\ubb38\uacfc\ub300\ud559&quot;,&quot;dp_name&quot;:&quot;\ucca0\ud559\uacfc&quot;},{&quot;dp_code&quot;:&quot;PHYS&quot;,&quot;dp_college&quot;:&quot;\uc774\uacfc\ub300\ud559&quot;,&quot;dp_name&quot;:&quot;\ubb3c\ub9ac\ud559\uacfc&quot;},{&quot;dp_code&quot;:&quot;PMED&quot;,&quot;dp_college&quot;:&quot;\uc758\uacfc\ub300\ud559&quot;,&quot;dp_name&quot;:&quot;\uc758\uc608\uacfc&quot;},{&quot;dp_code&quot;:&quot;PMP&quot;,&quot;dp_college&quot;:&quot;\uc0dd\uba85\uacfc\ud559\ub300\ud559&quot;,&quot;dp_name&quot;:&quot;\uc758\uacfc\ud559\uc735\ud569\uc804\uacf5&quot;},{&quot;dp_code&quot;:&quot;POLI&quot;,&quot;dp_college&quot;:&quot;\uc815\uacbd\ub300\ud559&quot;,&quot;dp_name&quot;:&quot;\uc815\uce58\uc678\uad50\ud559\uacfc&quot;},{&quot;dp_code&quot;:&quot;PREL&quot;,&quot;dp_college&quot;:&quot;\uc815\uacbd\ub300\ud559&quot;,&quot;dp_name&quot;:&quot;PEL\uc5f0\uacc4\uc804\uacf5&quot;},{&quot;dp_code&quot;:&quot;PSYC&quot;,&quot;dp_college&quot;:&quot;\ubb38\uacfc\ub300\ud559&quot;,&quot;dp_name&quot;:&quot;\uc2ec\ub9ac\ud559\uacfc&quot;},{&quot;dp_code&quot;:&quot;RUSS&quot;,&quot;dp_college&quot;:&quot;\ubb38\uacfc\ub300\ud559&quot;,&quot;dp_name&quot;:&quot;\ub178\uc5b4\ub178\ubb38\ud559\uacfc&quot;},{&quot;dp_code&quot;:&quot;SAEK&quot;,&quot;dp_college&quot;:&quot;\uc0ac\ubc94\ub300\ud559&quot;,&quot;dp_name&quot;:&quot;\uccb4\uc721\uad50\uc721\uacfc&quot;},{&quot;dp_code&quot;:&quot;SEDU&quot;,&quot;dp_college&quot;:&quot;\uc0ac\ubc94\ub300\ud559&quot;,&quot;dp_name&quot;:&quot;\uc0ac\ubc94\ub300\ud559&quot;},{&quot;dp_code&quot;:&quot;SOCI&quot;,&quot;dp_college&quot;:&quot;\ubb38\uacfc\ub300\ud559&quot;,&quot;dp_name&quot;:&quot;\uc0ac\ud68c\ud559\uacfc&quot;},{&quot;dp_code&quot;:&quot;SPAN&quot;,&quot;dp_college&quot;:&quot;\ubb38\uacfc\ub300\ud559&quot;,&quot;dp_name&quot;:&quot;\uc11c\uc5b4\uc11c\ubb38\ud559\uacfc&quot;},{&quot;dp_code&quot;:&quot;SPGE&quot;,&quot;dp_college&quot;:&quot;\uad50\uc591\uad50\uc721\uc6d0&quot;,&quot;dp_name&quot;:&quot;\uad50\uc591\uad50\uc721\uc6d0&quot;},{&quot;dp_code&quot;:&quot;STAT&quot;,&quot;dp_college&quot;:&quot;\uc815\uacbd\ub300\ud559&quot;,&quot;dp_name&quot;:&quot;\ud1b5\uacc4\ud559\uacfc&quot;},{&quot;dp_code&quot;:&quot;STEP&quot;,&quot;dp_college&quot;:&quot;\uc815\ubcf4\ub300\ud559&quot;,&quot;dp_name&quot;:&quot;\uc18c\ud504\ud2b8\uc6e8\uc5b4\uae30\uc220\uacfc\uc0b0\uc5c5\uc735\ud569\uc804\uacf5&quot;},{&quot;dp_code&quot;:&quot;STSR&quot;,&quot;dp_college&quot;:&quot;\ubb38\uacfc\ub300\ud559&quot;,&quot;dp_name&quot;:&quot;\uacfc\ud559\uae30\uc220\ud559\uc5f0\uacc4\uc804\uacf5&quot;}]' />
+<input type='hidden' id='geList' value='[{&quot;geCode&quot;:&quot;GEFC&quot;,&quot;geType&quot;:&quot;\uc138\uacc4\uc758\ubb38\ud654&quot;},{&quot;geCode&quot;:&quot;GEHI&quot;,&quot;geType&quot;:&quot;\uc5ed\uc0ac\uc758\ud0d0\uad6c&quot;},{&quot;geCode&quot;:&quot;GELA&quot;,&quot;geType&quot;:&quot;\ubb38\ud559\uacfc\uc608\uc220&quot;},{&quot;geCode&quot;:&quot;GECE&quot;,&quot;geType&quot;:&quot;\uc724\ub9ac\uc640\uc0ac\uc0c1&quot;},{&quot;geCode&quot;:&quot;GESO&quot;,&quot;geType&quot;:&quot;\uc0ac\ud68c\uc758\uc774\ud574&quot;},{&quot;geCode&quot;:&quot;GEST&quot;,&quot;geType&quot;:&quot;\uacfc\ud559\uacfc\uae30\uc220&quot;},{&quot;geCode&quot;:&quot;GEQR&quot;,&quot;geType&quot;:&quot;\uc815\ub7c9\uc801\uc0ac\uace0&quot;}]' />
+<div id='searchWrap' class="box">
+	<div class="title"><span>고급검색</span></div>
+	<div class="content">
+		<div class="row">
+			<div class="e">
+				<div class="left">년도</div>
+				<div class="right">
+					<select name='lec_year'>
+						<option value='2015'>2015년</option><option value='2014'>2014년</option><option value='2013'>2013년</option><option value='2012'>2012년</option><option value='2011'>2011년</option><option value='2010'>2010년</option><option value='2009'>2009년</option>					</select>
+				</div>
+			</div>
+			<div class="e">
+				<div class="left">학기</div>
+				<div class="right">
+					<select name='lec_term'>
+						<option value=''>전체</option>
+						<option value='1R'>1학기</option>
+						<option value='2R'>2학기</option>
+					</select>
+				</div>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="e">
+				<div class="left">구분</div>
+				<div class="right">
+					<select name='lec_type' onchange='lecTypeChange();'>
+						<option value=''>전체</option>
+						<option value='전공'>전공</option>
+						<option value='핵심교양'>핵심교양</option>
+						<option value='선택교양'>선택교양</option>
+					</select>
+				</div>
+			</div>
+			<div class="e hide">
+				<div class="left">소분류</div>
+				<div class="right">
+					<select name='lec_type2' onchange='lecType2Change();'>
+						<option value=''>전체</option>
+					</select>
+				</div>
+			</div>
+			<div class="e last hide">
+				<div class="left">학과</div>
+				<div class="right">
+					<select name='dp_code'>
+						<option value=''>전체</option>
+					</select>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="e">
+				<div class="left">필터링</div>
+				<div class="right">
+					<select name='lec_evalCnt'>
+						<option value=''>전체보기</option>
+						<option value='3'>강의평 3개 이상</option>
+						<option value='5'>강의평 5개 이상</option>
+						<option value='10'>강의평 10개 이상</option>
+					</select>
+				</div>
+			</div>
+			<div class="e">
+				<div class="left">정렬기준</div>
+				<div class="right">
+					<select name='order_by' onchange='orderByChange();'>
+						<option value=''>없음</option>
+						<option value='lec_name'>강의명</option>
+						<option value='lec_code'>학수번호</option>
+						<option value='lec_profName'>교수명</option>
+						<option value='lec_evalCnt'>평가수</option>
+						<option value='lec_avgTotal'>총평</option>
+						<option value='lec_avgDifficulty'>난이도</option>
+						<option value='lec_avgStudyTime'>학습량</option>
+						<option value='lec_avgAttendance'>출첵</option>
+						<option value='lec_avgGrade'>학점</option>
+						<option value='lec_avgAchievement'>성취감</option>
+					</select>
+				</div>
+			</div>
+			<div class="e last hide">
+				<div class="left">순서</div>
+				<div class="right">
+					<select name='order'>
+						<option value='ASC'>오름차순</option>
+						<option value='DESC'>내림차순</option>
+					</select>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="e">
+				<div class="left">총평</div>
+				<div class="right">
+					<input type='hidden' name='sliderTotalMin' value='0' />
+					<input type='hidden' name='sliderTotalMax' value='5' />
+					<div class="min">0</div>
+					<div class="max">5</div>
+					<div class="sliderWrap"><div id="sliderTotal"></div></div>
+				</div>
+			</div>
+			<div class="e">
+				<div class="left">난이도</div>
+				<div class="right">
+					<input type='hidden' name='sliderDifficultyMin' value='0' />
+					<input type='hidden' name='sliderDifficultyMax' value='5' />
+					<div class="min">0</div>
+					<div class="max">5</div>
+					<div class="sliderWrap"><div id="sliderDifficulty"></div></div>
+				</div>
+			</div>
+			<div class="e last">
+				<div class="left">학습량</div>
+				<div class="right">
+					<input type='hidden' name='sliderStudyTimeMin' value='0' />
+					<input type='hidden' name='sliderStudyTimeMax' value='5' />
+					<div class="min">0</div>
+					<div class="max">5</div>
+					<div class="sliderWrap"><div id="sliderStudyTime"></div></div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="e">
+				<div class="left">출첵</div>
+				<div class="right">
+					<input type='hidden' name='sliderAttendanceMin' value='0' />
+					<input type='hidden' name='sliderAttendanceMax' value='5' />
+					<div class="min">0</div>
+					<div class="max">5</div>
+					<div class="sliderWrap"><div id="sliderAttendance"></div></div>
+				</div>
+			</div>
+			<div class="e">
+				<div class="left">학점</div>
+				<div class="right">
+					<input type='hidden' name='sliderGradeMin' value='0' />
+					<input type='hidden' name='sliderGradeMax' value='5' />
+					<div class="min">0</div>
+					<div class="max">5</div>
+					<div class="sliderWrap"><div id="sliderGrade"></div></div>
+				</div>
+			</div>
+			<div class="e last">
+				<div class="left">성취감</div>
+				<div class="right">
+					<input type='hidden' name='sliderAchievementMin' value='0' />
+					<input type='hidden' name='sliderAchievementMax' value='5' />
+					<div class="min">0</div>
+					<div class="max">5</div>
+					<div class="sliderWrap"><div id="sliderAchievement"></div></div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="e last">
+				<div class="left">검색어</div>
+				<div class="right">
+					<input type='text' name='keyword' onkeydown='if (event.keyCode==13) doSearch(1);' placeholder='강의명, 학수번호, 교수명을 입력해주세요.' />
+					<button type='button' onclick='doSearch(1);'>검색</button>
+				</div>
+			</div>
+		</div>
+		<div class='descWrap'>* 리뉴얼 이전의 강의평은 총평, 출첵, 성취감으로만 필터링 할 수 있습니다.</div>
+	</div>
+</div>
+<div id='resultWrap' class='box'>
+	<div class="title"><span>검색결과</span></div>
+	<div class="content">
+		<div class="listWrap" id='resultListWrap'>
+			<div class="noResult">강의를 검색해주세요.</div>
+		</div>
+		
+	</div>
+</div>
+	</div><!-- main닫기 -->
+	<div class="sideContent">
+				<div class='myInfo box'>
+			<div class='name_wrap'>
+				<div class='name'>황학</div>
+				<div class='menu'></div>
+			</div>
+			<div class='evalInfo'>
+				<div class='row'>
+					<div class='left'>Point</div>
+					<div class='right'><span class='bold'>0 / 0</span> 점</div>
+				</div>
+				<div class='row2'>
+					(현재/누적)
+				</div>
+				<div class='row cursor' onclick="location.href=yh_path+'/myLectureEval.php'">
+					<div class='left'>내 강의평</div>
+					<div class='right'><span class='bold'>0 / 12</span> 건</div>
+				</div>
+				<div class='row2'>
+					(이번학기/전체)
+				</div>
+			</div>
+			<div class="btnWrap">
+									<div class="permBtn">
+						<div class="bg" style='width:100%;'></div>
+						<div class="text">열람권한있음</div>
+					</div>
+								<button type='button' class='evalBtn' onclick="location.href=yh_path+'/lectureEval.php'">평가하러가기</button>
+			</div>
+		</div>
+				<div class='guide box'>
+			<div class="left" onclick="location.href=yh_path+'/guide.php'">사용가이드</div>
+			<div class="right" onclick="location.href=yh_path+'/returnInfo.php'">복학생안내</div>
+		</div>
+		<div class='facebook box'>
+			<div class='title'>페이스북</div>
+			<div class='content'>
+				<iframe src="//www.facebook.com/plugins/likebox.php?href=https%3A%2F%2Fwww.facebook.com%2Fkuklue&amp;width=208&amp;height=558&amp;colorscheme=light&amp;show_faces=true&amp;header=false&amp;stream=true&amp;show_border=false&amp;appId=115288441967877" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:208px; height:558px;" allowTransparency="true"></iframe>
+			</div>
+		</div>
+		<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+		<!-- side_content -->
+		<ins class="adsbygoogle"
+			 style="display:inline-block;width:250px;height:300px"
+			 data-ad-client="ca-pub-3217618135707969"
+			 data-ad-slot="4035582137"></ins>
+		<script>
+		(adsbygoogle = window.adsbygoogle || []).push({});
+		</script>
+	</div>
+</div>
+<div id='tail'>
+	<div class="inner">
+		<div class="copyright">Copyright &copy; 2015 <a href='http://kweb.korea.ac.kr/' target='_blank' class='orange'>KLUE</a> All rights reserved.</div>
+	</div>
+</div>
