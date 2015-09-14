@@ -1,6 +1,17 @@
 class DeviseCreateUsers < ActiveRecord::Migration
   def change
     create_table(:users) do |t|
+      ## 페이스북 필요
+      t.string :name,               null: false, default: ""
+      t.string :uid,                null: false, default: ""
+      t.string :provider,           null: false, default: ""
+
+      ## 기본정보
+      t.string :lastname
+      t.string :firstname
+      t.string :image
+      t.string :gender
+      
       ## Database authenticatable
       t.string :email,              null: false, default: ""
       t.string :encrypted_password, null: false, default: ""

@@ -1,5 +1,8 @@
 class HomeController < ApplicationController
     def index
+        if user_signed_in?
+            redirect_to "/home/main"
+        end
     end
     def main
         @hairshop=Hairshop.all
