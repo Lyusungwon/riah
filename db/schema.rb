@@ -40,6 +40,7 @@ ActiveRecord::Schema.define(version: 20150914042448) do
     t.string   "firstname"
     t.string   "image"
     t.string   "gender"
+    t.string   "nickname"
     t.string   "email",                  default: "", null: false
     t.string   "encrypted_password",     default: "", null: false
     t.string   "reset_password_token"
