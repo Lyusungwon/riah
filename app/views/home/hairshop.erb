@@ -89,15 +89,83 @@
 <!--후기 나열-->
 <div id='lectureEvalList'>
     <%@hairshop.evals.each do |h|%>
-        <%=h.name%>:
-        <%=h.content%>
+        <p class="bg-danger"><%=h.name%></p>:
+        <img style="width:60px;height=80px" src="<%=h.image%>"/>
+        <div class="stars">
+	        <div>총평
+	        <% 1.upto(5) do |i|%>
+		        <span class="star-rating small">	
+		        	<%if i==h.rating_a%>
+		        	<i class="on"></i>
+		        	<%else%>
+		        	<i></i>
+		        	<%end%>
+		        </span>
+		    </div>
+		    <div>가격
+		    <% 1.upto(5) do |i|%>    
+		        <span class="star-rating small">	
+		        	<%if i==h.rating_c%>
+		        	<i class="on"></i>
+		        	<%else%>
+		        	<i></i>
+		        	<%end%>
+		        </span>
+		    <%end%>
+		    </div>
+		    <div>실력
+		    <% 1.upto(5) do |i|%>    
+		        <span class="star-rating small">	
+		        	<%if i==h.rating_s%>
+		        	<i class="on"></i>
+		        	<%else%>
+		        	<i></i>
+		        	<%end%>
+		        </span>
+		    <%end%>
+		    </div>
+		    <div>시설.서비스
+		    <% 1.upto(5) do |i|%>
+		        <span class="star-rating small">	
+		        	<%if i==h.rating_f%>
+		        	<i class="on"></i>
+		        	<%else%>
+		        	<i></i>
+		        	<%end%>
+		        </span>
+	        <%end%>
+	        </div>
+        </div>
+        <p class="bg-info"><%=h.content%></p>
+        
+        <a role="button" class="btn btn-primary" id="modify">수정</a>
+        <a rold="button" class="btn btn-primary" id="delete">삭제</a>
+        <!--비번을 입력해야 통과시켜준다---->
+        <script>
+        	$(document).ready(function{
+        		$('#delete').click(function{
+        			var pass = prompt("비밀번호를 입력하여주십시오");
+        			if(pass==<%=h.password%>){
+        				$('#delete').setAttribute("href","/home/delete/<%=h.id%>");//링크로 만들어주기
+        			}
+        		});
+        		$('#modify').click(function{
+        			var pass = prompt("비밀번호를 입력하여주십시오");
+        			if(pass==<%=h.password%>){
+        				$('#modify').setAttribute("href","/home/update<%=h.id%>");//링크로 만들어주기
+        			}
+        		});
+        	});
+        </script>
+        <!--자바스크립트 끝-->
     <%end%>
 <!-----후기 쓰는칸---->
 
   <% if user_signed_in? %>
-              <%= form_tag '/trend/reply',method:'post', html: {:class => "form-horizontal"},multipart: true do %>
+              <%= form_tag '/trend/reply',method:'post', html: {:class => "form-horizontal"}, multipart: true do %>
               <!--<form class="form-horizontal" action="/trend/reply">-->
-              <input type="hidden" name="item_id" value="<%=@detail.id%>"> 
+              <input type="hidden" name="hairshop_id" value="<%=@hairshop.id%>">
+              <input type="hidden" name="user_id" value="<%=current_user.id%>">
                   <!--댓글 공간 시작-->
                 <fieldset>
                       <legend style="font-family: sans-serif">댓글</legend>

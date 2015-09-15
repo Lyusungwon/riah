@@ -10,6 +10,11 @@ class CreateEvals < ActiveRecord::Migration
       t.string :image
       t.string :password
       
+      t.integer :rating_a
+      t.integer :rating_c
+      t.integer :rating_s
+      t.integer :rating_f
+      
       t.timestamps null: false
     end
   end

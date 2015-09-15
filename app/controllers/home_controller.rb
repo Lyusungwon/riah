@@ -1,4 +1,5 @@
 class HomeController < ApplicationController
+    before_action :authenticate_user!, only: [:write, :delete, :update, :myeval, :myinfo]
     def index
     end
     def main
@@ -12,7 +13,8 @@ class HomeController < ApplicationController
         @hairshop=Hairshop.find(params[:id])
     end
     def write
-        eval.create(name: current_user, content: params[:content],image: params[:image_file],password: params[:password])
+        Eval.create(name: current_user.email, content: params[:content],image: params[:image_file],password: params[:password], 
+        rating_a: params[:rating_a],rating_c: params[:rating_c],rating_s: params[:rating_s],rating_f: params[:rating_f])
         redirect_to :back
     end
     def delete
@@ -21,7 +23,9 @@ class HomeController < ApplicationController
         redirect_to :back
     end
     def update
-        
+        @up=Eval.find(params[:id])
+    end
+    def modify
     end
     def myinfo
         
