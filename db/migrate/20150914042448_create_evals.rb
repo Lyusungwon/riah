@@ -5,10 +5,8 @@ class CreateEvals < ActiveRecord::Migration
       t.integer :user_id
       t.integer :hairshop_id
       
-      t.string :name
       t.text :content
       t.string :image
-      t.string :password
       
       t.integer :rating_a
       t.integer :rating_c

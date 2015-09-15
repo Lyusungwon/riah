@@ -7,10 +7,7 @@ class DeviseCreateUsers < ActiveRecord::Migration
       t.string :provider,           null: false, default: ""
 
       ## 기본정보
-      t.string :lastname
-      t.string :firstname
       t.string :image
-      t.string :gender
       t.string :nickname
       
       ## Database authenticatable

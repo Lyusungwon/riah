@@ -12,9 +12,7 @@ class User < ActiveRecord::Base
       user.email = auth.info.email
       user.password = Devise.friendly_token[0,20]
       user.name = auth.info.name   # assuming the user model has a name
-      user.lastname = auth.info.last_name  
-      user.firstname = auth.info.first_name   
-      user.gender = auth.extra.raw_info.gender   # assuming the user model has a name
+      user.nickname = auth.info.name   # assuming the user model has a name
       user.image = auth.info.image
     end
   end
@@ -27,6 +25,7 @@ class User < ActiveRecord::Base
     end
   end
 
-  has_many :evals
+    has_many :evals
+    has_many :hairshops, through: :evals
 
 end
