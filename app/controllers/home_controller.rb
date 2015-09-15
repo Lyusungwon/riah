@@ -29,6 +29,17 @@ class HomeController < ApplicationController
         @up=Eval.find(params[:id])
     end
     def modify
+        @mo=Eval.find(params[:id])
+        @mo.content=params[:content_n]
+        @mo.password=params[:password_n]
+        @mo.rating_a=params[:rating_a_n]
+        @mo.rating_s=params[:rating_s_n]
+        @mo.rating_c=params[:rating_c_n]
+        @mo.rating_f=params[:rating_f_n]
+        @mo.image=params[:image_file_n]
+        @mo.save
+        
+        redirect_to '/home/hairshop/'+ @mo.hairshop_id
     end
     def myinfo
         
