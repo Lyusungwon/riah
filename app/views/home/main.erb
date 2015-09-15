@@ -71,6 +71,7 @@
 			<% @hairshop.each do |h|%>
 				<%=h.name%><br> </br>
 				<%=h.address%>
+				<a class="btn btn-primary" href="/home/hairshop/<%=h.id%>">자세히 보기</a>
 			<% end %>
 		</div>
 	</div>

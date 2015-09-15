@@ -1,4 +1,4 @@
 class Hairshop < ActiveRecord::Base
     
-    has_many :eval
+    has_many :evals
 end

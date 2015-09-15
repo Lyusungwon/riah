@@ -14,13 +14,26 @@
 ActiveRecord::Schema.define(version: 20150914042448) do
 
   create_table "evals", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.integer  "user_id"
+    t.integer  "hairshop_id"
+    t.string   "name"
+    t.text     "content"
+    t.string   "image"
+    t.string   "password"
+    t.integer  "rating_a"
+    t.integer  "rating_c"
+    t.integer  "rating_s"
+    t.integer  "rating_f"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
   create_table "hairshops", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.string   "name"
+    t.string   "address"
+    t.string   "phonenumber"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
   create_table "users", force: :cascade do |t|
