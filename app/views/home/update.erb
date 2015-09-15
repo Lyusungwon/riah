@@ -182,4 +182,76 @@
 <div id='tail'>
 	<div class="inner">
 		<div class="copyright">Copyright &copy; 2015 <a href='http://kweb.korea.ac.kr/' target='_blank' class='orange'>KLUE</a> All rights reserved.</div>
-	
+<!--수정시작--------------------------------------------------->	
+		<%= form_tag '/home/modify',method:'post', html: {:class => "form-horizontal"}, multipart: true do %>
+            <input type="hidden" name="user_id" value="<%=@up.id%>">
+                  <!--댓글 공간 시작-->
+                <fieldset>
+                      <legend style="font-family: sans-serif">댓글</legend>
+                      <div class="form-group">
+                          <div style="margin:20px, auto">
+                          <p><%=current_user.email%></p></div>
+                       <!--댓글 내 별점 공간-->
+                      <div class="form-group" >
+                        <p>총평</p>
+                          <span class="star-rating small">
+                            <input type="radio" name="rating_a_n" value="1"><i></i>
+                            <input type="radio" name="rating_a_n" value="2"><i></i>
+                            <input type="radio" name="rating_a_n" value="3"><i></i>
+                            <input type="radio" name="rating_a_n" value="4"><i></i>
+                            <input type="radio" name="rating_a_n" value="5"><i></i>
+                          </span>
+                        <p>가격</p>
+                          <span class="star-rating small">
+                            <input type="radio" name="rating_c_n" value="1"><i></i>
+                            <input type="radio" name="rating_c_n" value="2"><i></i>
+                            <input type="radio" name="rating_c_n" value="3"><i></i>
+                            <input type="radio" name="rating_c_n" value="4"><i></i>
+                            <input type="radio" name="rating_c_n" value="5"><i></i>
+                          </span>
+                       </div>
+                      
+                       <div class="form-group">
+                        <p>실력</p>
+                          <span class="star-rating small">
+                            <input type="radio" name="rating_s_n" value="1"><i></i>
+                            <input type="radio" name="rating_s_n" value="2"><i></i>
+                            <input type="radio" name="rating_s_n" value="3"><i></i>
+                            <input type="radio" name="rating_s_n" value="4"><i></i>
+                            <input type="radio" name="rating_s_n" value="5"><i></i>
+                          </span>
+                       </div>
+                       <div class="form-group">
+                        <p>시설.서비스</p>
+                          <span class="star-rating small">
+                            <input type="radio" name="rating_f_n" value="1"><i></i>
+                            <input type="radio" name="rating_f_n" value="2"><i></i>
+                            <input type="radio" name="rating_f_n" value="3"><i></i>
+                            <input type="radio" name="rating_f_n" value="4"><i></i>
+                            <input type="radio" name="rating_f_n" value="5"><i></i>
+                          </span>
+                       </div>
+                       <!-- 댓글 텍스트 쓰는공간-->
+                        <label for="textArea" class="col-lg-2 control-label">Textarea</label>
+                        <div class="col-lg-10">
+                          <textarea class="form-control" rows="3" name="content_n"><%=@up.content%></textarea>
+                          <span style="font-family: sans-serif" class="help-block">댓글을 남겨주세요</span>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label for="exampleInputPassword1">암호</label>
+                        <input type="password" class="form-control" name="password_n" placeholder="암호">
+                      </div>
+                      <div class="form-group">
+                        <label for="exampleInputFile">이미지파일 업로드</label>
+                        <input type="file" name="image_file_n">
+                        <p class="help-block">여기에 블록레벨 도움말 예제</p>
+                      </div>
+                      <!--전송버튼-->
+                      <div class="form-group" id="submit">
+                        <div class="col-lg-8 col-lg-offset-2">
+                          <button type="submit" class="btn btn-primary">GO</button>
+                        </div>
+                      </div>
+                    </fieldset>
+                  <%end%>

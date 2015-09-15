@@ -20,6 +20,13 @@ ActiveRecord::Schema.define(version: 20150914042448) do
     t.text     "content"
     t.string   "image"
     t.string   "password"
+<<<<<<< HEAD
+    t.integer  "rating_a"
+    t.integer  "rating_c"
+    t.integer  "rating_s"
+    t.integer  "rating_f"
+=======
+>>>>>>> 2a77c1e8ac051e1269025773b5683ca976ada8a7
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
   end
