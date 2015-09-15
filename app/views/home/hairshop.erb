@@ -5,8 +5,9 @@
 			<div class="inner">
 				<div class='logo'><a href='.'><img src='./css/images/logo_s_white.png' /></a></div>
 				<div class='search'><input type='text' id='topBar_search' onkeydown='if (event.keyCode == 13) topBar_search();' placeholder='강의명, 학수번호, 교수명으로 빠른검색' /></div>
-				<div class='search2'><button type='button' onclick="location.href=yh_path+'/lectureSearch2.php'">고급검색</button></div>				<div class='menu'>
-										<div class="e menu">
+				<div class='search2'><button type='button' onclick="location.href=yh_path+'/lectureSearch2.php'">고급검색</button></div>				
+				<div class='menu'>
+					<div class="e menu">
 						<div class="dropdown">
 							<div class="row" onclick="location.href=yh_path+'/myInfo.php'">내 정보</div>
 							<div class="row" onclick="location.href=yh_path+'/myLectureEval.php'">내 강의평</div>
@@ -20,6 +21,12 @@
 							<div class="row" onclick="location.href=yh_path+'/logout.php'">로그아웃</div>
 						</div>
 					</div>
+				</div>
+					<%if user_signed_in? %>
+					<a href="/users/sign_out">로그아웃</a>
+					<%else%>
+					<a href="/users/sign_in">로그인</a>
+					<%end%>
 					<div class="e notification" notificationData='[{&quot;msg&quot;:&quot;\ubcf5\ud559\uc2e0\uccad\uc774 \uc2b9\uc778\ub418\uc5c8\uc2b5\ub2c8\ub2e4.&quot;,&quot;link&quot;:&quot;&quot;,&quot;wr_time&quot;:&quot;2015-07-18 19:52:22&quot;,&quot;read&quot;:1}]'>
 						<div class='cnt'></div>
 						<div class="dropdown"></div>
@@ -139,6 +146,7 @@
         <a role="button" class="btn btn-primary" id="modify">수정</a>
         <a rold="button" class="btn btn-primary" id="delete">삭제</a>
         <!--비번을 입력해야 통과시켜준다---->
+		<!--
 		<script>
         	$(document).ready(function{
         		$('#delete').click(function{
@@ -154,14 +162,14 @@
         			}
         		});
         	});
-        </script>
+        </script>-->
         <!--자바스크립트 끝-->
     <%end%>
         
 <!-----후기 쓰는칸---->
 
   <% if user_signed_in? %>
-            <%= form_tag '/trend/reply',method:'post', html: {:class => "form-horizontal"}, multipart: true do %>
+            <%= form_tag '/home/write',method:'post', html: {:class => "form-horizontal"}, multipart: true do %>
               <!--<form class="form-horizontal" action="/trend/reply">-->
               <input type="hidden" name="hairshop_id" value="<%=@hairshop.id%>">
               <input type="hidden" name="user_id" value="<%=current_user.id%>">
