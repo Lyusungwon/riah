@@ -20,10 +20,13 @@ ActiveRecord::Schema.define(version: 20150914042448) do
     t.text     "content"
     t.string   "image"
     t.string   "password"
+<<<<<<< HEAD
     t.integer  "rating_a"
     t.integer  "rating_c"
     t.integer  "rating_s"
     t.integer  "rating_f"
+=======
+>>>>>>> 2a77c1e8ac051e1269025773b5683ca976ada8a7
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
   end
@@ -37,6 +40,13 @@ ActiveRecord::Schema.define(version: 20150914042448) do
   end
 
   create_table "users", force: :cascade do |t|
+    t.string   "name",                   default: "", null: false
+    t.string   "uid",                    default: "", null: false
+    t.string   "provider",               default: "", null: false
+    t.string   "lastname"
+    t.string   "firstname"
+    t.string   "image"
+    t.string   "gender"
     t.string   "email",                  default: "", null: false
     t.string   "encrypted_password",     default: "", null: false
     t.string   "reset_password_token"

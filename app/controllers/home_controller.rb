@@ -1,6 +1,9 @@
 class HomeController < ApplicationController
     before_action :authenticate_user!, only: [:write, :delete, :update, :myeval, :myinfo]
     def index
+        if user_signed_in?
+            redirect_to "/home/main"
+        end
     end
     def main
         @hairshop=Hairshop.all
