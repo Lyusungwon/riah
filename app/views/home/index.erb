@@ -2,39 +2,40 @@
 	<%= stylesheet_link_tag "index", :media => "all" %>
 </head>
 
-<div id='head'>
-	<div class="inner">
-		<div class='logo'><a href='.'><img src='./css/images/logo_s_white.png' /></a></div>
-		<div class='menu'>
-			<a href='./index.php'>로그인</a>
-        	<a href='./register.php'>회원가입</a>
+<div id='content'><input type='hidden' id='pubKey' value='' />
+    <div class='login_wrap container'>
+ 	    <div class='row'>
+	    	<div class='col-md-6'>
+	    		<div class='logo'><img src='https://riahstudio.files.wordpress.com/2010/04/riah-logo-unedited.jpg' style='width:100%'/></div>
+	    		<div class='desc'>KLUE는 현재 <span class='bold'>32,043</span>명의 학우가 <br /><span class='bold'>263,340</span>개의 강의평을 공유하고 있습니다.</div>
+	    	</div>
+	    	<div class='col-md-6'>
+	    		<div class='welcome'>
+					<p>안녕하세요</p>
+	    		</div>
+				<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+			        <div class="col-md-12">
+		    			<div class='id_wrap'><%= f.email_field :email, autofocus: true, type:'text', id:'mb_id', class:'form-control', placeholder:'포털아이디', onkeydown:'if (event.keyCode==13) do_login();' %></div>
+		    		</div>
+			        <div class="col-md-12">
+			        	<div class='pw_wrap'><%= f.password_field :password, autocomplete: "off", type:'password', id:'mb_pw', class:'form-control', placeholder:'비밀번호', onkeydown:'if (event.keyCode==13) do_login();' %></div>
+		    		</div>
+			        <div class="col-md-6">
+			        	<%= f.submit '로그인', class:"btn btn-success", style:"width:100%; margin-top:10px;" %>
+			        </div>
+			        <div class="col-md-6">
+			        	<%= link_to "페이스북 로그인", user_omniauth_authorize_path(:facebook), class:"btn btn-primary", style:"width:100%; margin-top:10px;" %>
+			        </div>
+			        <div class="col-md-12">	        
+			    		<a href="/home/register">회원가입</a>
+			    		<a>비밀번호 찾기</a>
+			        </div>
+				<% end %>
+			</div>
 		</div>
 	</div>
-</div>
-
-<div id='content'><input type='hidden' id='pubKey' value='' />
-    <div class='login_wrap'>
-    	<div class='left'>
-    		<div class='logo'><img src='./css/images/common_logo_orange.png' /></div>
-    		<div class='desc'>KLUE는 현재 <span class='bold'>32,043</span>명의 학우가 <br /><span class='bold'>263,340</span>개의 강의평을 공유하고 있습니다.</div>
-    	</div>
-    	<div class='right'>
-    		<div class='welcome'>
-			<% if user_signed_in? %>
-			  <p><%= link_to "로그아웃", destroy_user_session_path, method: :delete, data: {confirm: "Are you sure?" }, class: 'btn btn-default'%></p>
-			<% else %>
-			  <p><%= link_to "로그인", new_user_session_path, class: 'btn btn-default' %></p>
-			  <p><%= link_to "페이스북으로 로그인", user_omniauth_authorize_path(:facebook) %></p>
-			<% end %>
-    		</div>
-    		<div class='idpw_wrap'>
-    			<div class='id_wrap'><input type='text' id='mb_id' placeholder='포털아이디' onkeydown='if (event.keyCode==13) do_login();' /><span class='desc'>@korea.ac.kr</span></div>
-    			<div class='pw_wrap'><input type='password' id=git s'mb_pw' placeholder='비밀번호' onkeydown='if (event.keyCode==13) do_login();' /></div>
-    		</div>
-    		<div class='btn_wrap'><button type='button' class='login' onclick='do_login();'>로그인</button><button type='button' onclick="location.href=yh_path+'/register.php'">회원가입</button><button type='button' onclick="findPw_open();">비밀번호 찾기</button></div>
-    	</div>
-    </div>
     <div class='tail_wrap'>klue.kr2@gmail.com | Copyright &copy; 2015 <a href='http://kweb.korea.ac.kr/' target='_blank' class='orange'>KLUE</a> All rights reserved.</div>
+    </div>
     <div id="findPwPopup">
     	<div class="inner">
     		<div class="title">비밀번호 찾기</div>
@@ -56,10 +57,4 @@
     		</div>
     	</div>
     </div>
-</div>
-
-<div id='tail'>
-	<div class="inner">
-		<div class="copyright">Copyright &copy; 2015 <a href='http://kweb.korea.ac.kr/' target='_blank' class='orange'>KLUE</a> All rights reserved.</div>
-	</div>
 </div>
