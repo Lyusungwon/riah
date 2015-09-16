@@ -41,6 +41,7 @@ class HomeController < ApplicationController
     else
     redirect_to :back   
     end
+    end
     def delete
         e=Eval.find(params[:id])
         e.destroy
