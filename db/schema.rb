@@ -19,8 +19,10 @@ ActiveRecord::Schema.define(version: 20150914042448) do
     t.text     "content"
     t.string   "image"
     t.integer  "rating_a"
+    t.integer  "rating_b"
     t.integer  "rating_c"
-    t.integer  "rating_s"
+    t.integer  "rating_d"
+    t.integer  "rating_e"
     t.integer  "rating_f"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
