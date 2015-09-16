@@ -16,22 +16,22 @@ ActiveRecord::Schema.define(version: 20150914042448) do
   create_table "evals", force: :cascade do |t|
     t.integer  "user_id"
     t.integer  "hairshop_id"
-    t.text     "eval_content"
-    t.string   "eval_image"
-    t.integer  "eval_rating_a"
-    t.integer  "eval_rating_c"
-    t.integer  "eval_rating_s"
-    t.integer  "eval_rating_f"
-    t.datetime "created_at",    null: false
-    t.datetime "updated_at",    null: false
+    t.text     "content"
+    t.string   "image"
+    t.integer  "rating_a"
+    t.integer  "rating_c"
+    t.integer  "rating_s"
+    t.integer  "rating_f"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
   create_table "hairshops", force: :cascade do |t|
-    t.string   "shop_name"
-    t.string   "shop_address"
-    t.string   "shop_phonenumber"
-    t.datetime "created_at",       null: false
-    t.datetime "updated_at",       null: false
+    t.string   "name"
+    t.string   "address"
+    t.string   "phonenumber"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
   create_table "users", force: :cascade do |t|

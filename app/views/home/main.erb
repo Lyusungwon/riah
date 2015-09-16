@@ -30,8 +30,8 @@
 				<% @evaluation.each do |e|%>
 				<div class="e" id="lecEval_263352">				
 					<div class="title">
-						<a href="/home/hairshop/<%=e.hairshop_id%>" class="lec_name"><%=e.hairshop.shop_name%></a>
-						<span class="lec_profName"><%=e.hairshop.shop_address%></span>
+						<a href="/home/hairshop/<%=e.hairshop_id%>" class="lec_name"><%=e.hairshop.name%></a>
+						<span class="lec_profName"><%=e.hairshop.address%></span>
 					</div>				
 					<div class="content">					
 						<div class="right">						
@@ -49,7 +49,7 @@
 								</div>						
 								<div class="wrInfoSub" title="2015-09-15 14:51:23">(201219****) | 4시간 전</div>						
 								<div class="wrContent">
-									<%=e.eval_content%>
+									<%=e.content%>
 								</div>					
 							</div>			
 						</div>				

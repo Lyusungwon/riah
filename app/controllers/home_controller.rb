@@ -15,8 +15,31 @@ class HomeController < ApplicationController
         @hairshop=Hairshop.find(params[:id])
     end
     def write
-        Eval.create(content: params[:content], image: params[:image_file])
-        redirect_to :back
+    
+    if  Opinion.where(:user_id =>current_user.id, :hairshop_id => params[:id]).empty?
+    evaluation = Opinion.new
+    evaluation.user_id = current_user.id
+    evaluation.hairshop_id = params[:id]
+    evaluation.general = params[:rating1].to_i
+    evaluation.money = params[:rating2].to_i
+    evaluation.service = params[:rating3].to_i
+    evaluation.cut = params[:rating4].to_i
+    evaluation.perm = params[:rating5].to_i
+    evaluation.dye = params[:rating6].to_i
+    evaluation.op= params[:text]
+    opinions.save
+  
+    a = Opinion.where(post_id: params[:id]).all
+    
+    
+    staraverage=a.average(:general).to_f
+    #ski=a.average(:skill)
+    s=Post.find(params[:id].to_i)
+    s.star =staraverage
+    s.save
+    
+    else
+    redirect_to :back   
     end
     def delete
         e=Eval.find(params[:id])
