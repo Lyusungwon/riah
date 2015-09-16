@@ -1,8 +1,15 @@
 <div id='head'>
 	<div class="inner">
 		<div class='logo'><a href='.'><img src='./css/images/logo_s_white.png' /></a></div>
-		<div class='search'><input type='text' id='topBar_search' onkeydown='if (event.keyCode == 13) topBar_search();' placeholder='강의명, 학수번호, 교수명으로 빠른검색' /></div>
-		<div class='search2'><button type='button' onclick="location.href=yh_path+'/lectureSearch2.php'">고급검색</button></div>
+		 		    
+      		<form action ="/home/hairshopsearch/" method="GET">
+      		
+      		<div class='search'><input type='text' id='topBar_search' onkeydown='if (event.keyCode == 13) topBar_search();' placeholder='주소 또는 미용실이름 검색' name="searchkey"/></div>
+      		<input type ="submit" value="검색">
+      		
+      		</form>
+      
+      </div>
 		<div class='menu'>
 			<div class="e menu">
 				<div class="dropdown">

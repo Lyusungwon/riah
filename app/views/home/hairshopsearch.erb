@@ -63,14 +63,30 @@
 		</div>
 		<table class='listTable'>
 			<tr class='head'>
-				<td class='lec_term'>학기</td>
-				<td class='lec_name'>과목명</td>
-				<td class='lec_code'>과목코드</td>
-				<td class='lec_profName'>교수</td>
+				<td class='lec_term'>이름</td>
+				<td class='lec_name'>주소</td>
+				<td class='lec_code'>전화번호</td>
+				<td class='lec_profName'>총평점</td>
 				<td class='lec_summary'>평점평균</td>
 				<td class='evalBtn'>평가하기</td>
 			</tr>
-						<tr class='noResult'><td colspan='5'>결과가 없습니다.</td></tr>		</table>
+ 			<%unless @ar.nil?%>		
+						 <% @result.each do |x|%>
+						 	<tr class='head'>
+				<td class='lec_term'><%=x.name%></td>
+				<td class='lec_name'><%=x.address%></td>
+				<td class='lec_code'></td>
+				<td class='lec_profName'></td>
+				<td class='lec_summary'></td>
+				<td class='evalBtn'></td>
+			</tr>
+						 
+						 
+						 <%end%>
+						 <%end%>
+						
+						
+						</table>
 	</div>
 	<div class='page'>
 			</div>
@@ -132,3 +148,7 @@
 		<div class="copyright">Copyright &copy; 2015 <a href='http://kweb.korea.ac.kr/' target='_blank' class='orange'>KLUE</a> All rights reserved.</div>
 	</div>
 </div>
+
+
+
+

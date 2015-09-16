@@ -8,6 +8,30 @@ class HomeController < ApplicationController
         @evaluation=Eval.all
     end
     def hairshopsearch
+        
+        
+    searching = params[:searchkey]
+    @result=Hairshop.search(searching).all
+    @ar =Array.new
+    @result.each do |x|
+    c=x.id
+    k=c.to_s
+    @ar << k
+    @x=nil
+   # @ar2 = Array.new
+    #  for i in 0...@ar.length
+      
+    
+    
+    
+    end
+     @@arr=@ar
+    
+        
+        
+        
+        
+        
     end
     def hairshopsearch2
     end
