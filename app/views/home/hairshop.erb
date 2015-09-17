@@ -27,7 +27,8 @@
                         <%end%>
                     <%end%>
                 </div></div>		
-                <div class="e difficulty"><div class="left">서비스</div><div class="right"><%=@hairshop.avg_b.round(0)%></div><div class="center">
+                <div class="e difficulty"><div class="left">서비스</div><div class="right"><%=@hairshop.avg_b.round(0)%></div>
+                <div class="center">
               	  	<% for i in(1..5)%>
                         <%if i <= @hairshop.avg_b.round(0)%>
                         <span class="active"></span>
@@ -179,7 +180,8 @@
 						</div>						
 						<div class="wrInfoSub" title="2015-09-15 14:51:23">(201219****) | 4시간 전</div>						
 						<div class="wrContent">
-						<%=h.content%>	
+						<%=h.content%>
+						<img src="<%=h.image%>"/>
 						</div>					
 					</div>			
 				</div>				
