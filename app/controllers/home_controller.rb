@@ -18,7 +18,7 @@ class HomeController < ApplicationController
     end
     def write_process        
         if  Eval.where(:user_id => current_user.id, :hairshop_id => params[:hairshop_id]).empty?
-        Eval.create(user_id: current_user.id, hairshop_id: params[:hairshop_id], rating_a: params[:rating_a], rating_b: params[:rating_b], rating_c: params[:rating_c], rating_d: params[:rating_d], rating_d: params[:rating_ㅇ], rating_d: params[:rating_d])
+        Eval.create(user_id: current_user.id, hairshop_id: params[:hairshop_id], rating_a: params[:rating_a], rating_b: params[:rating_b], rating_c: params[:rating_c], rating_d: params[:rating_d], rating_e: params[:rating_e], rating_f: params[:rating_f])
         #a = Opinion.where(post_id: params[:id]).all
         #staraverage=a.average(:general).to_f
         
