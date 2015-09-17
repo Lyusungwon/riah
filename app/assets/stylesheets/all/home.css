@@ -634,16 +634,8 @@ input, button, textarea {
 .lectureEvalList > .e > .content > .right > .e > .center > span:last-child {
   border-radius: 0 5px 5px 0; }
 
-.lectureEvalList > .e > .content > .right > .e.total > .center > span {
-  height: 20px;
-  margin-top: 5px;
-  border-radius: 0;
-  border: none;
-  background: url("./images/lectureEval_star.png") top center no-repeat;
-  background-size: 20px 40px; }
-
 .lectureEvalList > .e > .content > .right > .e.total > .center > span.active {
-  background-position: center -20px; }
+  background: #F84; }
 
 .lectureEvalList > .e > .content > .right > .e.difficulty > .center > span.active {
   background: #F84; }
