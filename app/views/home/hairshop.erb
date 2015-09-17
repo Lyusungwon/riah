@@ -103,7 +103,7 @@
 	    					<div class="center">    		  
 	    					    <span class="star-rating" style="height: 20px;width: 100px;"><!--별이 다 안나옴ㅠ-->
 	                		        <% 1.upto(5) do |i|%>	
-	                		        	<%if i==h.rating_a%>
+	                		        	<%if i==h.rating_a.to_i%>
 	                		        	<i class="on"></i>
 	                		        	<%else%>
 	                		        	<i></i>
@@ -116,7 +116,7 @@
 						    <div class="left">서비스</div>
 					        <div class="center">
 	        		        <% for i in(1..5)%>
-		                        <%if i <= h.rating_b%>
+		                        <%if i <= h.rating_b.to_i%>
 		                        <span class="active"></span>
 		                        <%else%>
 		                        <span></span>
@@ -128,7 +128,7 @@
 						    <div class="left">가격대</div>
 					        <div class="center">
 	        		        <% for i in(1..5)%>
-		                        <%if i <= h.rating_c%>
+		                        <%if i <= h.rating_c.to_i%>
 		                        <span class="active"></span>
 		                        <%else%>
 		                        <span></span>
@@ -140,7 +140,7 @@
 						    <div class="left">커트</div>
 					        <div class="center">
 	        		        <% for i in(1..5)%>
-		                        <%if i <= h.rating_d %>
+		                        <%if i <= h.rating_d.to_i %>
 		                        <span class="active"></span>
 		                        <%else%>
 		                        <span></span>
@@ -152,7 +152,7 @@
 						    <div class="left">파마</div>
 					        <div class="center">
 	        		        <% for i in(1..5)%>
-		                        <%if i <= h.rating_e%>
+		                        <%if i <= h.rating_e.to_i%>
 		                        <span class="active"></span>
 		                        <%else%>
 		                        <span></span>
@@ -164,7 +164,7 @@
 					        <div class="left">염색</div>
 					        <div class="center">
 	        		        <% for i in(1..5)%>
-		                        <%if i <= h.rating_f%>
+		                        <%if i <= h.rating_f.to_i%>
 		                        <span class="active"></span>
 		                        <%else%>
 		                        <span></span>

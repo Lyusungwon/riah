@@ -6,7 +6,7 @@ class Hairshop < ActiveRecord::Base
     def avg_a
         sum=0
         evals.each do |r|
-            sum+=r.rating_a
+            sum+=r.rating_a.to_f
         end
         if evals.count ==0
             0
@@ -17,7 +17,7 @@ class Hairshop < ActiveRecord::Base
     def avg_b
         sum=0
         evals.each do |r|
-            sum+=r.rating_b
+            sum+=r.rating_b.to_f
         end
         if evals.count ==0
             0
@@ -28,7 +28,7 @@ class Hairshop < ActiveRecord::Base
     def avg_c
         sum=0
         evals.each do |r|
-            sum+=r.rating_c
+            sum+=r.rating_c.to_f
         end
         if evals.count ==0
             0
@@ -39,7 +39,7 @@ class Hairshop < ActiveRecord::Base
     def avg_d
         sum=0
         evals.each do |r|
-            sum+=r.rating_d
+            sum+=r.rating_d.to_f
         end
         if evals.count ==0
             0
@@ -50,7 +50,7 @@ class Hairshop < ActiveRecord::Base
     def avg_e
         sum=0
         evals.each do |r|
-            sum+=r.rating_e
+            sum+=r.rating_e.to_f
         end
         if evals.count ==0
             0
@@ -61,7 +61,7 @@ class Hairshop < ActiveRecord::Base
     def avg_f
         sum=0
         evals.each do |r|
-            sum+=r.rating_f
+            sum+=r.rating_f.to_f
         end
         if evals.count ==0
             0
