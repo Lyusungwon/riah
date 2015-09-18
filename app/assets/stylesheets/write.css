@@ -24,8 +24,9 @@
 #content > .mainContent > .eval_wrap > .form > .row > .content > .e > .center > .graphWrap > span {width:45px;height:10px;margin-top:15px;border-right:1px solid #F5F5F5;background:#E5E5E5;float:left;}
 #content > .mainContent > .eval_wrap > .form > .row > .content > .e > .center > .graphWrap:first-child > span {border-radius:5px 0 0 5px;}
 #content > .mainContent > .eval_wrap > .form > .row > .content > .e > .center > .graphWrap:last-child > span{border-radius:0 5px 5px 0;}
-#content > .mainContent > .eval_wrap > .form > .row > .content > .e.total > .center > .graphWrap > span {width:30px;height:30px;margin-top:7px;border-radius:0;border:none;background:url('./images/lectureEval_star.png') top center no-repeat;background-size:30px 60px;}
-#content > .mainContent > .eval_wrap > .form > .row > .content > .e.total > .center > .graphWrap > span.active {background-position:0px -30px;}
+/*#content > .mainContent > .eval_wrap > .form > .row > .content > .e.total > .center > .graphWrap > span {width:30px;height:30px;margin-top:7px;border-radius:0;border:none;background:url('./images/lectureEval_star.png') top center no-repeat;background-size:30px 60px;}
+#content > .mainContent > .eval_wrap > .form > .row > .content > .e.total > .center > .graphWrap > span.active {background-position:0px -30px;}*/
+#content > .mainContent > .eval_wrap > .form > .row > .content > .e.total > .center > .graphWrap > span.active {background:#F84;}
 #content > .mainContent > .eval_wrap > .form > .row > .content > .e.difficulty > .center > .graphWrap > span.active {background:#F84;}
 #content > .mainContent > .eval_wrap > .form > .row > .content > .e.studyTime > .center > .graphWrap > span.active {background:#5987FF;}
 #content > .mainContent > .eval_wrap > .form > .row > .content > .e.attendance > .center > .graphWrap > span.active {background:#FFC000;}

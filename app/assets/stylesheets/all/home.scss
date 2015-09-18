@@ -116,8 +116,8 @@ input, button, textarea {font-family:'맑은 고딕','Dotum','Arial'}
 .lectureEvalList > .e > .content > .right > .e > .center > span {width:20%;height:10px;margin-top:10px;border-right:1px solid #F5F5F5;background:#E5E5E5;float:left;}
 .lectureEvalList > .e > .content > .right > .e > .center > span:first-child {border-radius:5px 0 0 5px;}
 .lectureEvalList > .e > .content > .right > .e > .center > span:last-child {border-radius:0 5px 5px 0;}
-.lectureEvalList > .e > .content > .right > .e.total > .center > span {height:20px;margin-top:5px;border-radius:0;border:none;background:url('./images/lectureEval_star.png') top center no-repeat;background-size:20px 40px;}
-.lectureEvalList > .e > .content > .right > .e.total > .center > span.active {background-position:center -20px;}
+//.lectureEvalList > .e > .content > .right > .e.total > .center > span {height:20px;margin-top:5px;border-radius:0;border:none;background:url('./images/lectureEval_star.png') top center no-repeat;background-size:20px 40px;}
+.lectureEvalList > .e > .content > .right > .e.total > .center > span.active {background:#F84;}//background-position:center -20px;
 .lectureEvalList > .e > .content > .right > .e.difficulty > .center > span.active {background:#F84;}
 .lectureEvalList > .e > .content > .right > .e.studyTime > .center > span.active {background:#5987FF;}
 .lectureEvalList > .e > .content > .right > .e.attendance > .center > span.active {background:#FFC000;}

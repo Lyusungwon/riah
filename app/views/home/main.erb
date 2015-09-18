@@ -38,75 +38,78 @@
 							<div class="e total">
 		    					<div class="left">총평</div>
 		    					<div class="center">    		  
-		    					    <span class="star-rating small">
-		                		        <% 1.upto(5) do |i|%>	
-		                		        	<%if i==e.rating_a%>
-		                		        	<i class="on"></i>
-		                		        	<%else%>
-		                		        	<i></i>
-		                		        	<%end%>
-		                		        <%end%>
-		            		        </span>
+		    					  
+		    					  <span class="star-rating"><!--별이 다 안나옴ㅠ-->
+	                		        <% 1.upto(5) do |i|%>	
+	                		        	<%if i==e.rating_a%>
+	                		        	<i class="on"></i>
+	                		        	<%else%>
+	                		        	<i></i>
+	                		        	<%end%>
+	                		        <%end%>
+	            		        </span>  
+		                		     
 		    		            </div>
 		    				</div>						
 							<div class="e difficulty">
 							    <div class="left">서비스</div>
 						        <div class="center">
-		        		        <% 1.upto(5) do |i|%>	
-		        		        	<%if i==e.rating_b%>
-		        		        	<span class="active"></span>
-		        		        	<%else%>
-		        		        	<span></span>
-		        		        	<%end%>
-		        		        <%end%>
+		        		        <% for i in(1..5)%>
+					                        <%if i <= e.rating_b %>
+					                        <span class="active"></span>
+					                        <%else%>
+					                        <span></span>
+					                        <%end%>
+					            <%end%>
+		        		        
 						        </div>
 						    </div>						
 							<div class="e studyTime">
 							    <div class="left">가격대</div>
 						        <div class="center">
-		        		        <% 1.upto(5) do |i|%>	
-		        		        	<%if i==e.rating_c%>
-		        		        	<span class="active"></span>
-		        		        	<%else%>
-		        		        	<span></span>
-		        		        	<%end%>
-		        		        <%end%>
+		        		        <% for i in(1..5)%>
+					                        <%if i <= e.rating_c %>
+					                        <span class="active"></span>
+					                        <%else%>
+					                        <span></span>
+					                        <%end%>
+					              <%end%>
 						        </div>
 							</div>						
 							<div class="e attendance">					    
 							    <div class="left">커트</div>
 						        <div class="center">
-		        		        <% 1.upto(5) do |i|%>	
-		        		        	<%if i==e.rating_d%>
-		        		        	<span class="active"></span>
-		        		        	<%else%>
-		        		        	<span></span>
-		        		        	<%end%>
-		        		        <%end%>
+		        		        <% for i in(1..5)%>
+					                        <%if i <= e.rating_d %>
+					                        <span class="active"></span>
+					                        <%else%>
+					                        <span></span>
+					                        <%end%>
+					              <%end%>
 						        </div>
 		                    </div>						
 							<div class="e grade">
 							    <div class="left">파마</div>
 						        <div class="center">
-		        		        <% 1.upto(5) do |i|%>	
-		        		        	<%if i==e.rating_e%>
-		        		        	<span class="active"></span>
-		        		        	<%else%>
-		        		        	<span></span>
-		        		        	<%end%>
-		        		        <%end%>
+		        		        <% for i in(1..5)%>
+					                        <%if i <= e.rating_e %>
+					                        <span class="active"></span>
+					                        <%else%>
+					                        <span></span>
+					                        <%end%>
+					              <%end%>
 						        </div>
 							</div>						
 							<div class="e achievement">
 						        <div class="left">염색</div>
 						        <div class="center">
-		        		        <% 1.upto(5) do |i|%>	
-		        		        	<%if i==e.rating_f%>
-		        		        	<span class="active"></span>
-		        		        	<%else%>
-		        		        	<span></span>
-		        		        	<%end%>
-		        		        <%end%>
+		        		        <% for i in(1..5)%>
+					                        <%if i <= e.rating_f %>
+					                        <span class="active"></span>
+					                        <%else%>
+					                        <span></span>
+					                        <%end%>
+					              <%end%>
 						        </div>
 							</div>					
 						</div>					

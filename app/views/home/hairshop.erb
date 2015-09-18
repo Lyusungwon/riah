@@ -27,7 +27,8 @@
                         <%end%>
                     <%end%>
                 </div></div>		
-                <div class="e difficulty"><div class="left">서비스</div><div class="right"><%=@hairshop.avg_b.round(0)%></div><div class="center">
+                <div class="e difficulty"><div class="left">서비스</div><div class="right"><%=@hairshop.avg_b.round(0)%></div>
+                <div class="center">
               	  	<% for i in(1..5)%>
                         <%if i <= @hairshop.avg_b.round(0)%>
                         <span class="active"></span>
@@ -101,22 +102,22 @@
 	    				<div class="e total">
 	    					<div class="left">총평</div>
 	    					<div class="center">    		  
-	    					    <span class="star-rating"><!--별이 다 안나옴ㅠ-->
+	    					    <span class="star-rating" style="height: 20px;width: 100px;"><!--별이 다 안나옴ㅠ-->
 	                		        <% 1.upto(5) do |i|%>	
-	                		        	<%if i==h.rating_a%>
+	                		        	<%if i==h.rating_a.to_i%>
 	                		        	<i class="on"></i>
 	                		        	<%else%>
 	                		        	<i></i>
 	                		        	<%end%>
 	                		        <%end%>
-	            		        </span>
+	            		   </span>
 	    		            </div>
 	    				</div>						
 						<div class="e difficulty">
 						    <div class="left">서비스</div>
 					        <div class="center">
 	        		        <% for i in(1..5)%>
-		                        <%if i <= h.rating_b%>
+		                        <%if i <= h.rating_b.to_i%>
 		                        <span class="active"></span>
 		                        <%else%>
 		                        <span></span>
@@ -128,7 +129,7 @@
 						    <div class="left">가격대</div>
 					        <div class="center">
 	        		        <% for i in(1..5)%>
-		                        <%if i <= h.rating_c%>
+		                        <%if i <= h.rating_c.to_i%>
 		                        <span class="active"></span>
 		                        <%else%>
 		                        <span></span>
@@ -140,7 +141,7 @@
 						    <div class="left">커트</div>
 					        <div class="center">
 	        		        <% for i in(1..5)%>
-		                        <%if i <= h.rating_d %>
+		                        <%if i <= h.rating_d.to_i %>
 		                        <span class="active"></span>
 		                        <%else%>
 		                        <span></span>
@@ -152,7 +153,7 @@
 						    <div class="left">파마</div>
 					        <div class="center">
 	        		        <% for i in(1..5)%>
-		                        <%if i <= h.rating_e%>
+		                        <%if i <= h.rating_e.to_i%>
 		                        <span class="active"></span>
 		                        <%else%>
 		                        <span></span>
@@ -164,7 +165,7 @@
 					        <div class="left">염색</div>
 					        <div class="center">
 	        		        <% for i in(1..5)%>
-		                        <%if i <= h.rating_f%>
+		                        <%if i <= h.rating_f.to_i%>
 		                        <span class="active"></span>
 		                        <%else%>
 		                        <span></span>
@@ -179,7 +180,8 @@
 						</div>						
 						<div class="wrInfoSub" title="2015-09-15 14:51:23">(201219****) | 4시간 전</div>						
 						<div class="wrContent">
-						<%=h.content%>	
+						<%=h.content%>
+						<img src="<%=h.image%>"/>
 						</div>					
 					</div>			
 				</div>				

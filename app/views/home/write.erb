@@ -1,11 +1,60 @@
 <head>
 	<%= stylesheet_link_tag "write", :media => "all" %>
 </head>
-
-<%= render :partial => "home/navbar" %>   
-
-<div id='content'>
-	<div class='mainContent'>
+	<div id='head'>
+			<div class="inner">
+				<div class='logo'><a href='.'><img src='./css/images/logo_s_white.png' /></a></div>
+				<div class='search'><input type='text' id='topBar_search' onkeydown='if (event.keyCode == 13) topBar_search();' placeholder='강의명, 학수번호, 교수명으로 빠른검색' /></div>
+				<div class='search2'><button type='button' onclick="location.href=yh_path+'/lectureSearch2.php'">고급검색</button></div>				<div class='menu'>
+										<div class="e menu">
+						<div class="dropdown">
+							<div class="row" onclick="location.href=yh_path+'/myInfo.php'">내 정보</div>
+							<div class="row" onclick="location.href=yh_path+'/myLectureEval.php'">내 강의평</div>
+							<!--<div class="row">쪽지함</div>-->
+							<div class="hr"></div>
+							<div class="row" onclick="location.href=yh_path+'/serverTime.php'">서버시간확인</div>
+							<div class="row" onclick="location.href=yh_path+'/lectureSearch2.php'">고급검색</div>
+							<div class="row" onclick="location.href=yh_path+'/report.php'">신고/문의하기</div>
+							<!--<div class="row">신고/문의내역</div>-->
+							<div class="hr"></div>
+							<div class="row" onclick="location.href=yh_path+'/logout.php'">로그아웃</div>
+						</div>
+					</div>
+					<div class="e notification" notificationData='[{&quot;msg&quot;:&quot;\ubcf5\ud559\uc2e0\uccad\uc774 \uc2b9\uc778\ub418\uc5c8\uc2b5\ub2c8\ub2e4.&quot;,&quot;link&quot;:&quot;&quot;,&quot;wr_time&quot;:&quot;2015-07-18 19:52:22&quot;,&quot;read&quot;:1}]'>
+						<div class='cnt'></div>
+						<div class="dropdown"></div>
+					</div>
+									</div>
+								<div class="serverTime" id='serverTime2' offsetSK='-0.042508047210693,0.007002' onclick="location.href=yh_path+'/serverTime.php'">
+					<div class="icon"></div>
+					<div class="time">받는중...</div>
+					<div class="dropdown">현재 수강신청 서버의 시간입니다<br />더 정확한 시간을 보시려면 <strong>클릭!</strong></div>
+				</div>
+							</div>
+		</div>
+		<div id='sideAD'>
+			<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+			<!-- side2 -->
+			<ins class="adsbygoogle"
+				 style="display:inline-block;width:160px;height:600px"
+				 data-ad-client="ca-pub-3217618135707969"
+				 data-ad-slot="2849566935"></ins>
+			<script>
+			(adsbygoogle = window.adsbygoogle || []).push({});
+			</script>
+		</div>
+		<div id="sideAD2">
+			<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+			<!-- side3 -->
+			<ins class="adsbygoogle"
+				 style="display:inline-block;width:160px;height:600px"
+				 data-ad-client="ca-pub-3217618135707969"
+				 data-ad-slot="6272208130"></ins>
+			<script>
+			(adsbygoogle = window.adsbygoogle || []).push({});
+			</script>
+		</div>
+		<div id='content'><div class='mainContent'>
 		<div class="eval_wrap box">
 		<div class='title'>강의평가 쓰기</div>
 		<div class='desc'>
@@ -130,4 +179,7 @@
 	</div>
 </div>
 </div>
-<%= render :partial => "home/tail" %>   
+<div id='tail'>
+	<div class="inner">
+		<div class="copyright">Copyright &copy; 2015 <a href='http://kweb.korea.ac.kr/' target='_blank' class='orange'>KLUE</a> All rights reserved.</div>
+	

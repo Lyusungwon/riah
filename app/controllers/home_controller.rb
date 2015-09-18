@@ -42,8 +42,7 @@ class HomeController < ApplicationController
     end
     def write_process        
         if  Eval.where(:user_id => current_user.id, :hairshop_id => params[:hairshop_id]).empty?
-        Eval.create(user_id: current_user.id, hairshop_id: params[:harirshop_id], rating_a: params[:rating_a], 
-        rating_b: params[:rating_b],  rating_c: params[:rating_c], rating_d: params[:rating_d], rating_d: params[:rating_ㅇ], rating_d: params[:rating_d])
+        Eval.create(hairshop_id: params[:hairshop_id],user_id: current_user.id, content: params[:content], rating_a: params[:rating_a], rating_b: params[:rating_b], rating_c: params[:rating_c], rating_d: params[:rating_d], rating_e: params[:rating_e], rating_f: params[:rating_f], image: params[:image_file])
         #a = Opinion.where(post_id: params[:id]).all
         #staraverage=a.average(:general).to_f
         
@@ -51,6 +50,7 @@ class HomeController < ApplicationController
         #s=Post.find(params[:id].to_i)
         #s.star =staraverage
         #s.save
+        redirect_to :back
         else
             redirect_to :back   
         end
