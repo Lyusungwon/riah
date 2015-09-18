@@ -2,8 +2,7 @@
 	<%= stylesheet_link_tag "hairshop", :media => "all" %>
 </head>
 
-<%= render :partial => "home/navbar" %>   
-<%= render :partial => "home/tail" %>   
+<%= render :partial => "home/navbar" %>  
 
 	<div id='content'>
 	    <div class="mainContent">
@@ -12,20 +11,69 @@
 	<!--건드려야 될 부분--------------------------------->	
     	<div class="lectureInfo box">
     		<div class="top">
-        		<div class="lec_name"><span>중국사학사</span></div>
-        		<div class="lec_profName"><span>김진우 교수님</span></div>
+        		<div class="lec_name"><span><%=@hairshop.name%></span></div>
+        		<div class="lec_profName"><span><%=@hairshop.address%></span></div>
         		<div class='menu'></div>
         	</div>
             <div class="lec_rating" id="lec_rating">
                 <div class="e total"><div class="left">총평</div>
-                <div class="right">2.11</div>
-                <div class="center"><span class="active"></span><span class="active"></span><span></span><span></span><span></span></div></div>		
-                <div class="e difficulty"><div class="left">난이도</div><div class="right">3.22</div><div class="center"><span class="active"></span><span class="active"></span><span class="active"></span><span></span><span></span></div></div>		
-                <div class="e studyTime"><div class="left">학습량</div><div class="right">4.33</div><div class="center"><span class="active"></span><span class="active"></span><span class="active"></span><span class="active"></span><span></span></div></div>		
-                <div class="e attendance"><div class="left">출첵</div><div class="right">4.56</div><div class="center"><span class="active"></span><span class="active"></span><span class="active"></span><span class="active"></span><span class="active"></span></div></div>		
-                <div class="e grade"><div class="left">학점</div><div class="right">3.22</div><div class="center"><span class="active"></span><span class="active"></span><span class="active"></span><span></span><span></span></div></div>		
-                <div class="e achievement"><div class="left">성취감</div><div class="right">2.89</div><div class="center"><span class="active"></span><span class="active"></span><span class="active"></span><span></span><span></span></div></div>	
-            </div>
+                <div class="right"><%=@hairshop.avg_a.round(0)%></div>
+                <div class="center">
+                    <% for i in(1..5)%>
+                        <%if i <= @hairshop.avg_a.round(0)%>
+                        <span class="active"></span>
+                        <%else%>
+                        <span></span>
+                        <%end%>
+                    <%end%>
+                </div></div>		
+                <div class="e difficulty"><div class="left">서비스</div><div class="right"><%=@hairshop.avg_b.round(0)%></div><div class="center">
+              	  	<% for i in(1..5)%>
+                        <%if i <= @hairshop.avg_b.round(0)%>
+                        <span class="active"></span>
+                        <%else%>
+                        <span></span>
+                        <%end%>
+                    <%end%>
+                </div></div>		
+                <div class="e studyTime"><div class="left">가격대</div><div class="right"><%=@hairshop.avg_c.round(0)%></div><div class="center">
+                	<% for i in(1..5)%>
+                        <%if i <= @hairshop.avg_c.round(0)%>
+                        <span class="active"></span>
+                        <%else%>
+                        <span></span>
+                        <%end%>
+                    <%end%>
+                </div></div>		
+                <div class="e attendance"><div class="left">컷트</div><div class="right"><%=@hairshop.avg_d.round(0)%></div><div class="center">
+                	<% for i in(1..5)%>
+                        <%if i <= @hairshop.avg_d.round(0)%>
+                        <span class="active"></span>
+                        <%else%>
+                        <span></span>
+                        <%end%>
+                    <%end%>
+                </div></div>		
+                <div class="e grade"><div class="left">파마</div><div class="right"><%=@hairshop.avg_e.round(0)%></div><div class="center">
+                	<% for i in(1..5)%>
+                        <%if i <= @hairshop.avg_e.round(0)%>
+                        <span class="active"></span>
+                        <%else%>
+                        <span></span>
+                        <%end%>
+                    <%end%>
+                </div></div>		
+                <div class="e achievement"><div class="left">염색</div><div class="right"><%=@hairshop.avg_f.round(0)%></div><div class="center">
+                	<% for i in(1..5)%>
+                        <%if i <= @hairshop.avg_f.round(0)%>
+                        <span class="active"></span>
+                        <%else%>
+                        <span></span>
+                        <%end%>
+                    <%end%>
+                </div></div>	
+			</div>
+
         	<div class="lec_info">
         		<!--년도, 학기, 코드, 학점, 이수구분, 교수님, 시간, 강의실-->
         		<div class="e"><span class='subj'>개설학기</span><span class='content' title='2015-1R'>2015-1R</span></div>
@@ -46,101 +94,119 @@
     <!-----------------------------후기 시작-------------------------------------->
     <!--후기 나열-->
     <div class='lectureEvalList'>
-    	<div class="e" id="lecEval_263352">				
-    		<div class="title">
-    			<a href="./lecture.php?no=36557" class="lec_name">영어멀티미디어교육론</a>
-    			<span class="lec_profName">김영미 교수님</span>
-    		</div>				
-    		<div class="content">					
-    			<div class="right">						
-    				<div class="e total">
-    					<div class="left">총평</div>
-    					<div class="center"><span class="active"></span><span class="active"></span><span></span><span></span><span></span></div></div>						
-    					<div class="e difficulty"><div class="left">난이도</div><div class="center"><span class="active"></span><span></span><span></span><span></span><span></span></div></div>						
-    					<div class="e studyTime"><div class="left">학습량</div><div class="center"><span class="active"></span><span class="active"></span><span></span><span></span><span></span></div></div>						
-    					<div class="e attendance"><div class="left">출첵</div><div class="center"><span class="active"></span><span class="active"></span><span class="active"></span><span class="active"></span><span class="active"></span></div></div>						
-    					<div class="e grade"><div class="left">학점</div><div class="center"><span class="active"></span><span class="active"></span><span></span><span></span><span></span></div></div>						
-    					<div class="e achievement"><div class="left">성취감</div><div class="center"><span class="active"></span><span></span><span></span><span></span><span></span></div></div>					
-    				</div>					
-    				<div class="left">						
-    					<div class="wrInfo"><a href="./myLectureEval.php?mbNo=10600" class="bold">갸갸갹</a> 님의 의
-    					</div>						
-    					<div class="wrInfoSub" title="2015-09-15 14:51:23">(201219****) | 4시간 전</div>						
-    					<div class="wrContent">
-    						멀미교는.. 어찌보면 유용한데, 글킨한데 과연 이걸 학교 현장에서 쓸 수 있을까/애들이 좋아할까/이걸로 내가 뭘 만들 시간이 있을까를 고려하면 음.. 선뜻 그렇다고 답하기는 좀.. 교수님 나름의 객관적 기준이 있겠지만 파이널 과제나 수시과제의 평가는 살짝 주관적요소도 가미된 같슴당. 약간 음.. 예쁜거+한 학기동안 배운 모든 것을 깨알같이 다 때려박은거+알파인 것 같은데 그 알파가 뭔지눈 잘 모르겠네영ㅋㅋㅋ
-    					</div>					
-    				</div>			
-    			</div>				
-    			<div class="tail">					
-    				<div class="btnWrap">
-    					<span class="like" likecnt="0" onclick="lectureEvalList_like(263352)">0 좋아요</span>
-    					<span class="comment" onclick="lectureEvalList_getEvalCommentList(263352);">0 댓글</span>
-    					<span class="etc" onclick="location.href=yh_path+'/report.php?evalNo=263352'">신고</span></div>					
-    				<div class="commentList hide"></div>					
-    			<div class="commentInput hide">						
-    				<div class="right">
-    					<button type="button" onclick="lectureEvalList_writeEvalComment(263352)">입력</button>
-    				</div>						
-    				<div class="left">
-    					<input type="text" name="wr_content" onkeydown="if (event.keyCode==13) lectureEvalList_writeEvalComment(263352);" placeholder="댓글을 입력해주세요.">
-    				</div>
-    			</div>
-    		</div>			
-    	</div>
-    
-        <% @hairshop.evals.each do |h|%>
-            <p class="bg-danger"><%=h.user.name%></p>:
-            <img style="width:60px;height=80px" src="<%=h.image%>"/>
-            <div class="stars">
-    
-    			총평
-    		    <span class="star-rating small">
-    		        <% 1.upto(5) do |i|%>	
-    		        	<%if i==h.rating_a%>
-    		        	<i class="on"></i>
-    		        	<%else%>
-    		        	<i></i>
-    		        	<%end%>
-    		        <%end%>
-    		    </span>
-    			가격
-    		    <span class="star-rating small">
-    		        <% 1.upto(5) do |i|%>	
-    		        	<%if i==h.rating_c%>
-    		        	<i class="on"></i>
-    		        	<%else%>
-    		        	<i></i>
-    		        	<%end%>
-    		        <%end%>
-    		    </span>
-    			실력
-    		    <span class="star-rating small">
-    		        <% 1.upto(5) do |i|%>	
-    		        	<%if i==h.rating_s%>
-    		        	<i class="on"></i>
-    		        	<%else%>
-    		        	<i></i>
-    		        	<%end%>
-    		        <%end%>
-    		    </span>
-    		    시설.서비스
-    		    <span class="star-rating small">
-    		        <% 1.upto(5) do |i|%>	
-    		        	<%if i==h.rating_f%>
-    		        	<i class="on"></i>
-    		        	<%else%>
-    		        	<i></i>
-    		        	<%end%>
-		        	<%end%>
-    		    </span>
-            </div>
-            <p class="bg-info"><%=h.content%></p>
-            <a role="button" class="btn btn-primary" id="modify">수정</a>
-            <a rold="button" class="btn btn-primary" id="delete">삭제</a>
-        <%end%>
+	    <% @hairshop.evals.each do |h|%>
+	    	<div class="e" id="lecEval_263352">							
+	    		<div class="content">					
+	    			<div class="right">						
+	    				<div class="e total">
+	    					<div class="left">총평</div>
+	    					<div class="center">    		  
+	    					    <span class="star-rating"><!--별이 다 안나옴ㅠ-->
+	                		        <% 1.upto(5) do |i|%>	
+	                		        	<%if i==h.rating_a%>
+	                		        	<i class="on"></i>
+	                		        	<%else%>
+	                		        	<i></i>
+	                		        	<%end%>
+	                		        <%end%>
+	            		        </span>
+	    		            </div>
+	    				</div>						
+						<div class="e difficulty">
+						    <div class="left">서비스</div>
+					        <div class="center">
+	        		        <% for i in(1..5)%>
+		                        <%if i <= h.rating_b%>
+		                        <span class="active"></span>
+		                        <%else%>
+		                        <span></span>
+		                        <%end%>
+		                    <%end%>
+					        </div>
+					    </div>						
+						<div class="e studyTime">
+						    <div class="left">가격대</div>
+					        <div class="center">
+	        		        <% for i in(1..5)%>
+		                        <%if i <= h.rating_c%>
+		                        <span class="active"></span>
+		                        <%else%>
+		                        <span></span>
+		                        <%end%>
+		                    <%end%>
+					        </div>
+						</div>						
+						<div class="e attendance">					    
+						    <div class="left">커트</div>
+					        <div class="center">
+	        		        <% for i in(1..5)%>
+		                        <%if i <= h.rating_d %>
+		                        <span class="active"></span>
+		                        <%else%>
+		                        <span></span>
+		                        <%end%>
+		                    <%end%>
+					        </div>
+	                    </div>						
+						<div class="e grade">
+						    <div class="left">파마</div>
+					        <div class="center">
+	        		        <% for i in(1..5)%>
+		                        <%if i <= h.rating_e%>
+		                        <span class="active"></span>
+		                        <%else%>
+		                        <span></span>
+		                        <%end%>
+		                    <%end%>
+		                    </div>
+						</div>						
+						<div class="e achievement">
+					        <div class="left">염색</div>
+					        <div class="center">
+	        		        <% for i in(1..5)%>
+		                        <%if i <= h.rating_f%>
+		                        <span class="active"></span>
+		                        <%else%>
+		                        <span></span>
+		                        <%end%>
+		                    <%end%>
+					        </div>
+						</div>					
+					</div>
+					
+					<div class="left">						
+						<div class="wrInfo"><a href="./myLectureEval.php?mbNo=10600" class="bold">회원</a> 님의
+						</div>						
+						<div class="wrInfoSub" title="2015-09-15 14:51:23">(201219****) | 4시간 전</div>						
+						<div class="wrContent">
+						<%=h.content%>	
+						</div>					
+					</div>			
+				</div>				
+				<div class="tail">					
+					<div class="btnWrap">
+						<span class="like" likecnt="0" onclick="lectureEvalList_like(263352)">0 좋아요</span>
+						<span class="comment" onclick="lectureEvalList_getEvalCommentList(263352);">0 댓글</span>
+						<span class="etc" onclick="location.href=yh_path+'/report.php?evalNo=263352'">신고</span>
+					</div>
+					<!--
+					<div class="commentList hide"></div>					
+	    			<div class="commentInput hide">						
+	        			<div class="right">
+	        				<button type="button" onclick="lectureEvalList_writeEvalComment(263352)">입력</button>
+	        			</div>						
+	        			<div class="left">
+	        				<input type="text" name="wr_content" onkeydown="if (event.keyCode==13) lectureEvalList_writeEvalComment(263352);" placeholder="댓글을 입력해주세요.">
+	        			</div>
+	        		</div>
+	        		-->
+	        	</div>			
+	        </div>
 
+        <% end %>
+        
         <% if user_signed_in? %>
-            <%= form_tag '/home/write',method:'post', html: {:class => "form-horizontal"}, multipart: true do %>
+            <%= form_tag '/home/write_process',method:'post', html: {:class => "form-horizontal"}, multipart: true do %>
                   <!--<form class="form-horizontal" action="/trend/reply">-->
                   <input type="hidden" name="hairshop_id" value="<%=@hairshop.id%>">
                       <!--댓글 공간 시작-->
@@ -161,6 +227,17 @@
                               </span>
                             <p>가격</p>
                               <span class="star-rating small">
+                                <input type="radio" name="rating_b" value="1"><i></i>
+                                <input type="radio" name="rating_b" value="2"><i></i>
+                                <input type="radio" name="rating_b" value="3"><i></i>
+                                <input type="radio" name="rating_b" value="4"><i></i>
+                                <input type="radio" name="rating_b" value="5"><i></i>
+                              </span>
+                           </div>
+                          
+                           <div class="form-group">
+                            <p>실력</p>
+                              <span class="star-rating small">
                                 <input type="radio" name="rating_c" value="1"><i></i>
                                 <input type="radio" name="rating_c" value="2"><i></i>
                                 <input type="radio" name="rating_c" value="3"><i></i>
@@ -168,19 +245,28 @@
                                 <input type="radio" name="rating_c" value="5"><i></i>
                               </span>
                            </div>
-                          
                            <div class="form-group">
-                            <p>실력</p>
+                            <p>시설.서비스</p>
                               <span class="star-rating small">
-                                <input type="radio" name="rating_s" value="1"><i></i>
-                                <input type="radio" name="rating_s" value="2"><i></i>
-                                <input type="radio" name="rating_s" value="3"><i></i>
-                                <input type="radio" name="rating_s" value="4"><i></i>
-                                <input type="radio" name="rating_s" value="5"><i></i>
+                                <input type="radio" name="rating_d" value="1"><i></i>
+                                <input type="radio" name="rating_d" value="2"><i></i>
+                                <input type="radio" name="rating_d" value="3"><i></i>
+                                <input type="radio" name="rating_d" value="4"><i></i>
+                                <input type="radio" name="rating_d" value="5"><i></i>
                               </span>
                            </div>
                            <div class="form-group">
-                            <p>시설.서비스</p>
+                            <p>펌</p>
+                              <span class="star-rating small">
+                                <input type="radio" name="rating_e" value="1"><i></i>
+                                <input type="radio" name="rating_e" value="2"><i></i>
+                                <input type="radio" name="rating_e" value="3"><i></i>
+                                <input type="radio" name="rating_e" value="4"><i></i>
+                                <input type="radio" name="rating_e" value="5"><i></i>
+                              </span>
+                           </div>
+                           <div class="form-group">
+                            <p>염색</p>
                               <span class="star-rating small">
                                 <input type="radio" name="rating_f" value="1"><i></i>
                                 <input type="radio" name="rating_f" value="2"><i></i>
@@ -215,12 +301,7 @@
                         </fieldset>
                         
                 <%end%>
-       <%else%>
-                          <script>
-                            alert("로그인하세요");
-                           
-                          </script>
-                           
+
                           
        <%end%>
     
@@ -232,49 +313,8 @@
           });
         </script> 
     </div>
+  
 </div>
-<!------------------------후기 끝------------------------------------>
-
-	<div class="sideContent">
-				<div class='myInfo box'>
-			<div class='name_wrap'>
-				<div class='name'>황학</div>
-				<div class='menu'></div>
-			</div>
-			<div class='evalInfo'>
-				<div class='row'>
-					<div class='left'>Point</div>
-					<div class='right'><span class='bold'>0 / 0</span> 점</div>
-				</div>
-				<div class='row2'>
-					(현재/누적)
-				</div>
-				<div class='row cursor' onclick="location.href=yh_path+'/myLectureEval.php'">
-					<div class='left'>내 강의평</div>
-					<div class='right'><span class='bold'>0 / 12</span> 건</div>
-				</div>
-				<div class='row2'>
-					(이번학기/전체)
-				</div>
-			</div>
-			<div class="btnWrap">
-									<div class="permBtn">
-						<div class="bg" style='width:100%;'></div>
-						<div class="text">열람권한있음</div>
-					</div>
-								<button type='button' class='evalBtn' onclick="location.href=yh_path+'/lectureEval.php'">평가하러가기</button>
-			</div>
-		</div>
-				<div class='guide box'>
-			<div class="left" onclick="location.href=yh_path+'/guide.php'">사용가이드</div>
-			<div class="right" onclick="location.href=yh_path+'/returnInfo.php'">복학생안내</div>
-		</div>
-		<div class='facebook box'>
-			<div class='title'>페이스북</div>
-			<div class='content'>
-				<iframe src="//www.facebook.com/plugins/likebox.php?href=https%3A%2F%2Fwww.facebook.com%2Fkuklue&amp;width=208&amp;height=558&amp;colorscheme=light&amp;show_faces=true&amp;header=false&amp;stream=true&amp;show_border=false&amp;appId=115288441967877" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:208px; height:558px;" allowTransparency="true"></iframe>
-			</div>
-		</div>
-	</div>
+<%= render :partial => "home/sidebar1" %> 
 </div>
-
+<%= render :partial => "home/tail" %>   

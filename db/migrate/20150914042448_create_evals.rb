@@ -9,8 +9,10 @@ class CreateEvals < ActiveRecord::Migration
       t.string :image
       
       t.integer :rating_a
+      t.integer :rating_b
       t.integer :rating_c
-      t.integer :rating_s
+      t.integer :rating_d
+      t.integer :rating_e
       t.integer :rating_f
       
       t.timestamps null: false
