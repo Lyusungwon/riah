@@ -1,5 +1,5 @@
 <% @evaluation.each do |e|%>
-    <div class="e" id="lecEval_263352">				
+    <div class="e">				
     	<div class="title">
     		<a href="/home/hairshop/<%=e.hairshop_id%>" class="lec_name"><%=e.hairshop.name%></a>
     		<span class="lec_profName"><%=e.hairshop.address%></span>
@@ -96,20 +96,32 @@
     		</div>			
     	</div>				
     	<div class="tail">					
-    		<div class="btnWrap" style = "float:right;">
+        
+
+    		<div class="btnWrap">
                 <% if  Likeeval.where(:user_id =>current_user.id, :eval_id => e.id).empty?%>
-                <button class="btn-btn-primary" id ="good_<%=e.id%>"><div id ="goodletter_<%=e.id%>"> 좋아요</div><div id ="noletter_<%=e.id%>" class ="hidden">좋아요 취소</div></button>
-                <span id ="likenumber_<%=e.id%>"><%=e.likenumber%></span><span class ="hidden" id ="ids_<%=e.id%>"><%=e.id%></span>
+                    <span id ="likenumber_<%=e.id%>"><%=e.likenumber%></span><span class ="hidden" id ="ids_<%=e.id%>"><%=e.id%></span>
+                    <span id ="goodletter_<%=e.id%>"> 좋아요</span><span id ="noletter_<%=e.id%>" class ="hidden">좋아요 취소</span>
                 <%else%>
-                <button class="btn-btn-primary" id ="good_<%=e.id%>"> <div id ="goodletter_<%=e.id%>" class="hidden"> 좋아요</div><div id ="noletter_<%=e.id%>">좋아요 취소</div></button>
-                <span id ="likenumber_<%=e.id%>"><%=e.likenumber%></span><span class ="hidden" id ="ids_<%=e.id%>"><%=e.id%></span>
+                    <span id ="likenumber_<%=e.id%>"><%=e.likenumber%></span><span class ="hidden" id ="ids_<%=e.id%>"><%=e.id%></span>
+                    <span id ="goodletter_<%=e.id%>" class="hidden"> 좋아요</span><span id ="noletter_<%=e.id%>">좋아요 취소</span>
                 <%end%>                  
     			<span class="comment" onclick="lectureEvalList_getEvalCommentList(263352);">0 댓글</span>
-    			<span class="etc" onclick="location.href=yh_path+'/report.php?evalNo=263352'">신고</span>
+    			<span class="etc" href="/home/report">신고</span>
     			</div>					
-    		<!--
-    		<div class="commentList hide"></div>					
-    		<div class="commentInput hide">						
+    		<div class="commentList">
+    		    <div class="e">					
+    		        <div class="cmtInfo">
+    		            <span class="mb_nick">황학</span>
+    		            <span class="wr_time">2015-09-20 02:34:11</span>
+    		            <span class="option">
+    		                <span onclick="lectureEvalList_delEvalComment(680, 263375)">삭제</span>
+		                </span>
+	                </div>					
+	                <div class="cmtContent">ㅎㅎ</div>				
+	            </div>
+    		</div>					
+    		<div class="commentInput">						
     			<div class="right">
     				<button type="button" onclick="lectureEvalList_writeEvalComment(263352)">입력</button>
     			</div>						
@@ -117,7 +129,6 @@
     				<input type="text" name="wr_content" onkeydown="if (event.keyCode==13) lectureEvalList_writeEvalComment(263352);" placeholder="댓글을 입력해주세요.">
     			</div>
     		</div>
-    		-->
     	</div>			
     </div>
     <script>
