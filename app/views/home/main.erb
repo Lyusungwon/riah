@@ -43,11 +43,11 @@
 									<div class="e total">
 				    					<div class="left">총평</div>
 				    					<div class="center">    		  
-		                		        <% 1.upto(5) do |i|%>
-		                		        	<%if i==e.rating_a%>
-					                        <span></span>
-		                		        	<%else%>
+				        		        <% for i in(1..5)%>
+		                		        	<%if i <= e.rating_a%>
 					                        <span class="active"></span>
+		                		        	<%else%>
+					                        <span></span>
 		                		        	<%end%>
 		                		        <%end%>
 				    		            </div>
