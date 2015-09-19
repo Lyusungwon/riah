@@ -106,14 +106,14 @@
             		<div class="form">
             			<div class="row">
             				<div class="subj">강의명</div>
-        					<div class="content"><input type="text" id='lec_name' onkeydown='lecAC_keydown()' onkeyup='lecAC(0,event.keyCode);' onblur='lecAC_blur();' /><input type='hidden' name='lec_no' id='lec_no' /></div>
+        					<div class="content"><input type="text" id='lec_name' onkeydown='lecAC_keydown()' onkeyup='lecAC(0,event.keyCode);' onblur='lecAC_blur();' /><input type='hidden' name='hairshop_id' value="<%=params[:id]%>" /></div>
         				    <div id='lec_list'></div>
             			</div>
             			<div class="row">
             				<div class="subj">별점평가</div>
             				<div class="content bg1">
             					<div class="e total" id='gp_total'>
-            						<input type='hidden' name='eval_total' value='0' />
+            						<input type='hidden' name='rating_a' value='0' />
             						<div class="left">총평</div>
             						<div class='right'></div>
             						<div class="center">
@@ -125,7 +125,7 @@
             						</div>
             					</div>
             					<div class="e difficulty" id='gp_difficulty'>
-            						<input type='hidden' name='eval_difficulty' value='0' />
+            						<input type='hidden' name='rating_b' value='0' />
             						<div class="left">난이도</div>
             						<div class='right'></div>
             						<div class="center">
@@ -137,7 +137,7 @@
             						</div>
             					</div>
             					<div class="e studyTime" id='gp_studyTime'>
-            						<input type='hidden' name='eval_studyTime' value='0' />
+            						<input type='hidden' name='rating_c' value='0' />
             						<div class="left">학습량</div>
             						<div class='right'></div>
             						<div class="center">
@@ -149,7 +149,7 @@
             						</div>
             					</div>
             					<div class="e attendance" id='gp_attendance'>
-            						<input type='hidden' name='eval_attendance' value='0' />
+            						<input type='hidden' name='rating_d' value='0' />
             						<div class="left">출석체크</div>
             						<div class='right'></div>
             						<div class="center">
@@ -161,7 +161,7 @@
             						</div>
             					</div>
             					<div class="e grade" id='gp_grade'>
-            						<input type='hidden' name='eval_grade' value='0' />
+            						<input type='hidden' name='rating_e' value='0' />
             						<div class="left">학점</div>
             						<div class='right'></div>
             						<div class="center">
@@ -173,7 +173,7 @@
             						</div>
             					</div>
             					<div class="e achievement" id='gp_achievement'>
-            						<input type='hidden' name='eval_achievement' value='0' />
+            						<input type='hidden' name='rating_f' value='0' />
             						<div class="left">성취감</div>
             						<div class='right'></div>
             						<div class="center">
@@ -191,8 +191,8 @@
             				<div class="content"><textarea id='eval_content' name='eval_content' onkeyup='show_textCnt();' placeholder='평가 내용을 입력해주세요.'></textarea><div id="textCnt"></div></div>
             			</div>
             			<div class="btnWrap">
-            				<button id="submit" type='button' onclick='doSubmit();'>평가하기</button>
-                       
+            			<!--	<button id="submit" type='button' onclick='doSubmit();'>평가하기</button>-->
+                       	<input type ="submit">
             			</div>
             		</div>
             		</form>
