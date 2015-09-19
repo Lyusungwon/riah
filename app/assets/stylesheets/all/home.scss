@@ -25,7 +25,7 @@ input, button, textarea {font-family:'맑은 고딕','Dotum','Arial'}
             .ic.menu {background-image:url('/common_menu.png');}
             .ic.menu > .dropdown {width:220px;padding:10px;border:1px solid #DDD;text-align:left;position:absolute;right:10px;top:50px;z-index:20;background:#DBF0DF;box-shadow:0px 0px 2px 0px rgba(0,0,0,0.2);overflow:hidden;display:none;}
             .ic.menu > .dropdown > .row {padding:5px 10px;color:#555;overflow:hidden;cursor:pointer;}
-            .ic.menu > .dropdown > .row:hover {background:#DBF0DF;color:#F84;}
+            .ic.menu > .dropdown > .row:hover {background:#DBF0DF;color:#84B8A1;}
             .ic.menu > .dropdown > .hr {height:20px;margin-top:20px;border-top:1px solid #DDD;}
             .ic.menu:hover > .dropdown {display:block;}
         .menu > a {width:80px;height:50px;line-height:50px;color:#FEB;display:inline;float:right;}
@@ -49,7 +49,7 @@ input, button, textarea {font-family:'맑은 고딕','Dotum','Arial'}
         .evalInfo > .row {height:30px;overflow:hidden;}
         .evalInfo > .row.cursor {cursor:pointer;}
         .evalInfo > .row > .left {height:30px;line-height:30px;color:#777;text-align:center;font-size:18px;overflow:hidden;font-weight:bold;}
-        .evalInfo > .row > .right {height:30px;line-height:30px;color:#777;text-align:center;font-size:18px;overflow:hidden;color:#F84;font-weight:bold;}
+        .evalInfo > .row > .right {height:30px;line-height:30px;color:#777;text-align:center;font-size:18px;overflow:hidden;color:#84B8A1;font-weight:bold;}
         .evalInfo > .row2 {margin-bottom:10px;font-size:8pt;color:#999;text-align:right;}
         .side_btnWrap {margin-top:20px;padding-top:20px;border-top:1px solid #DDD;overflow:hidden;}
         .side_btnWrap > .permBtn {width:100%;height:45px;border:none;border-radius:3px;color:#FFF;font-size:11pt;text-align:center;background:#EEC174;position:relative;overflow:hidden;cursor:pointer;}
@@ -59,13 +59,13 @@ input, button, textarea {font-family:'맑은 고딕','Dotum','Arial'}
         
         .guide {padding:20px 0;font-size:10pt;color:#777;font-weight:bold;text-align:center;}
         .guide > .left {width:50%;height:20px;line-height:20px;float:left;border-right:1px solid #DDD;cursor:pointer;}
-        .guide > .right {height:20px;line-height:20px;color:#F84;overflow:hidden;cursor:pointer;}
+        .guide > .right {height:20px;line-height:20px;color:#84B8A1;overflow:hidden;cursor:pointer;}
 
 
 #tail {background:#FFF;border-top:1px solid #DDD;overflow:hidden;}
 #tail > .inner {width:980px;margin:0 auto;padding:30px 0;overflow:hidden;}
 #tail > .inner > .copyright {color:#777;font-size:11pt;}
-#tail > .inner > .copyright > .orange {font-weight:bold;color:#F84;}
+#tail > .inner > .copyright > .orange {font-weight:bold;color:#84B8A1;}
 
 /**
 * lectureEvalList
@@ -74,7 +74,7 @@ input, button, textarea {font-family:'맑은 고딕','Dotum','Arial'}
 .lectureEvalList > .noResult {height:100px;line-height:100px;color:#999;text-align:center;}
 .lectureEvalList > .e {padding:20px;margin-bottom:10px;border-radius:5px;border:1px solid #EAEAEA;border-bottom:1px solid #DDD;background:#FFF;overflow:hidden;}
 .lectureEvalList > .e > .title {border-bottom:1px solid #DDD;margin-bottom:15px;padding-bottom:15px;overflow:hidden;}
-.lectureEvalList > .e > .title > .lec_name {height:30px;line-height:30px;margin-right:10px;font-size:16pt;color:#F84;font-weight:bold;float:left;}
+.lectureEvalList > .e > .title > .lec_name {height:30px;line-height:30px;margin-right:10px;font-size:16pt;color:#84B8A1;font-weight:bold;float:left;}
 .lectureEvalList > .e > .title > .lec_profName {height:30px;line-height:20px;padding-top:10px;font-size:9pt;color:#AAA;float:left;}
 .lectureEvalList > .e > .content {margin-bottom:15px;overflow:hidden;}
 .lectureEvalList > .e > .content > .left {padding-right:15px;}
@@ -101,7 +101,7 @@ input, button, textarea {font-family:'맑은 고딕','Dotum','Arial'}
 .lectureEvalList > .e > .content > .right > .e.achievement > .center > span.active {background:#EFEBB0;}
 .lectureEvalList > .e > .content > .right > .prevData {height:30px;line-height:30px;color:#777;text-align:center;}
 .lectureEvalList > .e > .tail {border-top:1px solid #DDD;padding-top:15px;overflow:hidden;}
-.lectureEvalList > .e > .tail > .btnWrap {color:#F84;overflow:hidden;}
+.lectureEvalList > .e > .tail > .btnWrap {color:#84B8A1;overflow:hidden;}
 .lectureEvalList > .e > .tail > .btnWrap > span {height:20px;line-height:20px;float:left;cursor:pointer;}
 .lectureEvalList > .e > .tail > .btnWrap > span.like {padding-left:25px;padding-right:10px;background:url('./images/common_like.png') left center no-repeat;}
 .lectureEvalList > .e > .tail > .btnWrap > span.comment {padding-left:25px;padding-right:10px;background:url('./images/common_comment.png') left center no-repeat;}
@@ -110,9 +110,9 @@ input, button, textarea {font-family:'맑은 고딕','Dotum','Arial'}
 .lectureEvalList > .e > .tail > .commentList.hide {display:none;}
 .lectureEvalList > .e > .tail > .commentList > .e {margin-top:15px;padding:10px;border:1px solid #DDD;background:#F5F5F5;overflow:hidden;}
 .lectureEvalList > .e > .tail > .commentList > .e > .cmtInfo {overflow:hidden;}
-.lectureEvalList > .e > .tail > .commentList > .e > .cmtInfo > .mb_nick {margin-right:10px;font-size:10pt;font-weight:bold;color:#F84;float:left;}
+.lectureEvalList > .e > .tail > .commentList > .e > .cmtInfo > .mb_nick {margin-right:10px;font-size:10pt;font-weight:bold;color:#84B8A1;float:left;}
 .lectureEvalList > .e > .tail > .commentList > .e > .cmtInfo > .wr_time {font-size:9pt;color:#AAA;}
-.lectureEvalList > .e > .tail > .commentList > .e > .cmtInfo > .option {font-size:9pt;color:#F84;float:right;}
+.lectureEvalList > .e > .tail > .commentList > .e > .cmtInfo > .option {font-size:9pt;color:#84B8A1;float:right;}
 .lectureEvalList > .e > .tail > .commentList > .e > .cmtInfo > .option > span {cursor:pointer;}
 .lectureEvalList > .e > .tail > .commentList > .e > .cmtContent {margin-top:5px;color:#777;overflow:hidden;}
 .lectureEvalList > .e > .tail > .commentList > .e.deleted > .cmtContent {color:#999;}
