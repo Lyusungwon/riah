@@ -37,12 +37,15 @@ class HomeController < ApplicationController
     end
     def hairshop
         @hairshop=Hairshop.find(params[:id])
+        
     end
     def write
     end
+    
     def write_process        
+
         if  Eval.where(:user_id => current_user.id, :hairshop_id => params[:hairshop_id]).empty?
-        Eval.create(hairshop_id: params[:hairshop_id],user_id: current_user.id, content: params[:content], rating_a: params[:rating_a], rating_b: params[:rating_b], rating_c: params[:rating_c], rating_d: params[:rating_d], rating_e: params[:rating_e], rating_f: params[:rating_f], image: params[:image_file])
+        Eval.create(hairshop_id: params[:hairshop_id],user_id: current_user.id, content: params[:content], rating_a: params[:rating_a], rating_b: params[:rating_b], rating_c: params[:rating_c], rating_d: params[:rating_d], rating_e: params[:rating_e], rating_f: params[:rating_f], images: params[:images])
         #a = Opinion.where(post_id: params[:id]).all
         #staraverage=a.average(:general).to_f
         

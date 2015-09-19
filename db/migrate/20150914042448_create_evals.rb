@@ -15,6 +15,9 @@ class CreateEvals < ActiveRecord::Migration
       t.integer :rating_e
       t.integer :rating_f
       
+      t.string :prices
+      t.string :designer
+      
       t.timestamps null: false
     end
   end

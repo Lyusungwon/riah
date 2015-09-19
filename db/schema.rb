@@ -24,6 +24,8 @@ ActiveRecord::Schema.define(version: 20150914042448) do
     t.integer  "rating_d"
     t.integer  "rating_e"
     t.integer  "rating_f"
+    t.string   "prices"
+    t.string   "designer"
     t.datetime "created_at",                       null: false
     t.datetime "updated_at",                       null: false
   end
@@ -32,6 +34,9 @@ ActiveRecord::Schema.define(version: 20150914042448) do
     t.string   "name"
     t.string   "address"
     t.string   "phonenumber"
+    t.string   "price"
+    t.string   "opentime"
+    t.string   "hompage"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
   end

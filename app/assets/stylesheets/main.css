@@ -25,6 +25,6 @@
 #content > .mainContent > .welcome_wrap > .content > strong.orange {color:#F84;}
 #content > .mainContent > .welcome_wrap > .content > .desc {border:1px solid #DDD;padding:10px;font-size:9pt;background:#F5F5F5}
 
-#content > .mainContent > .recent_wrap {overflow:hidden;}
-#content > .mainContent > .recent_wrap > .title {height:60px;line-height:60px;font-size:16pt;font-weight:bold;color:#777;}
+.recent_wrap {overflow:hidden;}
+.recent_wrap > .title {height:60px;line-height:60px;font-size:16pt;font-weight:bold;color:#777;}
 	#lectureEvalList {}

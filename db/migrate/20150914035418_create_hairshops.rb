@@ -5,6 +5,10 @@ class CreateHairshops < ActiveRecord::Migration
       t.string :name
       t.string :address
       t.string :phonenumber
+      t.string :price
+      t.string :opentime
+      t.string :hompage
+      
       
       t.timestamps null: false
     end
