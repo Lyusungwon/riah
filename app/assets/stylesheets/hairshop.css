@@ -55,7 +55,6 @@ top: center no-repeat;background-size:20px 40px;}background-position:center -20p
 
 
 
- .main_box {padding:30px; width:800px;}
  .eval_wrap > .title {height:40px;line-height:40px;font-weight:bold;font-size:16pt;}
  .eval_wrap > .desc {width: 100%;padding:15px 10px;margin-top:40px;border-left:4px solid #FFA500;background:#F5F5F5;}
  .eval_wrap > .desc > ul {margin:0;padding-left:1.5em;list-style-type:check;}
