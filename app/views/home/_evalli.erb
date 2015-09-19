@@ -1,0 +1,189 @@
+<div class="e" id="lecEval_263352">		
+
+
+
+
+	<div class="content">					
+		<div class="right">						
+			<div class="e total">
+				<div class="left">총평</div>
+				<div class="center">    		  
+		        <% for i in(1..5)%>
+                    <%if i <= h.rating_a.to_i%>
+                    <span class="active"></span>
+                    <%else%>
+                    <span></span>
+                    <%end%>
+                <%end%>
+	            </div>
+			</div>						
+			<div class="e difficulty">
+			    <div class="left">서비스</div>
+		        <div class="center">
+		        <% for i in(1..5)%>
+                    <%if i <= h.rating_b.to_i%>
+                    <span class="active"></span>
+                    <%else%>
+                    <span></span>
+                    <%end%>
+                <%end%>
+		        </div>
+		    </div>						
+			<div class="e studyTime">
+			    <div class="left">가격대</div>
+		        <div class="center">
+		        <% for i in(1..5)%>
+                    <%if i <= h.rating_c.to_i%>
+                    <span class="active"></span>
+                    <%else%>
+                    <span></span>
+                    <%end%>
+                <%end%>
+		        </div>
+			</div>						
+			<div class="e attendance">					    
+			    <div class="left">커트</div>
+		        <div class="center">
+		        <% for i in(1..5)%>
+                    <%if i <= h.rating_d.to_i %>
+                    <span class="active"></span>
+                    <%else%>
+                    <span></span>
+                    <%end%>
+                <%end%>
+		        </div>
+            </div>						
+			<div class="e grade">
+			    <div class="left">파마</div>
+		        <div class="center">
+		        <% for i in(1..5)%>
+                    <%if i <= h.rating_e.to_i%>
+                    <span class="active"></span>
+                    <%else%>
+                    <span></span>
+                    <%end%>
+                <%end%>
+                </div>
+			</div>						
+			<div class="e achievement">
+		        <div class="left">염색</div>
+		        <div class="center">
+		        <% for i in(1..5)%>
+                    <%if i <= h.rating_f.to_i%>
+                    <span class="active"></span>
+                    <%else%>
+                    <span></span>
+                    <%end%>
+                <%end%>
+		        </div>
+			</div>					
+		</div>
+		
+		<div class="left">						
+			<div class="wrInfo"><a href="./myLectureEval.php?mbNo=10600" class="bold">회원</a> 님의
+			</div>						
+			<div class="wrInfoSub" title="2015-09-15 14:51:23">(201219****) | 4시간 전</div>						
+			<div class="wrContent">
+			<%=h.content%>
+			<% unless h.images.empty?%>
+    			<% h.images.each do |img| %>
+    			<img src="<%=img.url%>">
+    			<% end %>
+			<% end %>
+			</div>					
+		</div>			
+	</div>				
+	<div class="tail">					
+		<div class="btnWrap" style = "float:right;">
+
+        <% if  Likeeval.where(:user_id =>current_user.id, :eval_id => h.id).empty?%>
+        <button class="btn-btn-primary" id ="good_<%=h.id%>">
+        <div id ="goodletter_<%=h.id%>"> 좋아요</div><div id ="noletter_<%=h.id%>" class ="hidden">좋아요 취소</div></button><span id ="likenumber_<%=h.id%>"><%=h.likenumber%></span><span class ="hidden" id ="ids_<%=h.id%>"><%=h.id%></span>
+        <%else%>
+       <button class="btn-btn-primary" id ="good_<%=h.id%>"> <div id ="goodletter_<%=h.id%>" class="hidden"> 좋아요</div><div id ="noletter_<%=h.id%>">좋아요 취소</div></button><span id ="likenumber_<%=h.id%>"><%=h.likenumber%></span><span class ="hidden" id ="ids_<%=h.id%>"><%=h.id%></span>
+        <%end%>
+		</div>                            
+			<!--<span class="like" likecnt="0" onclick="lectureEvalList_like(263352)">0 좋아요</span>
+			<span class="comment" onclick="lectureEvalList_getEvalCommentList(263352);">0 댓글</span>
+			<span class="etc" onclick="location.href=yh_path+'/report.php?evalNo=263352'">신고</span>-->
+		<!--
+		<div class="commentList hide"></div>					
+		<div class="commentInput hide">						
+			<div class="right">
+				<button type="button" onclick="lectureEvalList_writeEvalComment(263352)">입력</button>
+			</div>						
+			<div class="left">
+				<input type="text" name="wr_content" onkeydown="if (event.keyCode==13) lectureEvalList_writeEvalComment(263352);" placeholder="댓글을 입력해주세요.">
+			</div>
+		</div>
+		-->
+	</div>			
+</div>
+
+
+                            <script>
+$(function(){
+var num = <%=h.likenumber%>
+var txt = "";
+$("#goodletter_<%=h.id%>").click(
+
+function(){
+//ajax로 서버에 데이터를 날려서 모델에저장한다.
+$.ajax({//대괄호가 하나 더 들어가있어야된데...
+    
+    data: { id :$("#ids_<%=h.id%>").text()},
+    url:  "/home/likeeval_process",
+    success: function(data)
+            {
+             num = num + 1
+             $("#likenumber_<%=h.id%>").html(num);
+             $("#goodletter_<%=h.id%>").addClass("hidden");
+             $("#noletter_<%=h.id%>").removeClass("hidden");
+            }
+
+})
+}
+);
+
+
+
+
+
+
+$("#noletter_<%=h.id%>").click(
+
+function(){
+//ajax로 서버에 데이터를 날려서 모델에저장한다.
+$.ajax({//대괄호가 하나 더 들어가있어야된데...
+    
+    data: { id :$("#ids_<%=h.id%>").text()},
+    url:  "/home/likeeval_process",
+    success: function(data)
+            { //동작이 여러개 있을 때는 함수를   function을 쓴다. //data는빼도 된다.
+                       //2.text area 안에 있는 내용을 뽑아서     출력한다.
+             
+             num = num - 1
+             $("#likenumber_<%=h.id%>").html(num);
+             $("#noletter_<%=h.id%>").addClass("hidden");
+             $("#goodletter_<%=h.id%>").removeClass("hidden");
+            }
+
+})
+}
+);
+
+
+
+
+
+
+
+
+
+
+
+})
+
+
+</script>
+

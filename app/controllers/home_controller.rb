@@ -7,9 +7,11 @@ class HomeController < ApplicationController
     def main
         @evaluation=Eval.all
     end
+    def hairshop
+        @hairshop=Hairshop.find(params[:id])
+        @evaluation=@hairshop.evals        
+    end
     def hairshopsearch
-        
-        
     searching = params[:searchkey]
     @result=Hairshop.search(searching).all
     @ar =Array.new
@@ -35,10 +37,6 @@ class HomeController < ApplicationController
     end
     def hairshopsearch2
     end
-    def hairshop
-        @hairshop=Hairshop.find(params[:id])
-        
-    end
     def write
     end
     
@@ -48,8 +46,10 @@ class HomeController < ApplicationController
             
             puts params[:images].inspect
             new_images = [] 
-            params[:images].each do |img|
-                new_images << img
+			unless new_images.empty?
+                params[:images].each do |img|
+                    new_images << img
+                end
             end
             Eval.create do |e| 
                 e.hairshop_id = params[:hairshop_id]
