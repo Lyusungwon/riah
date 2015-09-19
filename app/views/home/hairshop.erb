@@ -105,28 +105,30 @@
         			<form action = "/home/write_process" method="POST">
             		<div class="form">
             			<div class="row">
-            				<div class="subj">강의명</div>
-        					<div class="content"><input type="text" id='lec_name' onkeydown='lecAC_keydown()' onkeyup='lecAC(0,event.keyCode);' onblur='lecAC_blur();' /><input type='hidden' name='hairshop_id' value="<%=params[:id]%>" /></div>
+            				<div class="subj">헤어샵</div>
+        					<div class="content" style ="margin-top:12px; font-size:15px;"><%=Hairshop.find(params[:id]).name%></div>
         				    <div id='lec_list'></div>
             			</div>
             			<div class="row">
             				<div class="subj">별점평가</div>
             				<div class="content bg1">
+            				
             					<div class="e total" id='gp_total'>
             						<input type='hidden' name='rating_a' value='0' />
             						<div class="left">총평</div>
             						<div class='right'></div>
-            						<div class="center">
-            							<div class="graphWrap" onclick="lecGraph_select('gp_total', 1)" onmouseover="lecGraph_mouseover('gp_total', 1)" onmouseout="lecGraph_mouseout('gp_total')"><span msg='최악이에요!'></span></div>
-            							<div class="graphWrap" onclick="lecGraph_select('gp_total', 2)" onmouseover="lecGraph_mouseover('gp_total', 2)" onmouseout="lecGraph_mouseout('gp_total')"><span msg='별로에요'></span></div>
-            							<div class="graphWrap" onclick="lecGraph_select('gp_total', 3)" onmouseover="lecGraph_mouseover('gp_total', 3)" onmouseout="lecGraph_mouseout('gp_total')"><span msg='보통이에요'></span></div>
-            							<div class="graphWrap" onclick="lecGraph_select('gp_total', 4)" onmouseover="lecGraph_mouseover('gp_total', 4)" onmouseout="lecGraph_mouseout('gp_total')"><span msg='좋아요'></span></div>
-            							<div class="graphWrap" onclick="lecGraph_select('gp_total', 5)" onmouseover="lecGraph_mouseover('gp_total', 5)" onmouseout="lecGraph_mouseout('gp_total')"><span msg='최고에요!'></span></div>
-            						</div>
+            					    <span class="star-rating small" style ="margin-top:5px;margin-left:5px">
+                                          <input type="radio" name="rating_a" value="1"><i></i>
+                                          <input type="radio" name="rating_a" value="2"><i></i>
+                                          <input type="radio" name="rating_a" value="3"><i></i>
+                                          <input type="radio" name="rating_a" value="4"><i></i>
+                                          <input type="radio" name="rating_a" value="5"><i></i>
+                                         
+                                        </span>
             					</div>
             					<div class="e difficulty" id='gp_difficulty'>
             						<input type='hidden' name='rating_b' value='0' />
-            						<div class="left">난이도</div>
+            						<div class="left">가격대</div>
             						<div class='right'></div>
             						<div class="center">
             							<div class="graphWrap" onclick="lecGraph_select('gp_difficulty', 1)" onmouseover="lecGraph_mouseover('gp_difficulty', 1)" onmouseout="lecGraph_mouseout('gp_difficulty')"><span msg='짱쉬워요!'></span></div>
@@ -138,7 +140,7 @@
             					</div>
             					<div class="e studyTime" id='gp_studyTime'>
             						<input type='hidden' name='rating_c' value='0' />
-            						<div class="left">학습량</div>
+            						<div class="left">서비스</div>
             						<div class='right'></div>
             						<div class="center">
             							<div class="graphWrap" onclick="lecGraph_select('gp_studyTime', 1)" onmouseover="lecGraph_mouseover('gp_studyTime', 1)" onmouseout="lecGraph_mouseout('gp_studyTime')"><span msg='완전 적어요!'></span></div>
@@ -150,7 +152,7 @@
             					</div>
             					<div class="e attendance" id='gp_attendance'>
             						<input type='hidden' name='rating_d' value='0' />
-            						<div class="left">출석체크</div>
+            						<div class="left">컷트</div>
             						<div class='right'></div>
             						<div class="center">
             							<div class="graphWrap" onclick="lecGraph_select('gp_attendance', 1)" onmouseover="lecGraph_mouseover('gp_attendance', 1)" onmouseout="lecGraph_mouseout('gp_attendance')"><span msg='거의 안해요'></span></div>
@@ -162,7 +164,7 @@
             					</div>
             					<div class="e grade" id='gp_grade'>
             						<input type='hidden' name='rating_e' value='0' />
-            						<div class="left">학점</div>
+            						<div class="left">펌</div>
             						<div class='right'></div>
             						<div class="center">
             							<div class="graphWrap" onclick="lecGraph_select('gp_grade', 1)" onmouseover="lecGraph_mouseover('gp_grade', 1)" onmouseout="lecGraph_mouseout('gp_grade')"><span msg='전설의총잡이! FF'></span></div>
@@ -174,7 +176,7 @@
             					</div>
             					<div class="e achievement" id='gp_achievement'>
             						<input type='hidden' name='rating_f' value='0' />
-            						<div class="left">성취감</div>
+            						<div class="left">염색</div>
             						<div class='right'></div>
             						<div class="center">
             							<div class="graphWrap" onclick="lecGraph_select('gp_achievement', 1)" onmouseover="lecGraph_mouseover('gp_achievement', 1)" onmouseout="lecGraph_mouseout('gp_achievement')"><span msg='뭘배웠는지ㅜㅜ'></span></div>
@@ -299,7 +301,13 @@
 							</div>			
         				</div>				
         				<div class="tail">					
+<<<<<<< HEAD
         					<div class="btnWrap">
+=======
+        					<div class="btnWrap" style = "float:right;">
+        					
+        					  <% if user_signed_in?%>
+>>>>>>> f4198498dec19a5190a56dd4e1f35c2d9de226da
                             <% if  Likeeval.where(:user_id =>current_user.id, :eval_id => h.id).empty?%>
                             <button class="btn-btn-primary" id ="good_<%=h.id%>">
                             <div id ="goodletter_<%=h.id%>"> 좋아요</div><div id ="noletter_<%=h.id%>" class ="hidden">좋아요 취소</div></button><span id ="likenumber_<%=h.id%>"><%=h.likenumber%></span><span class ="hidden" id ="ids_<%=h.id%>"><%=h.id%></span>
