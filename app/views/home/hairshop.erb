@@ -1,0 +1,329 @@
+<head>
+	<%= stylesheet_link_tag "hairshop", :media => "all" %>
+</head>
+
+<%= render :partial => "home/navbar" %>  
+
+<div class="container" id='content' >
+	<div class="row">
+		<div class="col-md-7 col-md-offset-1">
+			<div class="mainContent">
+            	<div class="lectureInfo main_box">
+            		<div class="top">
+                		<div class="lec_name"><span><%=@hairshop.name%></span></div>
+                		<div class="lec_profName"><span><%=@hairshop.address%></span></div>
+                		<div class='menu'></div>
+                	</div>
+                    <div class="lec_rating" id="lec_rating">
+                        <div class="e total"><div class="left">총평</div>
+                        <div class="right"><%=@hairshop.avg_a.round(0)%></div>
+                        <div class="center">
+                            <% for i in(1..5)%>
+                                <%if i <= @hairshop.avg_a.round(0)%>
+                                <span class="active"></span>
+                                <%else%>
+                                <span></span>
+                                <%end%>
+                            <%end%>
+                        </div></div>		
+                        <div class="e difficulty"><div class="left">서비스</div><div class="right"><%=@hairshop.avg_b.round(0)%></div>
+                        <div class="center">
+                      	  	<% for i in(1..5)%>
+                                <%if i <= @hairshop.avg_b.round(0)%>
+                                <span class="active"></span>
+                                <%else%>
+                                <span></span>
+                                <%end%>
+                            <%end%>
+                        </div></div>		
+                        <div class="e studyTime"><div class="left">가격대</div><div class="right"><%=@hairshop.avg_c.round(0)%></div><div class="center">
+                        	<% for i in(1..5)%>
+                                <%if i <= @hairshop.avg_c.round(0)%>
+                                <span class="active"></span>
+                                <%else%>
+                                <span></span>
+                                <%end%>
+                            <%end%>
+                        </div></div>		
+                        <div class="e attendance"><div class="left">컷트</div><div class="right"><%=@hairshop.avg_d.round(0)%></div><div class="center">
+                        	<% for i in(1..5)%>
+                                <%if i <= @hairshop.avg_d.round(0)%>
+                                <span class="active"></span>
+                                <%else%>
+                                <span></span>
+                                <%end%>
+                            <%end%>
+                        </div></div>		
+                        <div class="e grade"><div class="left">파마</div><div class="right"><%=@hairshop.avg_e.round(0)%></div><div class="center">
+                        	<% for i in(1..5)%>
+                                <%if i <= @hairshop.avg_e.round(0)%>
+                                <span class="active"></span>
+                                <%else%>
+                                <span></span>
+                                <%end%>
+                            <%end%>
+                        </div></div>		
+                        <div class="e achievement"><div class="left">염색</div><div class="right"><%=@hairshop.avg_f.round(0)%></div><div class="center">
+                        	<% for i in(1..5)%>
+                                <%if i <= @hairshop.avg_f.round(0)%>
+                                <span class="active"></span>
+                                <%else%>
+                                <span></span>
+                                <%end%>
+                            <%end%>
+                        </div></div>	
+        			</div>
+        
+                	<div class="lec_info">
+                		<!--년도, 학기, 코드, 학점, 이수구분, 교수님, 시간, 강의실-->
+                		<div class="e"><span class='subj'>개설학기</span><span class='content' title='2015-1R'>2015-1R</span></div>
+                		<div class="e"><span class='subj'>과목코드</span><span class='content' title='HOEW451-00'>HOEW451-00</span></div>
+                		<div class="e2"><span class='subj'>학점</span><span class='content' title='3'>3학점</span></div>
+                		<div class="e"><span class='subj'>이수구분</span><span class='content' title='전공선택'>전공선택</span></div>
+                		<div class="e2"><span class='subj'>강의시간</span><span class='content' title='월(6) 서관315 수(6) 서관315 '>월(6) 서관315 수(6) 서관315 </span></div>
+                	</div>
+                	<div class='optionWrap'>
+                		<div class="left"><button type='button' class="eval" onclick="location.href='./lectureEval.php?lec_no=35564';">평가등록</button></div>
+                		<div class="right">
+                			<select id='sameLectureList' onchange="location.href=yh_path+'/lecture.php?no='+$(this).val()">
+                				<option value='35564' selected>2015년 1학기 (김진우 교수님)</option><option value='24443'>2013년 1학기 (김진우 교수님)</option><option value='11773'>2011년 1학기 (민병희 교수님)</option><option value='2730'>2009년 1학기 (Yang, Yanqiu 교수님)</option>			</select>
+                		</div>
+                	</div>
+                </div>        		
+
+    		<div class="eval_wrap main_box" style ="width:700px;">
+    			<div class='title'>강의평가 쓰기</div>
+    			<div class='desc'>
+    				<ul>
+    					<li>KLUE에는 강의를 먼저 들었던 학우들이 입력한 263,346개 이상의 강의평가가 등록되어있습니다.</li>
+    					<li>강의평가를 입력하여 100포인트를 모으시면 다른 학우들이 입력한 강의를 열람할 수 있습니다.</li>
+    					<li>KLUE는 여러분의 성의있는 강의평을 기반으로 운영됩니다.</li>
+    				</ul>
+    			</div>
+    		<div class="form">
+    			<div class="row">
+    				<div class="subj">강의명</div>
+					<div class="content"><input type="text" id='lec_name' onkeydown='lecAC_keydown()' onkeyup='lecAC(0,event.keyCode);' onblur='lecAC_blur();' /><input type='hidden' name='lec_no' id='lec_no' /></div>
+				<div id='lec_list'></div>
+    			</div>
+    			<div class="row">
+    				<div class="subj">별점평가</div>
+    				<div class="content bg1">
+    					<div class="e total" id='gp_total'>
+    						<input type='hidden' name='eval_total' value='0' />
+    						<div class="left">총평</div>
+    						<div class='right'></div>
+    						<div class="center">
+    							<div class="graphWrap" onclick="lecGraph_select('gp_total', 1)" onmouseover="lecGraph_mouseover('gp_total', 1)" onmouseout="lecGraph_mouseout('gp_total')"><span msg='최악이에요!'></span></div>
+    							<div class="graphWrap" onclick="lecGraph_select('gp_total', 2)" onmouseover="lecGraph_mouseover('gp_total', 2)" onmouseout="lecGraph_mouseout('gp_total')"><span msg='별로에요'></span></div>
+    							<div class="graphWrap" onclick="lecGraph_select('gp_total', 3)" onmouseover="lecGraph_mouseover('gp_total', 3)" onmouseout="lecGraph_mouseout('gp_total')"><span msg='보통이에요'></span></div>
+    							<div class="graphWrap" onclick="lecGraph_select('gp_total', 4)" onmouseover="lecGraph_mouseover('gp_total', 4)" onmouseout="lecGraph_mouseout('gp_total')"><span msg='좋아요'></span></div>
+    							<div class="graphWrap" onclick="lecGraph_select('gp_total', 5)" onmouseover="lecGraph_mouseover('gp_total', 5)" onmouseout="lecGraph_mouseout('gp_total')"><span msg='최고에요!'></span></div>
+    						</div>
+    					</div>
+    					<div class="e difficulty" id='gp_difficulty'>
+    						<input type='hidden' name='eval_difficulty' value='0' />
+    						<div class="left">난이도</div>
+    						<div class='right'></div>
+    						<div class="center">
+    							<div class="graphWrap" onclick="lecGraph_select('gp_difficulty', 1)" onmouseover="lecGraph_mouseover('gp_difficulty', 1)" onmouseout="lecGraph_mouseout('gp_difficulty')"><span msg='짱쉬워요!'></span></div>
+    							<div class="graphWrap" onclick="lecGraph_select('gp_difficulty', 2)" onmouseover="lecGraph_mouseover('gp_difficulty', 2)" onmouseout="lecGraph_mouseout('gp_difficulty')"><span msg='조금 쉬워요'></span></div>
+    							<div class="graphWrap" onclick="lecGraph_select('gp_difficulty', 3)" onmouseover="lecGraph_mouseover('gp_difficulty', 3)" onmouseout="lecGraph_mouseout('gp_difficulty')"><span msg='보통이에요'></span></div>
+    							<div class="graphWrap" onclick="lecGraph_select('gp_difficulty', 4)" onmouseover="lecGraph_mouseover('gp_difficulty', 4)" onmouseout="lecGraph_mouseout('gp_difficulty')"><span msg='조금 어려워요'></span></div>
+    							<div class="graphWrap" onclick="lecGraph_select('gp_difficulty', 5)" onmouseover="lecGraph_mouseover('gp_difficulty', 5)" onmouseout="lecGraph_mouseout('gp_difficulty')"><span msg='짱어려워요!'></span></div>
+    						</div>
+    					</div>
+    					<div class="e studyTime" id='gp_studyTime'>
+    						<input type='hidden' name='eval_studyTime' value='0' />
+    						<div class="left">학습량</div>
+    						<div class='right'></div>
+    						<div class="center">
+    							<div class="graphWrap" onclick="lecGraph_select('gp_studyTime', 1)" onmouseover="lecGraph_mouseover('gp_studyTime', 1)" onmouseout="lecGraph_mouseout('gp_studyTime')"><span msg='완전 적어요!'></span></div>
+    							<div class="graphWrap" onclick="lecGraph_select('gp_studyTime', 2)" onmouseover="lecGraph_mouseover('gp_studyTime', 2)" onmouseout="lecGraph_mouseout('gp_studyTime')"><span msg='조금 적어요'></span></div>
+    							<div class="graphWrap" onclick="lecGraph_select('gp_studyTime', 3)" onmouseover="lecGraph_mouseover('gp_studyTime', 3)" onmouseout="lecGraph_mouseout('gp_studyTime')"><span msg='보통이에요'></span></div>
+    							<div class="graphWrap" onclick="lecGraph_select('gp_studyTime', 4)" onmouseover="lecGraph_mouseover('gp_studyTime', 4)" onmouseout="lecGraph_mouseout('gp_studyTime')"><span msg='조금 많아요'></span></div>
+    							<div class="graphWrap" onclick="lecGraph_select('gp_studyTime', 5)" onmouseover="lecGraph_mouseover('gp_studyTime', 5)" onmouseout="lecGraph_mouseout('gp_studyTime')"><span msg='완전 많아요!'></span></div>
+    						</div>
+    					</div>
+    					<div class="e attendance" id='gp_attendance'>
+    						<input type='hidden' name='eval_attendance' value='0' />
+    						<div class="left">출석체크</div>
+    						<div class='right'></div>
+    						<div class="center">
+    							<div class="graphWrap" onclick="lecGraph_select('gp_attendance', 1)" onmouseover="lecGraph_mouseover('gp_attendance', 1)" onmouseout="lecGraph_mouseout('gp_attendance')"><span msg='거의 안해요'></span></div>
+    							<div class="graphWrap" onclick="lecGraph_select('gp_attendance', 2)" onmouseover="lecGraph_mouseover('gp_attendance', 2)" onmouseout="lecGraph_mouseout('gp_attendance')"><span msg='가끔 해요'></span></div>
+    							<div class="graphWrap" onclick="lecGraph_select('gp_attendance', 3)" onmouseover="lecGraph_mouseover('gp_attendance', 3)" onmouseout="lecGraph_mouseout('gp_attendance')"><span msg='보통이에요'></span></div>
+    							<div class="graphWrap" onclick="lecGraph_select('gp_attendance', 4)" onmouseover="lecGraph_mouseover('gp_attendance', 4)" onmouseout="lecGraph_mouseout('gp_attendance')"><span msg='자주 해요'></span></div>
+    							<div class="graphWrap" onclick="lecGraph_select('gp_attendance', 5)" onmouseover="lecGraph_mouseover('gp_attendance', 5)" onmouseout="lecGraph_mouseout('gp_attendance')"><span msg='항상 해요'></span></div>
+    						</div>
+    					</div>
+    					<div class="e grade" id='gp_grade'>
+    						<input type='hidden' name='eval_grade' value='0' />
+    						<div class="left">학점</div>
+    						<div class='right'></div>
+    						<div class="center">
+    							<div class="graphWrap" onclick="lecGraph_select('gp_grade', 1)" onmouseover="lecGraph_mouseover('gp_grade', 1)" onmouseout="lecGraph_mouseout('gp_grade')"><span msg='전설의총잡이! FF'></span></div>
+    							<div class="graphWrap" onclick="lecGraph_select('gp_grade', 2)" onmouseover="lecGraph_mouseover('gp_grade', 2)" onmouseout="lecGraph_mouseout('gp_grade')"><span msg='안주는 편'></span></div>
+    							<div class="graphWrap" onclick="lecGraph_select('gp_grade', 3)" onmouseover="lecGraph_mouseover('gp_grade', 3)" onmouseout="lecGraph_mouseout('gp_grade')"><span msg='보통이에요'></span></div>
+    							<div class="graphWrap" onclick="lecGraph_select('gp_grade', 4)" onmouseover="lecGraph_mouseover('gp_grade', 4)" onmouseout="lecGraph_mouseout('gp_grade')"><span msg='잘주는 편'></span></div>
+    							<div class="graphWrap" onclick="lecGraph_select('gp_grade', 5)" onmouseover="lecGraph_mouseover('gp_grade', 5)" onmouseout="lecGraph_mouseout('gp_grade')"><span msg='에이쁠폭격기!'></span></div>
+    						</div>
+    					</div>
+    					<div class="e achievement" id='gp_achievement'>
+    						<input type='hidden' name='eval_achievement' value='0' />
+    						<div class="left">성취감</div>
+    						<div class='right'></div>
+    						<div class="center">
+    							<div class="graphWrap" onclick="lecGraph_select('gp_achievement', 1)" onmouseover="lecGraph_mouseover('gp_achievement', 1)" onmouseout="lecGraph_mouseout('gp_achievement')"><span msg='뭘배웠는지ㅜㅜ'></span></div>
+    							<div class="graphWrap" onclick="lecGraph_select('gp_achievement', 2)" onmouseover="lecGraph_mouseover('gp_achievement', 2)" onmouseout="lecGraph_mouseout('gp_achievement')"><span msg='조금 적어요'></span></div>
+    							<div class="graphWrap" onclick="lecGraph_select('gp_achievement', 3)" onmouseover="lecGraph_mouseover('gp_achievement', 3)" onmouseout="lecGraph_mouseout('gp_achievement')"><span msg='보통이에요'></span></div>
+    							<div class="graphWrap" onclick="lecGraph_select('gp_achievement', 4)" onmouseover="lecGraph_mouseover('gp_achievement', 4)" onmouseout="lecGraph_mouseout('gp_achievement')"><span msg='조금 많아요'></span></div>
+    							<div class="graphWrap" onclick="lecGraph_select('gp_achievement', 5)" onmouseover="lecGraph_mouseover('gp_achievement', 5)" onmouseout="lecGraph_mouseout('gp_achievement')"><span msg='많이배웠어요!'></span></div>
+    						</div>
+    					</div>
+    				</div>
+    			</div>
+    			<div class="row">
+    				<div class="subj">평가내용</div>
+    				<div class="content"><textarea id='eval_content' name='eval_content' onkeyup='show_textCnt();' placeholder='평가 내용을 입력해주세요.'></textarea><div id="textCnt"></div></div>
+    			</div>
+    			<div class="btnWrap">
+    				<button id="submit" type='button' onclick='doSubmit();'>평가하기</button>
+                <script>
+                  $(document).ready(function(){
+                    $("#submit").click(function(){
+                      alert("소중한 후기 감사합니다");
+                    });
+                  });
+                </script> 
+    			</div>
+    		</div>
+    	</div>
+    </div>
+</div>
+
+    <!-----------------------------후기 시작-------------------------------------->
+    <!--후기 나열-->
+    <div class='lectureEvalList'>
+	    <% @hairshop.evals.each do |h|%>
+	    	<div class="e" id="lecEval_263352">							
+	    		<div class="content">					
+	    			<div class="right">						
+	    				<div class="e total">
+	    					<div class="left">총평</div>
+	    					<div class="center">    		  
+	    					    <span class="star-rating" style="height: 20px;width: 100px;"><!--별이 다 안나옴ㅠ-->
+	                		        <% 1.upto(5) do |i|%>	
+	                		        	<%if i==h.rating_a.to_i%>
+	                		        	<i class="on"></i>
+	                		        	<%else%>
+	                		        	<i></i>
+	                		        	<%end%>
+	                		        <%end%>
+	            		   </span>
+	    		            </div>
+	    				</div>						
+						<div class="e difficulty">
+						    <div class="left">서비스</div>
+					        <div class="center">
+	        		        <% for i in(1..5)%>
+		                        <%if i <= h.rating_b.to_i%>
+		                        <span class="active"></span>
+		                        <%else%>
+		                        <span></span>
+		                        <%end%>
+		                    <%end%>
+					        </div>
+					    </div>						
+						<div class="e studyTime">
+						    <div class="left">가격대</div>
+					        <div class="center">
+	        		        <% for i in(1..5)%>
+		                        <%if i <= h.rating_c.to_i%>
+		                        <span class="active"></span>
+		                        <%else%>
+		                        <span></span>
+		                        <%end%>
+		                    <%end%>
+					        </div>
+						</div>						
+						<div class="e attendance">					    
+						    <div class="left">커트</div>
+					        <div class="center">
+	        		        <% for i in(1..5)%>
+		                        <%if i <= h.rating_d.to_i %>
+		                        <span class="active"></span>
+		                        <%else%>
+		                        <span></span>
+		                        <%end%>
+		                    <%end%>
+					        </div>
+	                    </div>						
+						<div class="e grade">
+						    <div class="left">파마</div>
+					        <div class="center">
+	        		        <% for i in(1..5)%>
+		                        <%if i <= h.rating_e.to_i%>
+		                        <span class="active"></span>
+		                        <%else%>
+		                        <span></span>
+		                        <%end%>
+		                    <%end%>
+		                    </div>
+						</div>						
+						<div class="e achievement">
+					        <div class="left">염색</div>
+					        <div class="center">
+	        		        <% for i in(1..5)%>
+		                        <%if i <= h.rating_f.to_i%>
+		                        <span class="active"></span>
+		                        <%else%>
+		                        <span></span>
+		                        <%end%>
+		                    <%end%>
+					        </div>
+						</div>					
+					</div>
+					
+					<div class="left">						
+						<div class="wrInfo"><a href="./myLectureEval.php?mbNo=10600" class="bold">회원</a> 님의
+						</div>						
+						<div class="wrInfoSub" title="2015-09-15 14:51:23">(201219****) | 4시간 전</div>						
+						<div class="wrContent">
+						<%=h.content%>
+						<img src="<%=h.image%>"/>
+						</div>					
+					</div>			
+				</div>				
+				<div class="tail">					
+					<div class="btnWrap">
+						<span class="like" likecnt="0" onclick="lectureEvalList_like(263352)">0 좋아요</span>
+						<span class="comment" onclick="lectureEvalList_getEvalCommentList(263352);">0 댓글</span>
+						<span class="etc" onclick="location.href=yh_path+'/report.php?evalNo=263352'">신고</span>
+					</div>
+					<!--
+					<div class="commentList hide"></div>					
+	    			<div class="commentInput hide">						
+	        			<div class="right">
+	        				<button type="button" onclick="lectureEvalList_writeEvalComment(263352)">입력</button>
+	        			</div>						
+	        			<div class="left">
+	        				<input type="text" name="wr_content" onkeydown="if (event.keyCode==13) lectureEvalList_writeEvalComment(263352);" placeholder="댓글을 입력해주세요.">
+	        			</div>
+	        		</div>
+	        		-->
+	        	</div>			
+	        </div>
+
+        <% end %>
+
+    		<div class="col-md-3">
+    			<%= render :partial => "home/sidebar1" %>   
+    		</div>
+		</div>
+	</div><!-- main닫기 -->
+</div>
+<%= render :partial => "home/tail" %>   
+
+
+ 
