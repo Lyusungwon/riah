@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 gem 'search_cop'
 gem 'devise'
-gem 'carrierwave'
+gem 'carrierwave', github: 'carrierwaveuploader/carrierwave'
 gem 'fog'
 gem 'omniauth-facebook'
 
