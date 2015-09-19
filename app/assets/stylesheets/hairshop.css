@@ -10,13 +10,14 @@
 .lectureInfo > .lec_rating {margin-top:10px;padding-top:20px;border-top:1px solid #DDD;overflow:hidden;}
 .lectureInfo > .lec_rating > .e {width:50%;height:40px;float:left;display:inline;}
 .lectureInfo > .lec_rating > .e > .left {width:50px;height:30px;line-height:30px;padding-right:10px;float:left;font-size:9pt;color:#AAA;text-align:right;}
-.lectureInfo > .lec_rating > .e > .right {width:100px;height:30px;line-height:30px;padding-left:10px;float:right;font-family:'arial';font-size:12pt;font-weight:bold;color:#F84;text-align:left;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+.lectureInfo > .lec_rating > .e > .right {width:50px;height:30px;line-height:30px;padding-left:10px;float:right;font-family:'arial';font-size:12pt;font-weight:bold;color:#F84;text-align:left;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
 .lectureInfo > .lec_rating > .e > .right > .noData {font-family:'맑은 고딕';font-size:9pt;color:#AAA;font-weight:normal;}
 .lectureInfo > .lec_rating > .e > .center {height:30px;overflow:hidden;}
 .lectureInfo > .lec_rating > .e > .center > span {width:20%;height:10px;margin-top:10px;border-right:1px solid #F5F5F5;background:#E5E5E5;float:left;}
 .lectureInfo > .lec_rating > .e > .center > span:first-child {border-radius:5px 0 0 5px;}
 .lectureInfo > .lec_rating > .e > .center > span:last-child {border-radius:0 5px 5px 0;}
-.lectureInfo > .lec_rating > .e.total > .center > span {height:20px;margin-top:5px;border-radius:0;border:none;background:url('/lectureEval_star.png') center no-repeat;background-size:20px 40px;}
+.lectureInfo > .lec_rating > .e.total > .center > span {height:20px;margin-top:5px;border-radius:0;border:none;background:url('/lectureEval_star.png') no-repeat;background-position: center -20px;
+background-size:20px 40px;}
 .lectureInfo > .lec_rating > .e.total > .center > span.active {background-position:center -20px;}
 .lectureInfo > .lec_rating > .e.difficulty > .center > span.active {background:#F84;}
 .lectureInfo > .lec_rating > .e.studyTime > .center > span.active {background:#5987FF;}

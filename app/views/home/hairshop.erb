@@ -192,6 +192,13 @@
             				<div class="subj">평가내용</div>
             				<div class="content"><textarea id='eval_content' name='content' onkeyup='show_textCnt();' placeholder='평가 내용을 입력해주세요.'></textarea><div id="textCnt"></div></div>
             			</div>
+            			<div class="form-group">
+                            <label for="exampleInputFile">이미지파일 업로드</label>
+                            <input type="file" name="images[]" multiple>
+                            <p class="help-block">예제</p>
+                         </div>
+                         
+            			
             			<div class="btnWrap">
             			<!--	<button id="submit" type='button' onclick='doSubmit();'>평가하기</button>-->
                        	<input type ="submit">
@@ -282,14 +289,16 @@
         					</div>
         					
         					<div class="left">						
-        						<div class="wrInfo"><a href="./myLectureEval.php?mbNo=10600" class="bold">회원</a> 님의
-        						</div>						
-        						<div class="wrInfoSub" title="2015-09-15 14:51:23">(201219****) | 4시간 전</div>						
-        						<div class="wrContent">
-        						<%=h.content%>
-        						<img src="<%=h.images%>"/>
-        						</div>					
-        					</div>			
+								<div class="wrInfo"><a href="./myLectureEval.php?mbNo=10600" class="bold">회원</a> 님의
+								</div>						
+								<div class="wrInfoSub" title="2015-09-15 14:51:23">(201219****) | 4시간 전</div>						
+								<div class="wrContent">
+								<%=h.content%>
+								<% h.images.each do |img| %>
+								<img src="<%=img.url%>">
+								<% end %>
+								</div>					
+							</div>			
         				</div>				
         				<div class="tail">					
         					<div class="btnWrap" style = "float:right;">
@@ -400,5 +409,3 @@
 </div>
 <%= render :partial => "home/tail" %>   
 
-
- 
