@@ -18,7 +18,8 @@ input, button, textarea {font-family:'맑은 고딕','Dotum','Arial'}
 #head > .inner {height:50px;margin:0 auto;}
 #head > .inner > .logo {width:100px;height:50px;margin-left:10px;text-align:left;float:left;display:inline;}
 #head > .inner > .search {width:300px;height:50px;margin-left:15px;float:left;display:inline;}
-#head > .inner > .search > input {width:100%;height:30px;padding:0 40px 0 10px;margin-top:10px;border:none;border-radius:5px;background:#FFF url('./images/common_search.png') right 10px center no-repeat;background-size:20px 20px;}
+
+#topBar_search {}
 #head > .inner > .search2 {width:90px;height:50px;padding-top:10px;padding-left:10px;float:left;display:inline;}
 #head > .inner > .search2 > button {width:100%;height:31px;border-radius:3px;border:none;border-bottom:1px solid #D73;border-right:1px solid #D73;color:#FFF;background:#FB5;cursor:pointer;}
 #head > .inner > .menu {width:100px;height:50px;float:right;display:inline;}
