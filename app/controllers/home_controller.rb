@@ -44,16 +44,34 @@ class HomeController < ApplicationController
     
     def write_process        
 
-        if  Eval.where(:user_id => current_user.id, :hairshop_id => params[:hairshop_id]).empty?
-        Eval.create(hairshop_id: params[:hairshop_id],user_id: current_user.id, content: params[:content], rating_a: params[:rating_a], rating_b: params[:rating_b], rating_c: params[:rating_c], rating_d: params[:rating_d], rating_e: params[:rating_e], rating_f: params[:rating_f], images: params[:images])
-        #a = Opinion.where(post_id: params[:id]).all
-        #staraverage=a.average(:general).to_f
-        
-        #ski=a.average(:skill)
-        #s=Post.find(params[:id].to_i)
-        #s.star =staraverage
-        #s.save
-        redirect_to :back
+        if  true or Eval.where(:user_id => current_user.id, :hairshop_id => params[:hairshop_id]).empty?
+            
+            puts params[:images].inspect
+            new_images = [] 
+            params[:images].each do |img|
+                new_images << img
+            end
+            Eval.create do |e| 
+                e.hairshop_id = params[:hairshop_id]
+                e.user_id = current_user.id
+                e.content=  params[:content]
+                e.rating_a = params[:rating_a]
+                e.rating_b = params[:rating_b]
+                e.rating_c = params[:rating_c]
+                e.rating_d = params[:rating_d]
+                e.rating_e = params[:rating_e]
+                e.rating_f = params[:rating_f]
+                e.images = params[:images]
+            end
+                
+            #a = Opinion.where(post_id: params[:id]).all
+            #staraverage=a.average(:general).to_f
+            
+            #ski=a.average(:skill)
+            #s=Post.find(params[:id].to_i)
+            #s.star =staraverage
+            #s.save
+            redirect_to :back
         else
             redirect_to :back   
         end
