@@ -25,7 +25,7 @@ class User < ActiveRecord::Base
     end
   end
 
-    has_many :evals
+
     has_many :hairshops, through: :evals
 
 end

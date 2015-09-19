@@ -12,7 +12,9 @@
 		<div class="col-md-7 col-md-offset-1">
 			<div class="mainContent">
 				<div class="welcome_wrap main_box">
-					<div class="title"><span>공지사항</span></div>
+					<div class="title">
+						<span>공지사항</span>
+					</div>
 					<div class="content">
 						<strong>열람권한 초기화 및 2015년 1학기 강의평가 안내</strong><br /><br />
 				
@@ -41,17 +43,13 @@
 									<div class="e total">
 				    					<div class="left">총평</div>
 				    					<div class="center">    		  
-				    					  
-				    					  <span class="star-rating"><!--별이 다 안나옴ㅠ-->
-			                		        <% 1.upto(5) do |i|%>
-			                		        	<%if i==e.rating_a%>
-			                		        	<i class="on"></i>
-			                		        	<%else%>
-			                		        	<i></i>
-			                		        	<%end%>
-			                		        <%end%>
-			            		        </span>  
-				                		     
+		                		        <% 1.upto(5) do |i|%>
+		                		        	<%if i==e.rating_a%>
+					                        <span></span>
+		                		        	<%else%>
+					                        <span class="active"></span>
+		                		        	<%end%>
+		                		        <%end%>
 				    		            </div>
 				    				</div>						
 									<div class="e difficulty">

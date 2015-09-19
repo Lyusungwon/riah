@@ -4,67 +4,55 @@
 
 <%= render :partial => "home/navbar" %>   
 
-<div id='content'>
-	<div class="mainContent">
-	<div id='lectureList' class='lectureList box'>
-	<div class="title"><span>검색결과</span></div>
-	<div class="content">
-		<div class='listTop'>
-			<div class="left"></div>
-			<div class="right">총 0개의 결과</div>
-		</div>
-		<table class='listTable'>
-			<tr class='head'>
-				<td class='lec_term'>이름</td>
-				<td class='lec_name'>주소</td>
-				<td class='lec_code'>전화번호</td>
-				<td class='lec_profName'>총평점</td>
-				<td class='lec_summary'>평점평균</td>
-				<td class='evalBtn'>평가하기</td>
-			</tr>
-<<<<<<< HEAD
- 			<%unless @ar.nil?%>		
-						 <% @result.each do |x|%>
-						 	<tr class='head'>
-				<td class='lec_term'><%=x.name%></td>
-				<td class='lec_name'><%=x.address%></td>
-				<td class='lec_code'></td>
-				<td class='lec_profName'></td>
-				<td class='lec_summary'></td>
-				<td class='evalBtn'></td>
-			</tr>
-						 
-						 
-						 <%end%>
-						 <%end%>
-						
-						
-						</table>
+
+<div class="container" id='content' >
+	<div class="row">
+		<div class="col-md-7 col-md-offset-1">
+			<div class="mainContent">
+				<div id='lectureList' class='lectureList main_box'>
+				<div class="title"><span>검색결과</span></div>
+				<div class="content">
+					<div class='listTop'>
+						<div class="left"></div>
+						<div class="right">총 <%= @result.count %>개의 결과</div>
+					</div>
+					<table class='listTable'>
+						<tr class='head'>
+							<td class='lec_term'>이름</td>
+							<td class='lec_name'>주소</td>
+							<td class='lec_code'>전화번호</td>
+							<td class='lec_profName'>총평점</td>
+							<td class='lec_summary'>평점평균</td>
+							<td class='evalBtn'>평가하기</td>
+						</tr>
+			 			<%unless @ar.empty?%>		
+						<% @result.each do |x|%>
+					 	<tr>
+							<td class='lec_term'><%=x.name%></td>
+							<td class='lec_name'><%=x.address%></td>
+							<td class='lec_code'></td>
+							<td class='lec_profName'></td>
+							<td class='lec_summary'></td>
+							<td class='evalBtn'></td>
+						</tr>
+						<%end%>
+						<%else%>
+						<tr class='noResult'>
+							<td colspan='5'>결과가 없습니다.</td>
+						</tr>
+						<%end%>	
+					</table>
+				</div>
+				<div class='page'>
+				</div>
+			</div>
+        </div>
+	</div><!-- main닫기 -->
+	<div class="col-md-3">
+		<%= render :partial => "home/sidebar1" %>   
 	</div>
-	<div class='page'>
-			</div>
 </div>
-	</div><!-- main닫기 -->
-	<div class="sideContent">
-				<div class='myInfo box'>
-			<div class='name_wrap'>
-				<div class='name'>황학</div>
-				<div class='menu'></div>
-=======
-						<tr class='noResult'><td colspan='5'>결과가 없습니다.</td></tr>		</table>
->>>>>>> a0114304075fecc192f61d59c5a78f54e7f2d27a
-			</div>
-			<div class='page'>
-			</div>
-		</div>
-	</div><!-- main닫기 -->
-<%= render :partial => "home/sidebar1" %>   
-</div>
-
-<<<<<<< HEAD
-
-
-
-=======
 <%= render :partial => "home/tail" %>   
->>>>>>> a0114304075fecc192f61d59c5a78f54e7f2d27a
+
+
+ 

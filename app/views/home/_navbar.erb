@@ -1,7 +1,7 @@
 <div id='head' class="container-fluid">
 	<div class="inner row">
 		<div class='logo col-md-3'>
-		    <a href='/'><img src='http://findicons.com/files/icons/2166/oxygen/64/knewstuff.png'/></a>
+		    <a href='/'><img src='/icon.png' style="height:50px;width:60px;"></a>
 		</div>
 		<div class='search col-md-6'>
             <form action ="/home/hairshopsearch/" method="GET">		
@@ -13,10 +13,7 @@
     			<div class="dropdown">
                     <div class="row"><%= link_to "내 정보", edit_user_registration_path %></div>
     				<div class="row">내 강의평</div>
-    				<div class="hr"></div>
-    				<div class="row">서버시간확인</div>
-    				<div class="row">고급검색</div>
-    				<div class="row">신고/문의하기</div>
+    				<div class="row"><%= link_to "신고/문의하기", '/home/report' %></div>
     				<div class="hr"></div>
     				<div class="row"><%= link_to "로그아웃", destroy_user_session_path, method: :delete, data: { confirm: "로그아웃 하시겠습니까?" } %></div>
     			</div>

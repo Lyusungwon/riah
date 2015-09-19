@@ -93,4 +93,28 @@ class HomeController < ApplicationController
     end
     def report
     end
+    
+    def likeeval_process
+         s= Eval.find(params[:id])
+        
+        if Likeeval.where(:user_id =>current_user.id, :eval_id => params[:id]).empty?
+        
+          
+          Likeeval.create(:user_id => current_user.id, :eval_id => params[:id], :like => true)
+          
+          s.likenumber = s.likenumber + 1
+          s.save
+          
+          
+        else
+            
+          Likeeval.where(:user_id =>current_user.id, :eval_id => params[:id]).first.destroy
+          s.likenumber = s.likenumber - 1
+          s.save
+        
+        end
+        render :text =>""
+        
+    end
+    
 end

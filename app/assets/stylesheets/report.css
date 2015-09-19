@@ -1,38 +1,38 @@
-#content > .mainContent > .reportForm {}
-#content > .mainContent > .reportForm > .content {overflow:hidden;}
-#content > .mainContent > .reportForm > .content > .row {overflow:hidden;}
-#content > .mainContent > .reportForm > .content > .row > .left {width:80px;height:50px;line-height:40px;padding:5px 10px 0 0;font-size:10pt;font-weight:bold;color:#999;float:left;}
-#content > .mainContent > .reportForm > .content > .row > .right {min-height:50px;padding:5px 0;overflow:hidden;}
-#content > .mainContent > .reportForm > .content > .row > .right > input {width:100%;height:40px;border:1px solid #DDD;padding:0 10px;}
-#content > .mainContent > .reportForm > .content > .row > .right > textarea {width:100%;height:250px;line-height:130%;border:1px solid #DDD;padding:10px;resize:none;}
-#content > .mainContent > .reportForm > .btnWrap {margin-top:5px;text-align:right;overflow:hidden;}
-#content > .mainContent > .reportForm > .btnWrap > button {height:50px;padding:0 15px;border:none;color:#FFF;font-size:10pt;background:#F84;}
+ .reportForm {}
+ .reportForm > .content {overflow:hidden;}
+ .reportForm > .content > .row {overflow:hidden;}
+ .reportForm > .content > .row > .left {width:80px;height:50px;line-height:40px;padding:5px 10px 0 0;font-size:10pt;font-weight:bold;color:#999;float:left;}
+ .reportForm > .content > .row > .right {min-height:50px;padding:5px 0;overflow:hidden;}
+ .reportForm > .content > .row > .right > input {width:100%;height:40px;border:1px solid #DDD;padding:0 10px;}
+ .reportForm > .content > .row > .right > textarea {width:100%;height:250px;line-height:130%;border:1px solid #DDD;padding:10px;resize:none;}
+ .reportForm > .btnWrap {margin-top:5px;text-align:right;overflow:hidden;}
+ .reportForm > .btnWrap > button {height:50px;padding:0 15px;border:none;color:#FFF;font-size:10pt;background:#F84;}
 
-#reportList > .content > .listTable {width:100%;margin-top:10px;text-align:center;border-collapse:collapse;table-layout:fixed;}
-#reportList > .content > .listTable tr {height:40px;margin:0;padding:0;border-bottom:1px dotted #DDD;cursor:pointer;}
-#reportList > .content > .listTable tr > td {margin:0;padding:0;text-overflow:ellipsis;white-space:nowrap;overflow:hidden;}
-#reportList > .content > .listTable tr > td.no {width:70px;color:#AAA;}
-#reportList > .content > .listTable tr > td.rp_subject {width:auto;text-align:left;}
-#reportList > .content > .listTable tr > td.wr_time {width:120px;color:#AAA;}
-#reportList > .content > .listTable tr > td.rp_answer {width:80px;color:#AAA;}
-#reportList > .content > .listTable tr > td.rp_answer.answered {color:#2C2;font-weight:bold;}
+ .listTable {width:100%;margin-top:10px;text-align:center;border-collapse:collapse;table-layout:fixed;}
+ .listTable tr {height:40px;margin:0;padding:0;border-bottom:1px dotted #DDD;cursor:pointer;}
+ .listTable tr > td {margin:0;padding:0;text-overflow:ellipsis;white-space:nowrap;overflow:hidden;}
+ .listTable tr > td.no {width:70px;color:#AAA;}
+ .listTable tr > td.rp_subject {width:auto;text-align:left;}
+ .listTable tr > td.wr_time {width:120px;color:#AAA;}
+ .listTable tr > td.rp_answer {width:80px;color:#AAA;}
+ .listTable tr > td.rp_answer.answered {color:#2C2;font-weight:bold;}
 
-#reportList > .content > .listTable tr > td.mb_name {width:100px;color:#F84;}
-#reportList > .content > .listTable tr > td.rt_reason {width:auto;text-align:left;}
-#reportList > .content > .listTable tr > td.rt_start {width:80px;color:#AAA;}
-#reportList > .content > .listTable tr > td.rt_finish {width:80px;color:#AAA;}
-#reportList > .content > .listTable tr > td.rt_cnt {width:80px;}
-#reportList > .content > .listTable tr > td.rt_status {width:80px;font-weight:bold;}
-#reportList > .content > .listTable tr > td.rt_status.s0 {color:#999}
-#reportList > .content > .listTable tr > td.rt_status.s1 {color:#2C2;}
-#reportList > .content > .listTable tr > td.rt_status.s-1 {color:#F33;}
-#reportList > .content > .listTable tr.head {height:40px;border:1px solid #E1E1E1;border-bottom:1px solid #CCC;border-right:1px solid #CCC;background:#F5F5F5;cursor:auto;}
-#reportList > .content > .listTable tr.head > td {font-size:10pt;color:#333;font-weight:bold;text-align:center;}
-#reportList > .content > .listTable tr.noResult {height:100px;color:#AAA;}
+ .listTable tr > td.mb_name {width:100px;color:#F84;}
+ .listTable tr > td.rt_reason {width:auto;text-align:left;}
+ .listTable tr > td.rt_start {width:80px;color:#AAA;}
+ .listTable tr > td.rt_finish {width:80px;color:#AAA;}
+ .listTable tr > td.rt_cnt {width:80px;}
+ .listTable tr > td.rt_status {width:80px;font-weight:bold;}
+ .listTable tr > td.rt_status.s0 {color:#999}
+ .listTable tr > td.rt_status.s1 {color:#2C2;}
+ .listTable tr > td.rt_status.s-1 {color:#F33;}
+ .listTable tr.head {height:40px;border:1px solid #E1E1E1;border-bottom:1px solid #CCC;border-right:1px solid #CCC;background:#F5F5F5;cursor:auto;}
+ .listTable tr.head > td {font-size:10pt;color:#333;font-weight:bold;text-align:center;}
+ .listTable tr.noResult {height:100px;color:#AAA;}
 
-#reportList > .content > .pageWrap {margin-top:15px;font-size:0;text-align:center;overflow:hidden;}
-#reportList > .content > .pageWrap > a {width:40px;height:40px;line-height:38px;border:1px solid #DDD;border-right:none;font-size:10pt;font-weight:bold;color:#555;background:#F5F5F5;display:inline-block;}
-#reportList > .content > .pageWrap > a.current {color:#F84;background:#FFF;}
-#reportList > .content > .pageWrap > a:first-child {border-radius:5px 0 0 5px;}
-#reportList > .content > .pageWrap > a:last-child {border-right:1px solid #DDD;border-radius:0 5px 5px 0;}
-#reportList > .content > .pageWrap > a:hover {background:#FFF;}
+ .pageWrap {margin-top:15px;font-size:0;text-align:center;overflow:hidden;}
+ .pageWrap > a {width:40px;height:40px;line-height:38px;border:1px solid #DDD;border-right:none;font-size:10pt;font-weight:bold;color:#555;background:#F5F5F5;display:inline-block;}
+ .pageWrap > a.current {color:#F84;background:#FFF;}
+ .pageWrap > a:first-child {border-radius:5px 0 0 5px;}
+ .pageWrap > a:last-child {border-right:1px solid #DDD;border-radius:0 5px 5px 0;}
+ .pageWrap > a:hover {background:#FFF;}
