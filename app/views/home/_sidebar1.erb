@@ -1,17 +1,10 @@
 	<div class="sideContent">
 		<div class='myInfo box'>
 			<div class='name_wrap'>
-				<div class='name'>황학</div>
+				<div class='name'><%= current_user.name %></div>
 				<div class='menu'></div>
 			</div>
 			<div class='evalInfo'>
-				<div class='row'>
-					<div class='left'>Point</div>
-					<div class='right'><span class='bold'>0 / 0</span> 점</div>
-				</div>
-				<div class='row2'>
-					(현재/누적)
-				</div>
 				<div class='row cursor' onclick="location.href=yh_path+'/myLectureEval.php'">
 					<div class='left'>내 강의평</div>
 					<div class='right'><span class='bold'>0 / 12</span> 건</div>
@@ -32,12 +25,5 @@
 			<div class="left" onclick="location.href=yh_path+'/guide.php'">사용가이드</div>
 			<div class="right" onclick="location.href=yh_path+'/returnInfo.php'">복학생안내</div>
 		</div>
-		<div class='facebook box'>
-			<div class='title'>페이스북</div>
-			<div class='content'>
-				<iframe src="//www.facebook.com/plugins/likebox.php?href=https%3A%2F%2Fwww.facebook.com%2Fkuklue&amp;width=208&amp;height=558&amp;colorscheme=light&amp;show_faces=true&amp;header=false&amp;stream=true&amp;show_border=false&amp;appId=115288441967877" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:208px; height:558px;" allowTransparency="true"></iframe>
-			</div>
-		</div>
-		<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 		<!-- side_content -->
 	</div>
