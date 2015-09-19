@@ -2,7 +2,7 @@
 /**
 * 전역설정
 **/
-body {width:100%;margin:0;padding:0;text-align:center;font-size:9pt;font-family:'맑은 고딕','Dotum','Arial';color:#333333;background:#F5F5F5;overflow-x:hidden;}
+body {width:100%;margin:0;padding-top:50px;text-align:center;font-size:9pt;font-family:'맑은 고딕','Dotum','Arial';color:#333333;background:#F5F5F5;overflow-x:hidden;}
 body * {font-size:inherit;color:inherit;box-sizing:border-box;}
 img,a,div,form {border:0;padding:0;}
 a {text-decoration:none;}
@@ -20,6 +20,7 @@ input, button, textarea {font-family:'맑은 고딕','Dotum','Arial'}
         .search {height:50px;display:inline;}
             #search_box {width:250px;height:30px;padding:0 40px 0 10px;margin-top:10px;border:none;border-radius:5px;background:#FFF url('/search.png') right 10px center no-repeat;background-size:20px 20px;}
         .menu {height:50px;float:right;display:inline;}
+<<<<<<< HEAD
             .i {width:50px;height:50px;background-size:25px 25px;background-repeat:no-repeat;background-position:center center;display:inline;float:right;position:relative;cursor:pointer;opacity:0.7;}
             .i:hover {opacity:1;}
             .i.menu {background-image:url('/common_menu.png');}
@@ -28,20 +29,37 @@ input, button, textarea {font-family:'맑은 고딕','Dotum','Arial'}
             .i.menu > .dropdown > .row:hover {background:#FEB;color:#F84;}
             .i.menu > .dropdown > .hr {height:20px;margin-top:20px;border-top:1px solid #DDD;}
             .i.menu:hover > .dropdown {display:block;}
+=======
+            .ic {width:50px;height:50px;background-size:25px 25px;background-repeat:no-repeat;background-position:center center;display:inline;float:right;position:relative;cursor:pointer;opacity:0.7;}
+            .ic:hover {opacity:1;}
+            .ic.menu {background-image:url('/common_menu.png');}
+            .ic.menu > .dropdown {width:220px;padding:10px;border:1px solid #DDD;text-align:left;position:absolute;right:10px;top:50px;z-index:20;background:#FFF;box-shadow:0px 0px 2px 0px rgba(0,0,0,0.2);overflow:hidden;display:none;}
+            .ic.menu > .dropdown > .row {padding:5px 10px;color:#555;overflow:hidden;cursor:pointer;}
+            .ic.menu > .dropdown > .row:hover {background:#FEB;color:#F84;}
+            .ic.menu > .dropdown > .hr {height:20px;margin-top:20px;border-top:1px solid #DDD;}
+            .ic.menu:hover > .dropdown {display:block;}
+>>>>>>> 51beb3ea769f64640c3425c90253f6907c7493b4
         .menu > a {width:80px;height:50px;line-height:50px;color:#FEB;display:inline;float:right;}
         .menu > a:hover {color:#FFF;text-decoration:none;}
 
 #content {margin-top:20px;text-align:left;overflow:hidden;}
     .mainContent {width:100%x;min-height:10px;overflow:hidden;float:left;}
+<<<<<<< HEAD
     .mainContent > .main_box {padding:20px;padding-top:0;margin-bottom:10px;border-radius:5px;border:1px solid #EAEAEA;border-bottom:1px solid #DDD;background:#FFF;overflow:hidden;}
     .mainContent > .main_box > .title {overflow:hidden;}
     .mainContent > .main_box > .title > span {line-height:45px;border-top:5px solid #F84;color:#F84;font-size:16pt;font-weight:bold;float:left;}
+=======
+        .main_box {padding:20px;padding-top:0;margin-bottom:10px;border-radius:5px;border:1px solid #EAEAEA;border-bottom:1px solid #DDD;background:#FFF;overflow:hidden;}
+        .main_box > .title {overflow:hidden;}
+        .main_box > .title > span {line-height:45px;border-top:5px solid #F84;color:#F84;font-size:16pt;font-weight:bold;float:left;}
+>>>>>>> 51beb3ea769f64640c3425c90253f6907c7493b4
 
     .sideContent {overflow:hidden;}
         .side_box {padding:20px;margin-bottom:10px;border-radius:5px;border:1px solid #EAEAEA;border-bottom:1px solid #DDD;background:#FFF;overflow:hidden;}
         .side_box > .title {padding-bottom:20px;border-bottom:1px solid #DDD;font-size:11pt;font-weight:bold;}
         .side_box > .content {margin-top:20px;color:#777;text-align:justify;overflow:hidden;}
 
+<<<<<<< HEAD
         .myInfo > .name_wrap > .name {width:140px;height:20px;line-height:20px;font-size:11pt;font-weight:bold;float:left;}
         .myInfo > .name_wrap > .menu {height:20px;line-height:20px;color:#F84;text-align:right;overflow:hidden;}
         .myInfo > .progressBar_wrap {margin-top:10px;}
@@ -58,6 +76,24 @@ input, button, textarea {font-family:'맑은 고딕','Dotum','Arial'}
         .myInfo > .btnWrap > .permBtn > .bg {height:45px;background:#FB5;position:absolute;left:0;top:0;z-index:2;}
         .myInfo > .btnWrap > .permBtn > .text {height:45px;line-height:45px;position:relative;z-index:3;}
         .myInfo > .btnWrap > .evalBtn {width:100%;height:45px;padding-right:20px;margin-top:5px;border:none;border-radius:3px;color:#FFF;font-size:11pt;background:#F84 url('./images/common_next.png') no-repeat right 30px center;cursor:pointer;}
+=======
+
+        .name_wrap {height:55px;background-image: url("https://jpassets.jobplanet.co.kr/assets/common/ico_my-4a4be3d9ca3c24e0885166734d8102de.png");background-position: 13px 11px;background-repeat: no-repeat;padding: 13px 11px 15px 72px;}
+        .name_wrap > .name {width:140px;height:20px;line-height:20px;font-size:11pt;font-weight:bold;float:left;}
+        
+        .evalInfo {margin-top:20px;padding-top:20px;border-top:1px solid #DDD;}
+        .evalInfo > .row {height:20px;overflow:hidden;}
+        .evalInfo > .row.cursor {cursor:pointer;}
+        .evalInfo > .row > .left {height:20px;line-height:20px;color:#777;font-weight:bold;}
+        .evalInfo > .row > .right {height:20px;line-height:20px;color:#777;text-align:right;overflow:hidden;}
+        .evalInfo > .row > .right > span {font-size:10pt;font-family:arial;color:#F84;font-weight:bold;}
+        .evalInfo > .row2 {margin-bottom:10px;font-size:8pt;color:#999;text-align:right;}
+        .btnWrap {margin-top:20px;padding-top:20px;border-top:1px solid #DDD;overflow:hidden;}
+        .btnWrap > .permBtn {width:100%;height:45px;border:none;border-radius:3px;color:#FFF;font-size:11pt;text-align:center;background:#AAA;position:relative;overflow:hidden;cursor:pointer;}
+        .btnWrap > .permBtn > .bg {height:45px;background:#FB5;position:absolute;left:0;top:0;z-index:2;}
+        .btnWrap > .permBtn > .text {height:45px;line-height:45px;position:relative;z-index:3;}
+        .btnWrap > .evalBtn {width:100%;height:45px;padding-right:20px;margin-top:5px;border:none;border-radius:3px;color:#FFF;font-size:11pt;background:#F84 url('./images/common_next.png') no-repeat right 30px center;cursor:pointer;}
+>>>>>>> 51beb3ea769f64640c3425c90253f6907c7493b4
         
         .guide {padding:20px 0;font-size:10pt;color:#777;font-weight:bold;text-align:center;}
         .guide > .left {width:50%;height:20px;line-height:20px;float:left;border-right:1px solid #DDD;cursor:pointer;}

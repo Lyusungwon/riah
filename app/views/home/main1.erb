@@ -1,0 +1,156 @@
+<head>
+	<%= stylesheet_link_tag "main", :media => "all" %>
+</head>
+
+<%= render :partial => "home/navbar" %>   
+<div class="jumbotron">
+	<h1>hi</h1>
+</div>
+
+<div class="container" id='content' >
+	<div class="row">
+		<div class="col-md-7 col-md-offset-1">
+			<div class="mainContent">
+				<div class="welcome_wrap main_box">
+					<div class="title"><span>공지사항</span></div>
+					<div class="content">
+						<strong>열람권한 초기화 및 2015년 1학기 강의평가 안내</strong><br /><br />
+				
+						안녕하세요 KLUE운영자 입니다. 이번학기 잘 마무리하셨나요?<br /><br />
+						
+						6월 24일 수요일 부로 열람권한 초기화 및 2015년 1학기 강의평가가 가능해졌습니다.<br /><br />
+				
+						또한 이제부터 15학번 새내기들도 KLUE를 이용하실 수 있으니 주변에 널리 알려주시고 알찬 강의평가 해주시길 부탁드릴게요~<br /><br />
+				
+						<strong>KLUE운영자 드림</strong>
+					</div>
+				</div>
+				<div class='recent_wrap'>
+					<div class='title'>
+						<span>베스트 평가</span>
+					</div>
+					<div class='lectureEvalList'>
+						<% @evaluation.each do |e|%>
+						<div class="e" id="lecEval_263352">				
+							<div class="title">
+								<a href="/home/hairshop/<%=e.hairshop_id%>" class="lec_name"><%=e.hairshop.name%></a>
+								<span class="lec_profName"><%=e.hairshop.address%></span>
+							</div>				
+							<div class="content">					
+								<div class="right">						
+									<div class="e total">
+				    					<div class="left">총평</div>
+				    					<div class="center">    		  
+				    					  
+				    					  <span class="star-rating"><!--별이 다 안나옴ㅠ-->
+			                		        <% 1.upto(5) do |i|%>
+			                		        	<%if i==e.rating_a%>
+			                		        	<i class="on"></i>
+			                		        	<%else%>
+			                		        	<i></i>
+			                		        	<%end%>
+			                		        <%end%>
+			            		        </span>  
+				                		     
+				    		            </div>
+				    				</div>						
+									<div class="e difficulty">
+									    <div class="left">서비스</div>
+								        <div class="center">
+				        		        <% for i in(1..5)%>
+							                        <%if i <= e.rating_b %>
+							                        <span class="active"></span>
+							                        <%else%>
+							                        <span></span>
+							                        <%end%>
+							            <%end%>
+				        		        
+								        </div>
+								    </div>						
+									<div class="e studyTime">
+									    <div class="left">가격대</div>
+								        <div class="center">
+				        		        <% for i in(1..5)%>
+							                        <%if i <= e.rating_c %>
+							                        <span class="active"></span>
+							                        <%else%>
+							                        <span></span>
+							                        <%end%>
+							              <%end%>
+								        </div>
+									</div>						
+									<div class="e attendance">					    
+									    <div class="left">커트</div>
+								        <div class="center">
+				        		        <% for i in(1..5)%>
+							                        <%if i <= e.rating_d %>
+							                        <span class="active"></span>
+							                        <%else%>
+							                        <span></span>
+							                        <%end%>
+							              <%end%>
+								        </div>
+				                    </div>						
+									<div class="e grade">
+									    <div class="left">파마</div>
+								        <div class="center">
+				        		        <% for i in(1..5)%>
+							                        <%if i <= e.rating_e %>
+							                        <span class="active"></span>
+							                        <%else%>
+							                        <span></span>
+							                        <%end%>
+							              <%end%>
+								        </div>
+									</div>						
+									<div class="e achievement">
+								        <div class="left">염색</div>
+								        <div class="center">
+				        		        <% for i in(1..5)%>
+							                        <%if i <= e.rating_f %>
+							                        <span class="active"></span>
+							                        <%else%>
+							                        <span></span>
+							                        <%end%>
+							              <%end%>
+								        </div>
+									</div>					
+								</div>					
+							
+								<div class="left">						
+									<div class="wrInfo"><a href="./myLectureEval.php?mbNo=10600" class="bold"><%=e.user.name%></a> 님의 의
+									</div>						
+									<div class="wrInfoSub" title="2015-09-15 14:51:23">(201219****) | 4시간 전</div>						
+									<div class="wrContent">
+										<%=e.content%>
+									</div>					
+								</div>			
+							</div>				
+							<div class="tail">					
+								<div class="btnWrap">
+									<span class="like" likecnt="0" onclick="lectureEvalList_like(263352)">0 좋아요</span>
+									<span class="comment" onclick="lectureEvalList_getEvalCommentList(263352);">0 댓글</span>
+									<span class="etc" onclick="location.href=yh_path+'/report.php?evalNo=263352'">신고</span></div>					
+								<div class="commentList hide">
+								</div>					
+								<div class="commentInput hide">						
+									<div class="right">
+										<button type="button" onclick="lectureEvalList_writeEvalComment(263352)">입력</button>
+									</div>						
+									<div class="left">
+										<input type="text" name="wr_content" onkeydown="if (event.keyCode==13) lectureEvalList_writeEvalComment(263352);" placeholder="댓글을 입력해주세요.">
+									</div>
+								</div>
+							</div>			
+						</div>
+						<% end %>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-3">
+			<%= render :partial => "home/sidebar1" %>   
+		</div>
+	</div>
+</div>
+<%= render :partial => "home/tail" %>   

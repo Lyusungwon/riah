@@ -19,11 +19,11 @@
 #content > .mainContent > .ieWarning > .desc > .content {color:#777;}
 #content > .mainContent > .ieWarning > .iconList {height:80px;overflow:hidden;}
 
-#content > .mainContent > .welcome_wrap {overflow:hidden;}
-#content > .mainContent > .welcome_wrap > .content {line-height:150%;padding:10px;color:#555;font-size:11pt;}
-#content > .mainContent > .welcome_wrap > .content > strong {color:#333;}
-#content > .mainContent > .welcome_wrap > .content > strong.orange {color:#F84;}
-#content > .mainContent > .welcome_wrap > .content > .desc {border:1px solid #DDD;padding:10px;font-size:9pt;background:#F5F5F5}
+    .welcome_wrap {overflow:hidden;}
+    .welcome_wrap > .content {line-height:150%;padding:10px;color:#555;font-size:11pt;}
+    .welcome_wrap > .content > strong {color:#333;}
+    .welcome_wrap > .content > strong.orange {color:#F84;}
+    .welcome_wrap > .content > .desc {border:1px solid #DDD;padding:10px;font-size:9pt;background:#F5F5F5}
 
 .recent_wrap {overflow:hidden;}
 .recent_wrap > .title {height:60px;line-height:60px;font-size:16pt;font-weight:bold;color:#777;}

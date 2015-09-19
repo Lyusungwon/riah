@@ -26,8 +26,13 @@ ActiveRecord::Schema.define(version: 20150914042448) do
     t.integer  "rating_f"
     t.string   "prices"
     t.string   "designer"
+<<<<<<< HEAD
     t.datetime "created_at",                       null: false
     t.datetime "updated_at",                       null: false
+=======
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+>>>>>>> 51beb3ea769f64640c3425c90253f6907c7493b4
   end
 
   create_table "hairshops", force: :cascade do |t|
