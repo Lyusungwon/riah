@@ -114,12 +114,14 @@
 							</div>					
 						</div>					
 					
-						<div class="left">						
+						<div class="left">				
+						<%unless e.user.nil?%>
 							<div class="wrInfo"><a href="./myLectureEval.php?mbNo=10600" class="bold"><%=e.user.name%></a> 님의 의
-							</div>						
+							</div>						<%end%>
 							<div class="wrInfoSub" title="2015-09-15 14:51:23">(201219****) | 4시간 전</div>						
 							<div class="wrContent">
 								<%=e.content%>
+								
 							</div>					
 						</div>			
 					</div>				

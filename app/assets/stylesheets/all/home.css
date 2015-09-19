@@ -296,17 +296,17 @@ input, button, textarea {
   overflow: hidden; }
 
 #content {
-  width: 980px;
-  margin: 10px auto;
+  width: 1200px;
+  margin: 30px;
   padding-top: 50px;
   text-align: left;
   overflow: hidden; }
 
 #content > .mainContent {
-  width: 720px;
+  width: 100%
   min-height: 10px;
-  overflow: hidden;
-  float: left; }
+  float: left;
+ }
 
 #content > .mainContent > .box {
   padding: 20px;
