@@ -300,21 +300,16 @@
         				</div>				
         				<div class="tail">					
         					<div class="btnWrap">
-        					
-        					  <% if user_signed_in?%>
                             <% if  Likeeval.where(:user_id =>current_user.id, :eval_id => h.id).empty?%>
                             <button class="btn-btn-primary" id ="good_<%=h.id%>">
                             <div id ="goodletter_<%=h.id%>"> 좋아요</div><div id ="noletter_<%=h.id%>" class ="hidden">좋아요 취소</div></button><span id ="likenumber_<%=h.id%>"><%=h.likenumber%></span><span class ="hidden" id ="ids_<%=h.id%>"><%=h.id%></span>
                             <%else%>
                            <button class="btn-btn-primary" id ="good_<%=h.id%>"> <div id ="goodletter_<%=h.id%>" class="hidden"> 좋아요</div><div id ="noletter_<%=h.id%>">좋아요 취소</div></button><span id ="likenumber_<%=h.id%>"><%=h.likenumber%></span><span class ="hidden" id ="ids_<%=h.id%>"><%=h.id%></span>
                             <%end%>
-                          <%else%>
-                          <%end%>
-                            
+        					</div>                            
         						<!--<span class="like" likecnt="0" onclick="lectureEvalList_like(263352)">0 좋아요</span>
         						<span class="comment" onclick="lectureEvalList_getEvalCommentList(263352);">0 댓글</span>
         						<span class="etc" onclick="location.href=yh_path+'/report.php?evalNo=263352'">신고</span>-->
-        					</div>
         					<!--
         					<div class="commentList hide"></div>					
         	    			<div class="commentInput hide">						

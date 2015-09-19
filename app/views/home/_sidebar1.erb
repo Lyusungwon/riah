@@ -4,8 +4,10 @@
 				<div class='name'><%= current_user.name %></div>
 			</div>
 			<div class='evalInfo'>
-				<div class='row cursor' onclick="location.href=yh_path+'/myLectureEval.php'">
-					<div class='col-md-6 left'>내 평가</div>
+				<div class='row cursor'>
+					<div class='col-md-6 left'>
+						<a href='/home/myeval'>내 평가</a>
+					</div>
 					<div class='col-md-6 right'>
 						<% @num = Eval.where(:user_id => current_user.id) %>
 						<%= @num.count %>건

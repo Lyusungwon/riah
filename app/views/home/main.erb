@@ -16,15 +16,7 @@
 						<span>공지사항</span>
 					</div>
 					<div class="content">
-						<strong>열람권한 초기화 및 2015년 1학기 강의평가 안내</strong><br /><br />
-				
-						안녕하세요 KLUE운영자 입니다. 이번학기 잘 마무리하셨나요?<br /><br />
-						
-						6월 24일 수요일 부로 열람권한 초기화 및 2015년 1학기 강의평가가 가능해졌습니다.<br /><br />
-				
-						또한 이제부터 15학번 새내기들도 KLUE를 이용하실 수 있으니 주변에 널리 알려주시고 알찬 강의평가 해주시길 부탁드릴게요~<br /><br />
-				
-						<strong>KLUE운영자 드림</strong>
+						<strong>1차로 안암동 주변 미용실을 먼저 합니다</strong><br />
 					</div>
 				</div>
 				<digit v class='recent_wrap'>
@@ -116,19 +108,23 @@
 								</div>					
 							
 								<div class="left">						
-									<div class="wrInfo"><a href="./myLectureEval.php?mbNo=10600" class="bold"><%=e.user.name%></a> 님의 의
-									</div>						
-									<div class="wrInfoSub" title="2015-09-15 14:51:23">(201219****) | 4시간 전</div>						
-									<div class="wrContent">
-										<%=e.content%>
-									</div>					
+									<div class="wrInfo"><a href="" class="bold"><%=e.user.name%></a>님의 의견</div>						
+									<div class="wrInfoSub"><%=e.user.created_at.in_time_zone("Seoul") %></div>						
+									<div class="wrContent"><%=e.content%></div>					
 								</div>			
 							</div>				
 							<div class="tail">					
-								<div class="btnWrap">
-									<span class="like" likecnt="0" onclick="lectureEvalList_like(263352)">0 좋아요</span>
+	        					<div class="btnWrap">
+		                            <% if  Likeeval.where(:user_id =>current_user.id, :eval_id => e.id).empty?%>
+		                            <button class="btn-btn-primary" id ="good_<%=e.id%>"><div id ="goodletter_<%=e.id%>"> 좋아요</div><div id ="noletter_<%=e.id%>" class ="hidden">좋아요 취소</div></button>
+		                            <span id ="likenumber_<%=e.id%>"><%=e.likenumber%></span><span class ="hidden" id ="ids_<%=e.id%>"><%=e.id%></span>
+		                            <%else%>
+		                            <button class="btn-btn-primary" id ="good_<%=e.id%>"> <div id ="goodletter_<%=e.id%>" class="hidden"> 좋아요</div><div id ="noletter_<%=e.id%>">좋아요 취소</div></button>
+		                            <span id ="likenumber_<%=e.id%>"><%=e.likenumber%></span><span class ="hidden" id ="ids_<%=e.id%>"><%=e.id%></span>
+		                            <%end%>                  
 									<span class="comment" onclick="lectureEvalList_getEvalCommentList(263352);">0 댓글</span>
-									<span class="etc" onclick="location.href=yh_path+'/report.php?evalNo=263352'">신고</span></div>					
+									<span class="etc" onclick="location.href=yh_path+'/report.php?evalNo=263352'">신고</span>
+									</div>					
 								<div class="commentList hide">
 								</div>					
 								<div class="commentInput hide">						
@@ -141,6 +137,37 @@
 								</div>
 							</div>			
 						</div>
+						<script>
+					    $(function(){
+						    var num = <%=e.likenumber%>
+						    var txt = "";
+						    $("#goodletter_<%=e.id%>").click(
+						        function(){//ajax로 서버에 데이터를 날려서 모델에저장한다.
+						            $.ajax({//대괄호가 하나 더 들어가있어야된데.
+						                data: { id :$("#ids_<%=e.id%>").text()},
+						                url:  "/home/likeeval_process",
+						                success: function(data)
+					                        {
+					                         num = num + 1
+					                         $("#likenumber_<%=e.id%>").html(num);
+					                         $("#goodletter_<%=e.id%>").addClass("hidden");
+					                         $("#noletter_<%=e.id%>").removeClass("hidden");
+					                        }})});
+							$("#noletter_<%=e.id%>").click(
+						        function(){//ajax로 서버에 데이터를 날려서 모델에저장한다.
+				    				$.ajax({//대괄호가 하나 더 들어가있어야된데...
+				                        data: { id :$("#ids_<%=e.id%>").text()},
+				                        url:  "/home/likeeval_process",
+				                        success: function(data)
+			                                { //동작이 여러개 있을 때는 함수를   function을 쓴다. //data는빼도 된다.
+			                                           //2.text area 안에 있는 내용을 뽑아서     출력한다.
+			                                 num = num - 1
+			                                 $("#likenumber_<%=e.id%>").html(num);
+			                                 $("#noletter_<%=e.id%>").addClass("hidden");
+			                                 $("#goodletter_<%=e.id%>").removeClass("hidden");
+			                                 }})});   
+							})
+						</script>
 						<% end %>
 					</div>
 				</div>
