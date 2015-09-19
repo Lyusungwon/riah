@@ -17,7 +17,7 @@ ActiveRecord::Schema.define(version: 20150919123246) do
     t.integer  "user_id"
     t.integer  "hairshop_id"
     t.text     "content"
-    t.string   "images",      default: "--- []\n"
+    t.text     "images",      default: "--- []\n"
     t.integer  "rating_a"
     t.integer  "rating_b"
     t.integer  "rating_c"

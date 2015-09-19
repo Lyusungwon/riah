@@ -6,8 +6,9 @@ class CreateEvals < ActiveRecord::Migration
       t.integer :hairshop_id
       
       t.text :content
-      t.string :images, array: false, default: []
-      
+
+      t.text :images, array: true, default: []
+
       t.integer :rating_a
       t.integer :rating_b
       t.integer :rating_c
