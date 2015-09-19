@@ -188,7 +188,7 @@
             			</div>
             			<div class="row">
             				<div class="subj">평가내용</div>
-            				<div class="content"><textarea id='eval_content' name='eval_content' onkeyup='show_textCnt();' placeholder='평가 내용을 입력해주세요.'></textarea><div id="textCnt"></div></div>
+            				<div class="content"><textarea id='eval_content' name='content' onkeyup='show_textCnt();' placeholder='평가 내용을 입력해주세요.'></textarea><div id="textCnt"></div></div>
             			</div>
             			<div class="btnWrap">
             			<!--	<button id="submit" type='button' onclick='doSubmit();'>평가하기</button>-->
@@ -291,9 +291,20 @@
         				</div>				
         				<div class="tail">					
         					<div class="btnWrap">
-        						<span class="like" likecnt="0" onclick="lectureEvalList_like(263352)">0 좋아요</span>
+        					
+        					  <% if user_signed_in?%>
+                            <% if  Likeeval.where(:user_id =>current_user.id, :eval_id => h.id).empty?%>
+                            <button class="btn-btn-primary" id ="good_<%=h.id%>">
+                            <div id ="goodletter_<%=h.id%>"> 좋아요</div><div id ="noletter_<%=h.id%>" class ="hidden">좋아요 취소</div></button><span id ="likenumber_<%=h.id%>"><%=h.likenumber%></span><span class ="hidden" id ="ids_<%=h.id%>"><%=h.id%></span>
+                            <%else%>
+                           <button class="btn-btn-primary" id ="good_<%=h.id%>"> <div id ="goodletter_<%=h.id%>" class="hidden"> 좋아요</div><div id ="noletter_<%=h.id%>">좋아요 취소</div></button><span id ="likenumber_<%=h.id%>"><%=h.likenumber%></span><span class ="hidden" id ="ids_<%=h.id%>"><%=h.id%></span>
+                            <%end%>
+                          <%else%>
+                          <%end%>
+                            
+        						<!--<span class="like" likecnt="0" onclick="lectureEvalList_like(263352)">0 좋아요</span>
         						<span class="comment" onclick="lectureEvalList_getEvalCommentList(263352);">0 댓글</span>
-        						<span class="etc" onclick="location.href=yh_path+'/report.php?evalNo=263352'">신고</span>
+        						<span class="etc" onclick="location.href=yh_path+'/report.php?evalNo=263352'">신고</span>-->
         					</div>
         					<!--
         					<div class="commentList hide"></div>					
@@ -308,6 +319,74 @@
         	        		-->
         	        	</div>			
         	        </div>
+        	        
+        	        
+        	                                    <script>
+    $(function(){
+    var num = <%=h.likenumber%>
+    var txt = "";
+    $("#goodletter_<%=h.id%>").click(
+        
+        function(){
+                    //ajax로 서버에 데이터를 날려서 모델에저장한다.
+                    $.ajax({//대괄호가 하나 더 들어가있어야된데...
+                        
+                        data: { id :$("#ids_<%=h.id%>").text()},
+                        url:  "/home/likeeval_process",
+                        success: function(data)
+                                {
+                                 num = num + 1
+                                 $("#likenumber_<%=h.id%>").html(num);
+                                 $("#goodletter_<%=h.id%>").addClass("hidden");
+                                 $("#noletter_<%=h.id%>").removeClass("hidden");
+                                }
+
+                })
+        }
+        );
+        
+        
+        
+        
+        
+        
+         $("#noletter_<%=h.id%>").click(
+        
+        function(){
+                    //ajax로 서버에 데이터를 날려서 모델에저장한다.
+                    $.ajax({//대괄호가 하나 더 들어가있어야된데...
+                        
+                        data: { id :$("#ids_<%=h.id%>").text()},
+                        url:  "/home/likeeval_process",
+                        success: function(data)
+                                { //동작이 여러개 있을 때는 함수를   function을 쓴다. //data는빼도 된다.
+                                           //2.text area 안에 있는 내용을 뽑아서     출력한다.
+                                 
+                                 num = num - 1
+                                 $("#likenumber_<%=h.id%>").html(num);
+                                 $("#noletter_<%=h.id%>").addClass("hidden");
+                                 $("#goodletter_<%=h.id%>").removeClass("hidden");
+                                }
+
+                })
+        }
+        );
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+})
+    
+    
+    </script>
+
                     <% end %>
     	        </div>
 	        </div>

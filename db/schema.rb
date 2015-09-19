@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150914042448) do
+ActiveRecord::Schema.define(version: 20150919123246) do
 
   create_table "evals", force: :cascade do |t|
     t.integer  "user_id"
@@ -26,6 +26,7 @@ ActiveRecord::Schema.define(version: 20150914042448) do
     t.integer  "rating_f"
     t.string   "prices"
     t.string   "designer"
+    t.integer  "likenumber",  default: 0
     t.datetime "created_at",                       null: false
     t.datetime "updated_at",                       null: false
   end
@@ -39,6 +40,14 @@ ActiveRecord::Schema.define(version: 20150914042448) do
     t.string   "hompage"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+  end
+
+  create_table "likeevals", force: :cascade do |t|
+    t.integer  "user_id"
+    t.integer  "eval_id"
+    t.boolean  "like",       default: false
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
   end
 
   create_table "users", force: :cascade do |t|
