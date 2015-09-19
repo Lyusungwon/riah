@@ -92,6 +92,9 @@ class HomeController < ApplicationController
     def register
     end
     def report
+        
+        @report = Report.where(:user_id => current_user.id).all
+        
     end
     
     def likeeval_process
@@ -115,6 +118,26 @@ class HomeController < ApplicationController
         end
         render :text =>""
         
+    end
+    
+    def report_process
+        
+        
+        
+        
+        report=Report.new
+        report.title = params[:rp_title]        
+        report.content = params[:rp_content]
+        report.user_id = current_user.id
+        report.save
+        
+        redirect_to :back
+        
+        
+    end
+    
+    def myreport_detail
+        @report = Report.find(params[:id])
     end
     
 end

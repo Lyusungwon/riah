@@ -1,0 +1,34 @@
+<head>
+	<%= stylesheet_link_tag "report", :media => "all" %>
+</head>
+
+<%= render :partial => "home/navbar" %>   
+
+<div class="container" id='content' >
+	<div class="row">
+		<div class="col-md-7 col-md-offset-1">
+			<div class="mainContent">
+					<div class='reportForm main_box' style="padding:10px;">
+						<div class="title"><span>내 신고</span></div>
+						<div class="content">
+							<div class="row">
+								<div class="left">제목</div>
+								<div class="right" style = "padding-top:15px;"><%=@report.title%></div>
+							</div>
+							<div class="row">
+								<div class="left">내용</div>
+								<div class="right" style = "padding-top:15px;"><%=@report.content%></div>
+							</div>
+						</div>
+						<div class="btnWrap"><input type ="submit" value="삭제하기"></div>
+					</div>
+			
+		
+			</div><!-- main닫기 -->
+		</div>
+				<div class="col-md-3">
+				<%= render :partial => "home/sidebar1" %>     
+				</div>
+	</div>
+</div>
+<%= render :partial => "home/tail" %>   

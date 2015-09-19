@@ -8,41 +8,63 @@
 	<div class="row">
 		<div class="col-md-7 col-md-offset-1">
 			<div class="mainContent">
-				<div class='reportForm main_box'>
-					<div class="title"><span>신고/문의 하기</span></div>
-					<div class="content">
-						<div class="row">
-							<div class="left">제목</div>
-							<div class="right"><input type='text' name='rp_subject' value='' /></div>
+				<form action ="/home/report_process/">
+					<div class='reportForm main_box' style="padding:10px;">
+						<div class="title"><span>신고/문의 하기</span></div>
+						<div class="content">
+							<div class="row">
+								<div class="left">제목</div>
+								<div class="right"><input type='text' name='rp_title' value='' /></div>
+							</div>
+							<div class="row">
+								<div class="left">내용</div>
+								<div class="right"><textarea name='rp_content'></textarea></div>
+							</div>
 						</div>
-						<div class="row">
-							<div class="left">내용</div>
-							<div class="right"><textarea name='rp_content'></textarea></div>
-						</div>
+						<div class="btnWrap"><input type ="submit" value="작성하기"></div>
 					</div>
-					<div class="btnWrap"><button type='button' onclick='doSubmit();'>작성하기</button></div>
-				</div>
+				</form>
+				
+				
 				<div class="reportList main_box" id='reportList'>
 					<div class="title"><span>내 신고/문의 내역</span></div>
+					
 					<div class="content">
 						<table class='listTable' id='listTable'>
+						
+						<%unless current_user.reports.empty?%>
+						
 							<tr class='head'>
 								<td class='no'>No</td>
 								<td class='rp_subject'>제목</td>
 								<td class='wr_time'>작성시간</td>
 								<td class='rp_answer'>답변여부</td>
 							</tr>
+							<%current_user.reports.each do |x|%>
+						
+							<tr>
+								<a href="/home/myreport_detail/<%=x.id%>"><td class='no'><%=x.id%></td></a>
+								<td class='rp_subject' style ="text-align:center;"><%=x.title%></td>
+								<td class='wr_time'></td>
+								<td class='rp_answer'>답변여부</td>
+							</tr>
+							
+								
+								<%end%>
+						<%else%>
 							<tr class="noResult">
 								<td colspan='4'>신고/문의 내역이 없습니다.</td>
 							</tr>
+						<%end%>
 						</table>
 					</div>
+					
 				</div>
 			</div><!-- main닫기 -->
 		</div>
-		<div class="col-md-3">
-		<%= render :partial => "home/sidebar1" %>     
-		</div>
+				<div class="col-md-3">
+				<%= render :partial => "home/sidebar1" %>     
+				</div>
 	</div>
 </div>
 <%= render :partial => "home/tail" %>   
