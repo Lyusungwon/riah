@@ -5,24 +5,31 @@
 			</div>
 			<div class='evalInfo'>
 				<div class='row cursor' onclick="location.href=yh_path+'/myLectureEval.php'">
-					<div class='col-md-6 left'>내 강의평</div>
-					<div class='col-md-6 right'><span class='bold'>0 / 12</span> 건</div>
+					<div class='col-md-6 left'>내 평가</div>
+					<div class='col-md-6 right'>
+						<% @num = Eval.where(:user_id => current_user.id) %>
+						<%= @num.count %>건
+					</div>
 				</div>
+<!--
 				<div class='row2'>
 					(이번학기/전체)
 				</div>
+-->
 			</div>
 			<div class="btnWrap">
 				<div class="permBtn">
 					<div class="bg" style='width:100%;'></div>
-					<div class="text">열람권한있음</div>
+					<div class="text" style='font-weight:bold;'>열람권한있음</div>
 				</div>
+<!--
 				<button type='button' class='evalBtn' ><a href="/home/write">평가하러가기</a></button>
+-->
 			</div>
 		</div>
 		<div class='guide side_box'>
-			<div class="left" onclick="location.href=yh_path+'/guide.php'">사용가이드</div>
-			<div class="right" onclick="location.href=yh_path+'/returnInfo.php'">복학생안내</div>
+			<div class="left"><a href="/home">사용가이드</a></div>
+			<div class="right"><a href="/home/report">신고/제보하기</a></div>
 		</div>
 		<!-- side_content -->
 	</div>
