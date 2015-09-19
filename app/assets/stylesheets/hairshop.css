@@ -28,7 +28,7 @@
 .lectureInfo > .lec_info {margin-top:20px;padding-top:20px;border-top:1px solid #DDD;font-size:10pt;overflow:hidden;}
 .lectureInfo > .lec_info > .e {width:33.33%;height:30px;line-height:30px;float:left;}
 .lectureInfo > .lec_info > .e2 {height:30px;line-height:30px;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;}
-.lectureInfo > .lec_info > div > .subj {margin-right:10px;font-weight:bold;color:#555;}
+.lectureInfo > .lec_info > div > .subj {margin-right:20px;font-weight:bold;color:#555;}
 .lectureInfo > .lec_info > div > .content {color:#999;}
 
 .lectureInfo > .optionWrap {margin-top:20px;padding-top:20px;border-top:1px solid #DDD;overflow:hidden;}
@@ -60,7 +60,7 @@
  .eval_wrap > .desc > ul > li:last-child {margin:0;}
    .form {margin-top:40px;overflow:hidden;}
    .form > .row {margin-bottom:20px;position:relative;}
-   .form > .row > .subj {width:70px;height:40px;line-height:40px;padding-left:25px;float:left;font-size:11pt;font-weight:bold;}
+   .form > .row > .subj {margin-right:10px;width:80px;height:40px;line-height:40px;padding-left:25px;float:left;font-size:09pt;font-weight:bold;}
    .form > .row > .content {min-height:40px;overflow:hidden;}
    .form > .row > .content.bg1 {width: 75%;background:#F5F5F5;}
    .form > .row > .content > input {width:90%;height:40px;border:1px solid #DDD;margin:0;padding: 15px;overflow:hidden;}
