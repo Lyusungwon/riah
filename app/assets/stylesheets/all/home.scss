@@ -2,7 +2,7 @@
 /**
 * 전역설정
 **/
-body {width:100%;margin:0;padding-top:50px;text-align:center;font-size:9pt;font-family:'맑은 고딕','Dotum','Arial';color:#333333;background:#F5F5F5;overflow-x:hidden;}
+body {width:100%;margin:0;padding-top:50px;text-align:center;font-size:9pt;font-family:'맑은 고딕','Dotum','Arial';color:#333333;background:#DBF0DF;overflow-x:hidden;}
 body * {font-size:inherit;color:inherit;box-sizing:border-box;}
 img,a,div,form {border:0;padding:0;}
 a {text-decoration:none;}
@@ -14,18 +14,18 @@ input, button, textarea {font-family:'맑은 고딕','Dotum','Arial'}
 /**
 * head.php
 **/
-#head {width:100%;min-width:980px;height:50px;background:#F84;position:fixed;left:0;top:0;z-index:10;box-shadow:0px 0px 2px 2px rgba(0,0,0,0.2);}
+#head {width:100%;min-width:980px;height:50px;background:#84B8A1;position:fixed;left:0;top:0;z-index:10;box-shadow:0px 0px 2px 2px rgba(0,0,0,0.2);}
     .inner {height:50px;margin:0 auto;}
         .logo {height:50px;margin-left:10px;text-align:left;float:left;display:inline;}
         .search {height:50px;display:inline;}
-            #search_box {width:250px;height:30px;padding:0 40px 0 10px;margin-top:10px;border:none;border-radius:5px;background:#FFF url('/search.png') right 10px center no-repeat;background-size:20px 20px;}
+            #search_box {width:250px;height:30px;padding:0 40px 0 10px;margin-top:10px;border:none;border-radius:5px;background:#DBF0DF url('/search.png') right 10px center no-repeat;background-size:20px 20px;}
         .menu {height:50px;float:right;display:inline;}
             .ic {width:50px;height:50px;background-size:25px 25px;background-repeat:no-repeat;background-position:center center;display:inline;float:right;position:relative;cursor:pointer;opacity:0.7;}
             .ic:hover {opacity:1;}
             .ic.menu {background-image:url('/common_menu.png');}
-            .ic.menu > .dropdown {width:220px;padding:10px;border:1px solid #DDD;text-align:left;position:absolute;right:10px;top:50px;z-index:20;background:#FFF;box-shadow:0px 0px 2px 0px rgba(0,0,0,0.2);overflow:hidden;display:none;}
+            .ic.menu > .dropdown {width:220px;padding:10px;border:1px solid #DDD;text-align:left;position:absolute;right:10px;top:50px;z-index:20;background:#DBF0DF;box-shadow:0px 0px 2px 0px rgba(0,0,0,0.2);overflow:hidden;display:none;}
             .ic.menu > .dropdown > .row {padding:5px 10px;color:#555;overflow:hidden;cursor:pointer;}
-            .ic.menu > .dropdown > .row:hover {background:#FEB;color:#F84;}
+            .ic.menu > .dropdown > .row:hover {background:#DBF0DF;color:#F84;}
             .ic.menu > .dropdown > .hr {height:20px;margin-top:20px;border-top:1px solid #DDD;}
             .ic.menu:hover > .dropdown {display:block;}
         .menu > a {width:80px;height:50px;line-height:50px;color:#FEB;display:inline;float:right;}
@@ -35,7 +35,7 @@ input, button, textarea {font-family:'맑은 고딕','Dotum','Arial'}
     .mainContent {width:100%x;min-height:10px;overflow:hidden;}
         .main_box {padding:20px;padding-top:0;margin-bottom:10px;border-radius:5px;border:1px solid #EAEAEA;border-bottom:1px solid #DDD;background:#FFF;overflow:hidden;}
         .main_box > .title {overflow:hidden;}
-        .main_box > .title > span {line-height:45px;border-top:5px solid #F84;color:#F84;font-size:16pt;font-weight:bold;float:left;}
+        .main_box > .title > span {line-height:45px;border-top:5px solid #B3DABF;color:#84B8A1;font-size:16pt;font-weight:bold;float:left;}
 
     .sideContent {overflow:hidden;}
         .side_box {padding:20px;margin-bottom:10px;border-radius:5px;border:1px solid #EAEAEA;border-bottom:1px solid #DDD;background:#FFF;overflow:hidden;}
@@ -52,10 +52,10 @@ input, button, textarea {font-family:'맑은 고딕','Dotum','Arial'}
         .evalInfo > .row > .right {height:30px;line-height:30px;color:#777;text-align:center;font-size:18px;overflow:hidden;color:#F84;font-weight:bold;}
         .evalInfo > .row2 {margin-bottom:10px;font-size:8pt;color:#999;text-align:right;}
         .side_btnWrap {margin-top:20px;padding-top:20px;border-top:1px solid #DDD;overflow:hidden;}
-        .side_btnWrap > .permBtn {width:100%;height:45px;border:none;border-radius:3px;color:#FFF;font-size:11pt;text-align:center;background:#AAA;position:relative;overflow:hidden;cursor:pointer;}
+        .side_btnWrap > .permBtn {width:100%;height:45px;border:none;border-radius:3px;color:#FFF;font-size:11pt;text-align:center;background:#EEC174;position:relative;overflow:hidden;cursor:pointer;}
         .side_btnWrap > .permBtn > .bg {height:45px;background:#FB5;position:absolute;left:0;top:0;z-index:2;}
         .side_btnWrap > .permBtn > .text {height:45px;line-height:45px;position:relative;z-index:3;}
-        .side_btnWrap > .evalBtn {width:100%;height:45px;padding-right:20px;margin-top:5px;border:none;border-radius:3px;color:#FFF;font-size:11pt;background:#F84 url('./images/common_next.png') no-repeat right 30px center;cursor:pointer;}
+        .side_btnWrap > .evalBtn {width:100%;height:45px;padding-right:20px;margin-top:5px;border:none;border-radius:3px;color:#FFF;font-size:11pt;background:#EEC174 url('./images/common_next.png') no-repeat right 30px center;cursor:pointer;}
         
         .guide {padding:20px 0;font-size:10pt;color:#777;font-weight:bold;text-align:center;}
         .guide > .left {width:50%;height:20px;line-height:20px;float:left;border-right:1px solid #DDD;cursor:pointer;}
@@ -89,16 +89,16 @@ input, button, textarea {font-family:'맑은 고딕','Dotum','Arial'}
 .lectureEvalList > .e > .content > .right > .e > .left {width:50px;height:30px;line-height:30px;padding-right:10px;float:left;font-size:9pt;color:#AAA;text-align:right;}
 .lectureEvalList > .e > .content > .right > .e > .right {width:60px;height:30px;line-height:30px;padding-left:10px;float:right;font-size:9pt;color:#777;text-align:left;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
 .lectureEvalList > .e > .content > .right > .e > .center {height:30px;overflow:hidden;}
-.lectureEvalList > .e > .content > .right > .e > .center > span {width:20%;height:10px;margin-top:10px;border-right:1px solid #F5F5F5;background:#E5E5E5;float:left;}
+.lectureEvalList > .e > .content > .right > .e > .center > span {width:20%;height:10px;margin-top:10px;border-right:1px solid #F5F5F5;background:#FFF;float:left;}
 .lectureEvalList > .e > .content > .right > .e > .center > span:first-child {border-radius:5px 0 0 5px;}
 .lectureEvalList > .e > .content > .right > .e > .center > span:last-child {border-radius:0 5px 5px 0;}
 .lectureEvalList > .e > .content > .right > .e.total > .center > span {height:20px;margin-top:5px;border-radius:0;border:none;background:url('/lectureEval_star.png') top center no-repeat;background-size:20px 40px;}
 .lectureEvalList > .e > .content > .right > .e.total > .center > span.active {background-position:center -20px;}
-.lectureEvalList > .e > .content > .right > .e.difficulty > .center > span.active {background:#F84;}
-.lectureEvalList > .e > .content > .right > .e.studyTime > .center > span.active {background:#5987FF;}
-.lectureEvalList > .e > .content > .right > .e.attendance > .center > span.active {background:#FFC000;}
-.lectureEvalList > .e > .content > .right > .e.grade > .center > span.active {background:#8F3CB2;}
-.lectureEvalList > .e > .content > .right > .e.achievement > .center > span.active {background:#00C675;}
+.lectureEvalList > .e > .content > .right > .e.difficulty > .center > span.active {background:#DBF0DF;}
+.lectureEvalList > .e > .content > .right > .e.studyTime > .center > span.active {background:#B3DABF;}
+.lectureEvalList > .e > .content > .right > .e.attendance > .center > span.active {background:#84B8A1;}
+.lectureEvalList > .e > .content > .right > .e.grade > .center > span.active {background:#EEC174;}
+.lectureEvalList > .e > .content > .right > .e.achievement > .center > span.active {background:#EFEBB0;}
 .lectureEvalList > .e > .content > .right > .prevData {height:30px;line-height:30px;color:#777;text-align:center;}
 .lectureEvalList > .e > .tail {border-top:1px solid #DDD;padding-top:15px;overflow:hidden;}
 .lectureEvalList > .e > .tail > .btnWrap {color:#F84;overflow:hidden;}
