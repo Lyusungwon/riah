@@ -16,10 +16,8 @@
 .lectureInfo > .lec_rating > .e > .center > span {width:20%;height:10px;margin-top:10px;border-right:1px solid #F5F5F5;background:#E5E5E5;float:left;}
 .lectureInfo > .lec_rating > .e > .center > span:first-child {border-radius:5px 0 0 5px;}
 .lectureInfo > .lec_rating > .e > .center > span:last-child {border-radius:0 5px 5px 0;}
-/*.lectureInfo > .lec_rating > .e.total > .center > span {height:20px;margin-top:5px;border-radius:0;border:none;
-background:url('data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB3aWR0aD0iMjBweCIgaGVpZ2h0PSIyMHB4IiB2aWV3Qm94PSIwIDAgMjAgMjAiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDIwIDIwIiB4bWw6c3BhY2U9InByZXNlcnZlIj48cG9seWdvbiBmaWxsPSIjREREREREIiBwb2ludHM9IjEwLDAgMTMuMDksNi41ODMgMjAsNy42MzkgMTUsMTIuNzY0IDE2LjE4LDIwIDEwLDE2LjU4MyAzLjgyLDIwIDUsMTIuNzY0IDAsNy42MzkgNi45MSw2LjU4MyAiLz48L3N2Zz4=');
-top: center no-repeat;background-size:20px 40px;}background-position:center -20px;*/
-.lectureInfo > .lec_rating > .e.total > .center > span.active {background:#F84;}
+.lectureInfo > .lec_rating > .e.total > .center > span {height:20px;margin-top:5px;border-radius:0;border:none;background:url('/lectureEval_star.png');top: center no-repeat;background-size:20px 40px;}
+.lectureInfo > .lec_rating > .e.total > .center > span.active {background-position:center -20px;}
 .lectureInfo > .lec_rating > .e.difficulty > .center > span.active {background:#F84;}
 .lectureInfo > .lec_rating > .e.studyTime > .center > span.active {background:#5987FF;}
 .lectureInfo > .lec_rating > .e.attendance > .center > span.active {background:#FFC000;}
@@ -62,7 +60,7 @@ top: center no-repeat;background-size:20px 40px;}background-position:center -20p
  .eval_wrap > .desc > ul > li:last-child {margin:0;}
    .form {margin-top:40px;overflow:hidden;}
    .form > .row {margin-bottom:20px;position:relative;}
-   .form > .row > .subj {width:100px;height:40px;line-height:40px;padding-left:25px;float:left;font-size:11pt;font-weight:bold;}
+   .form > .row > .subj {width:70px;height:40px;line-height:40px;padding-left:25px;float:left;font-size:11pt;font-weight:bold;}
    .form > .row > .content {min-height:40px;overflow:hidden;}
    .form > .row > .content.bg1 {width: 75%;background:#F5F5F5;}
    .form > .row > .content > input {width:90%;height:40px;border:1px solid #DDD;margin:0;padding: 15px;overflow:hidden;}

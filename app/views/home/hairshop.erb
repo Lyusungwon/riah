@@ -208,15 +208,13 @@
         	    				<div class="e total">
         	    					<div class="left">총평</div>
         	    					<div class="center">    		  
-        	    					    <span class="star-rating" style="height: 20px;width: 100px;"><!--별이 다 안나옴ㅠ-->
-        	                		        <% 1.upto(5) do |i|%>	
-        	                		        	<%if i==h.rating_a.to_i%>
-        	                		        	<i class="on"></i>
-        	                		        	<%else%>
-        	                		        	<i></i>
-        	                		        	<%end%>
-        	                		        <%end%>
-        	            		       </span>
+        	        		        <% for i in(1..5)%>
+        		                        <%if i <= h.rating_a.to_i%>
+        		                        <span class="active"></span>
+        		                        <%else%>
+        		                        <span></span>
+        		                        <%end%>
+        		                    <%end%>
         	    		            </div>
         	    				</div>						
         						<div class="e difficulty">
